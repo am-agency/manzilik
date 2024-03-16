@@ -1,0 +1,258 @@
+.edit-profile {
+  .ant-tabs-nav {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .ant-tabs-tabpane {
+    @media screen and (max-width: 768px) {
+      padding-left: 0 !important;
+    }
+  }
+  .tabs-title {
+    line-height: 1.25;
+    margin-bottom: 30px;
+    font-size: @h6;
+  }
+
+  .profile__username {
+    font-weight: @semi-bold;
+    font-size: @h6;
+  }
+
+  .tab-title {
+    line-height: 1.25;
+    font-size: @h4;
+  }
+
+  .tabs {
+    width: 100%;
+    @media screen and (max-width: 768px) {
+      margin-top: 60px;
+    }
+
+    .ant-tabs-tab {
+      padding: 10px 15px !important;
+    }
+
+    .ant-tabs-tab-active {
+      background: @grey8;
+      border-radius: 8px;
+    }
+
+    .ant-tabs-content-holder {
+      border-left: none;
+      border-right: none;
+    }
+
+    .ant-tabs-ink-bar {
+      background: transparent;
+    }
+
+    .ant-tabs-tab img {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  .ant-tabs-rtl {
+    .ant-tabs-tab img {
+      margin: 0 0 0 8px;
+    }
+  }
+
+  .account-info {
+    .sub-title {
+      line-height: 1.25;
+      font-size: @h4;
+      margin-top: 30px;
+    }
+
+    .public-text {
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: @icon-background;
+      margin-bottom: 10px;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .ant-select-selector,
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      background-color: @grey8;
+      height: 50px;
+      border: none;
+
+      .ant-select-selection-search-input {
+        height: 50px;
+      }
+
+      .ant-select-selection-item {
+        line-height: 50px;
+      }
+    }
+
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      box-shadow: none;
+    }
+
+    .ant-select-arrow {
+      color: @black;
+    }
+  }
+  .profile-mobile-header {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    .wrapper-mobile-header {
+      padding: 16px 8px;
+      width: 100%;
+      height: 54px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f5f5f5;
+      background-color: #fff;
+      .mobile-header-tab {
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+        align-items: center;
+        &.selected-tab {
+          font-weight: 600;
+          background-color: #f5f5f5;
+          padding: 5.5px;
+          border-radius: 10px;
+        }
+        .tab-title-mobile-header {
+          font-size: 11px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .rtl {
+    .ant-tabs-nav {
+      margin-left: 50px !important;
+    }
+  }
+
+  .ltr {
+    .ant-tabs-nav {
+      margin-right: 50px !important;
+    }
+  }
+
+  .required_sign {
+    color: @danger;
+  }
+
+  .ant-alert {
+    background-color: @mid-light-grey6;
+    border-color: @grey6;
+    padding: 15px !important;
+    text-align: center;
+
+    .ant-color-content {
+      color: @text-color;
+    }
+  }
+
+  .ant-upload-list-picture-card-container {
+    width: 31.81%;
+    height: 207px;
+    margin: 0 0 8px 15px !important;
+    @media screen and (max-width: 687px) {
+      width: 100%;
+    }
+  }
+
+  .rtl.ant-tabs-rtl {
+    .ant-tabs-nav {
+      margin-left: 0px !important;
+      padding: 0 5px 0 0; //account for nav bar gutters and alignment
+      .ant-tabs-tab {
+        &.ant-tabs-tab-disabled:first-child {
+          cursor: auto;
+          padding: 3px !important; //fighting the important they have from ant design
+          background-color: transparent;
+          border-bottom: 1px solid @grey3;
+          .user-name {
+            color: @black2;
+          }
+          .ant-tabs-tab-btn {
+            .professional-avatar-box {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 0.5rem;
+            }
+          }
+        }
+        padding-block: 0 0 1rem 0 !important;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .ltr {
+    .ant-tabs-nav {
+      margin-right: 0px !important;
+      padding: 0 0 0 5px; //account for nav bar gutters and alignment
+    }
+  }
+
+  .profile-header {
+    padding-top: 8px;
+    @media screen and (max-width: 687px) {
+      display: none;
+    }
+  }
+}
+
+.edit-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.7rem;
+  h1.ant-typography {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+  .edit-profile__action-button {
+    background-color: @light-purple-white;
+    color: @bright-purple;
+    border: 1px solid @bright-purple;
+
+    svg {
+      margin-top: 2px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .edit-profile {
+    .tabs-title {
+      display: none;
+    }
+
+    .tab-title {
+      display: none;
+    }
+
+    .profile-header {
+      .edit-img {
+        margin: 0;
+      }
+    }
+  }
+}

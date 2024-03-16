@@ -1,0 +1,332 @@
+.body-wrapper,
+.modal-wrapper,
+.success-message {
+  .rounded-top-border {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .rounded-left-border.rtl {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .rounded-left-border.ltr {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .rounded-border {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .ant-tabs-top > .ant-tabs-nav::before {
+    border-bottom: 0 solid transparent;
+  }
+
+  .img-fit-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: @grey3;
+  }
+
+  .grayed-img {
+    filter: grayscale(100%);
+  }
+
+  .thumbnail-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @light-black;
+  }
+
+  .thumbnail-overlay-gradient {
+    background-color: transparent;
+    background-image: linear-gradient(@light-black, @transparent, @transparent, @transparent);
+  }
+
+  .form {
+    .title {
+      text-align: center;
+      color: @black2;
+      line-height: 1.2;
+      font-size: @h4;
+      margin: 50px 0 40px 0;
+      font-weight: @bold;
+    }
+
+    .col-heading {
+      line-height: 1.25;
+      margin-top: 5px;
+      font-size: @h4;
+      margin-bottom: 43px;
+      font-weight: @semi-bold;
+    }
+
+    .ant-input,
+    .ant-input-password {
+      min-height: 50px;
+      background: @gray-background;
+      border: 1px solid @gray-background;
+      border-radius: 10px;
+      padding: 3px 11px;
+    }
+
+    .ant-form-item {
+      margin-top: 13px;
+    }
+
+    .submit-button,
+    .cancel-button {
+      min-height: 50px;
+      max-width: 135px;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .cancel-button {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+
+    span {
+      line-height: 1.25;
+      font-size: @small;
+    }
+
+    .facebook,
+    .google {
+      background: @gray8;
+      border-color: @gray8;
+      color: @text-color;
+      text-shadow: none;
+    }
+
+    .ant-form-item .ant-mentions,
+    .ant-form-item textarea.ant-input {
+      min-height: 120px;
+      resize: none;
+      background: @grey8;
+      padding: 18px 20px;
+    }
+  }
+
+  .project-name-text {
+    display: block;
+    margin: auto 20px;
+    font-size: @very-small;
+    line-height: 1.25;
+    font-weight: @bold;
+    color: @text-color;
+  }
+
+  .items-number-text {
+    font-size: @very-small;
+    line-height: 1.25;
+    margin: 0 20px;
+    margin-top: 8px;
+    color: @mid-light-black;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .link {
+    color: @dark-purple;
+    text-decoration: underline;
+    font-weight: @bold;
+    font-size: @description;
+  }
+
+  .photo-title-wrapper {
+    flex: 1;
+  }
+
+  .title-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .createdAt-text {
+    font-size: @very-small;
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+
+  .tabs,
+  .custom-tabs {
+    .ant-tabs-nav::before {
+      border-bottom: none !important;
+    }
+
+    .ant-tabs-tab {
+      font-size: @very-small;
+      color: @black2;
+      padding: 8px 15px;
+      opacity: 0.8;
+      margin: 0;
+
+      @media screen and (max-width: 768px) {
+        padding: 4px 10px;
+      }
+
+      img {
+        margin: 0 8px;
+      }
+    }
+
+    .ant-tabs-tab-active {
+      background: @white;
+      box-shadow: @magazine-card-shadow;
+      border: 1px solid @icon-background;
+      border-radius: 10px;
+      font-weight: @semi-bold;
+      color: @black;
+      padding: 8px 30px;
+      opacity: 1;
+
+      @media screen and (max-width: 768px) {
+        padding: 4px 10px;
+      }
+    }
+
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: @black2;
+    }
+
+    .ant-tabs-nav {
+      margin: 0 !important;
+    }
+
+    .ant-tabs-ink-bar {
+      background: transparent;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 10px 0;
+    }
+  }
+
+  .custom-antd-btn,
+  .custom-antd-btn:hover,
+  .custom-antd-btn:focus {
+    background: @primary-color;
+    border-color: @primary-color;
+    height: 50px;
+    font-size: @description;
+    color: @white;
+  }
+
+  .custom-antd-tag {
+    color: @white;
+    background: @primary-color;
+    border: none;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  .no-scroll {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+
+  .ant-pagination {
+    text-align: center;
+  }
+}
+
+.spinner-wrapper {
+  .ant-spin {
+    span {
+      border-color: @dark-purple !important;
+    }
+  }
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-color: @fade-black-overlay;
+  z-index: 1080;
+  backdrop-filter: blur(5px);
+}
+
+.user-name {
+  cursor: pointer;
+}
+
+iframe.intercom-borderless-frame.intercom-otsumh.e1dl9bzv0 {
+  width: 413px;
+  background: @grey8;
+  box-shadow: @card-shadow;
+  border-radius: 16px;
+}
+
+// @TODO remove-after-skeletons
+.loader__bar {
+  position: relative;
+  pointer-events: none;
+
+  div:first-child {
+    z-index: 11;
+    border-radius: 1rem;
+    box-shadow: rgb(188 179 154) 0px 0px 10px, rgb(188 179 154) 0px 0px;
+
+    div:first-child {
+      & > div {
+        display: none;
+      }
+    }
+  }
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab {
+  margin: 0 0 0 24px !important;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0 0 10px !important;
+  }
+}
+
+.rtl {
+  .custom-antd-tag {
+    right: 16px;
+    left: auto;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

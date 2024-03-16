@@ -1,0 +1,53 @@
+.ai-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 80px;
+  .img-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 40px;
+    img {
+      width: 115px !important;
+      height: 94px !important;
+      border-radius: 13px;
+    }
+    img:nth-child(1) {
+      transform: rotate(9deg);
+      opacity: 0.5;
+    }
+    img:nth-child(2) {
+      transform: rotate(-9deg);
+    }
+  }
+  .empty-uploader {
+    width: 129px;
+    position: absolute;
+    top: 14px;
+    .empty-uploader-wrapper {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px dashed #d9d9d9;
+      cursor: pointer;
+    }
+  }
+  .empty-content {
+    text-align: center;
+    .empty-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .empty-subtitle {
+      font-size: 14px;
+      max-width: 470px;
+    }
+  }
+}

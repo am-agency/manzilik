@@ -1,0 +1,69 @@
+.service-review-modal-container {
+  width: 375px !important;
+  font-family: cairo;
+  p {
+    margin-bottom: 0;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .your-review {
+      width: 100%;
+    }
+    .review-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 13px;
+    }
+    .start-rating {
+      width: 100%;
+      .rating-stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+          font-size: 48px;
+        }
+      }
+      .start-rating-title {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 13px;
+      }
+      .horizontal-line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(225, 225, 225, 1);
+        margin-bottom: 13px;
+      }
+    }
+    .note {
+      width: 100%;
+      .msg-textarea-ar {
+        &:after {
+          float: left;
+          padding-top: 5px;
+        }
+      }
+
+      .msg-textarea-en {
+        &:after {
+          float: right;
+          padding-top: 7px;
+        }
+      }
+    }
+  }
+  .review-btn {
+    width: 100%;
+    background-color: rgba(70, 71, 116, 1);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 13px;
+  }
+}

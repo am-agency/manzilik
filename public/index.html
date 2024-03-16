@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Google tag (gtag.js) Prod -->
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-1FER3BVSZ3"></script>
+    <script async defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-1FER3BVSZ3', { debug_mode: true });
+    </script>
+
+    <!-- Google tag (gtag.js) QA -->
+    <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-DXHZNSNJFW"></script>
+    <script async defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-DXHZNSNJFW', { debug_mode: true });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script async defer>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '379558437188352');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=379558437188352&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Snap Pixel Code -->
+    <script async defer type="text/javascript">
+      (function (e, t, n) {
+        if (e.snaptr) return;
+        var a = (e.snaptr = function () {
+          a.handleRequest ? a.handleRequest.apply(a, arguments) : a.queue.push(arguments);
+        });
+        a.queue = [];
+        var s = 'script';
+        r = t.createElement(s);
+        r.async = !0;
+        r.src = n;
+        var u = t.getElementsByTagName(s)[0];
+        u.parentNode.insertBefore(r, u);
+      })(window, document, 'https://sc-static.net/scevent.min.js');
+      snaptr('init', '61f53ae4-e320-4943-a141-7d5b12e398f2', {
+        user_email: '__INSERT_USER_EMAIL__',
+      });
+      snaptr('track', 'PAGE_VIEW');
+    </script>
+    <!-- End Snap Pixel Code -->
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+      async
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" async />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" async />
+    <!-- page preload loader styles before react is able to render anything to the page -->
+    <style>
+      @keyframes lds-heart {
+        0% {
+          transform: scale(0.95);
+        }
+
+        5% {
+          transform: scale(1.5);
+        }
+
+        39% {
+          transform: scale(0.85);
+        }
+
+        45% {
+          transform: scale(1);
+        }
+
+        60% {
+          transform: scale(0.95);
+        }
+
+        100% {
+          transform: scale(0.9);
+        }
+      }
+
+      #root:empty {
+        background-image: url('%PUBLIC_URL%/logo192.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        animation: lds-heart 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

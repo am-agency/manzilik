@@ -1,0 +1,33 @@
+.idea-card {
+  cursor: pointer;
+  .idea-thumb {
+    height: 300px;
+  }
+  .idea-title-text {
+    @media screen and (max-width: 575px) {
+      margin-bottom: 0px;
+    }
+  }
+  .ant-card-cover img {
+    cursor: zoom-in;
+  }
+
+  .ant-card-meta-title {
+    font-size: @h6;
+    white-space: pre-wrap;
+    max-height: 50px;
+    text-transform: capitalize;
+  }
+
+  .by-text {
+    font-size: @very-small;
+    font-weight: @bold;
+  }
+
+  .client-name-text {
+    font-size: @very-small;
+    margin: 0 3px;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
+}

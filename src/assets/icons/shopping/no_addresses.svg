@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="84" viewBox="0 0 142 84">
+  <g id="Group_8990" data-name="Group 8990" transform="translate(-822 -495)">
+    <circle id="Ellipse_7946" data-name="Ellipse 7946" cx="42" cy="42" r="42" transform="translate(861 495)" fill="#f6f6f6"/>
+    <g id="pin-add" transform="translate(879.134 512.533)">
+      <path id="Path_13780" data-name="Path 13780" d="M25.151,0A24,24,0,0,0,1,24.151,23.192,23.192,0,0,0,8.245,41.4c.345.345,14.146,12.766,14.491,13.111a3.619,3.619,0,0,0,4.485,0c.345-.345,14.491-12.766,14.491-13.111a23.192,23.192,0,0,0,7.245-17.251A23.5,23.5,0,0,0,25.151,0ZM35.5,27.6H28.6v6.9H21.7V27.6H14.8V20.7h6.9V13.8h6.9v6.9h6.9Z" transform="translate(-1)" fill="#464774"/>
+    </g>
+    <rect id="Rectangle_2341" data-name="Rectangle 2341" width="50" height="9" rx="4.5" transform="translate(822 522)" fill="#bcb39a"/>
+    <rect id="Rectangle_2342" data-name="Rectangle 2342" width="16" height="9" rx="4.5" transform="translate(850 536)" fill="#e8e8e8"/>
+    <rect id="Rectangle_2343" data-name="Rectangle 2343" width="30" height="9" rx="4.5" transform="translate(934 516)" fill="#d3d3d3"/>
+  </g>
+</svg>

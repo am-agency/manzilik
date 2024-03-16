@@ -1,0 +1,111 @@
+.comments-section {
+  .more-comments-btn {
+    background-color: @light-purple2;
+    border: @dark-purple solid 1px;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: @bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @dark-purple;
+  }
+
+  .comment {
+    font-size: @very-small;
+
+    .comment-content {
+      img {
+        max-height: 100px;
+      }
+    }
+
+    p {
+      font-size: @very-small;
+      opacity: 1;
+    }
+
+    .comment-createdAt-text {
+      opacity: 0.5;
+    }
+
+    .commenter-name-text {
+      opacity: 1;
+      white-space: nowrap;
+    }
+  }
+
+  .write-comment {
+    background-color: @grey8;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: @very-small;
+    opacity: 0.7;
+  }
+
+  .editor-wrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.spam-list {
+  .ant-radio-input {
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+.comments-section,
+.products-page-container,
+.vendor-profile {
+  .list-header {
+    font-size: @very-small;
+
+    .comments-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: @grey8;
+      border-radius: 4px;
+      margin: 0 7px;
+      padding: 5px;
+    }
+
+    .products-count {
+      background-color: @white;
+      font-weight: @bold;
+      font-size: @description;
+    }
+
+    .sort-comment-filter {
+      font-size: @very-small;
+
+      .ant-select-item-option-content {
+        font-size: @very-small;
+      }
+    }
+
+    .sort-products-filter {
+      font-weight: @bold;
+    }
+
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .ant-select-single .ant-select-selector .ant-select-selection-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: @very-small;
+    }
+
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      box-shadow: none;
+    }
+  }
+}

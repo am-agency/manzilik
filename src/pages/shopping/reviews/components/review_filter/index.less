@@ -1,0 +1,30 @@
+.review_filter {
+  height: 61px;
+  padding: 13px 14px;
+  border-radius: 3px;
+  background-color: @grey8;
+  .ant-typography {
+    font-size: @description;
+    color: @gray9;
+  }
+  .ant-col:last-child {
+    display: flex;
+    justify-content: flex-end;
+    .ant-select {
+      .ant-select-selector {
+        height: 35px;
+        border-radius: 3px;
+        border: solid 1px @white;
+        background-color: @white;
+        color: @gray10;
+        font-size: @very-small;
+      }
+    }
+  }
+  .ant-select-selection-item,
+  .ant-select-item-option-content {
+    span {
+      font-size: @font-size-base;
+    }
+  }
+}

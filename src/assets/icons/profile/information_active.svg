@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="Group_10066" data-name="Group 10066" transform="translate(-1295 -247)">
+    <g id="NoPath_-_Copy_16_" data-name="NoPath - Copy (16)" transform="translate(1295 247)" fill="#464774" stroke="#fff" stroke-width="1">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="22" fill="none"/>
+    </g>
+    <g id="c-info" transform="translate(1306.992 258.992)">
+      <path id="Path_14250" data-name="Path 14250" d="M10.508,0A10.508,10.508,0,1,0,21.016,10.508,10.539,10.539,0,0,0,10.508,0Zm1.313,15.762H9.194V9.194h2.627ZM10.508,7.881A1.241,1.241,0,0,1,9.194,6.567a1.241,1.241,0,0,1,1.313-1.313,1.241,1.241,0,0,1,1.313,1.313A1.241,1.241,0,0,1,10.508,7.881Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

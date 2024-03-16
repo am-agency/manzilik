@@ -1,0 +1,85 @@
+.signup-form {
+  .ant-btn.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @gray8;
+    border-radius: 16px;
+
+    span {
+      font-size: @small;
+    }
+
+    img {
+      position: absolute;
+      left: 10px;
+    }
+  }
+
+  .ant-btn-rtl.social-btn {
+    img {
+      right: 10px;
+    }
+  }
+
+  .register-label {
+    color: @white;
+    text-align: center;
+    font-size: @very-small;
+    font-weight: @light;
+    margin-top: 8px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .custom-ant-input {
+    .ant-col {
+      .ant-form-item-control-input {
+        .ant-form-item-control-input-content {
+          .ant-input {
+            background: @transparent-blue;
+            border: none;
+            color: @white;
+
+            &::placeholder {
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .submit-button-item {
+    .ant-form-item-control-input-content {
+      display: flex;
+      justify-content: flex-end;
+
+      .ant-btn {
+        width: 226px;
+        background-color: @grey6;
+        border-color: @grey6;
+        border-radius: 16px;
+
+        span {
+          font-size: @h6;
+        }
+      }
+    }
+  }
+
+  .confirm-form {
+    .submit-button-item {
+      .ant-typography {
+        font-size: @p;
+        color: @white;
+      }
+
+      .ant-form-item-control-input-content {
+        justify-content: start;
+      }
+    }
+  }
+}

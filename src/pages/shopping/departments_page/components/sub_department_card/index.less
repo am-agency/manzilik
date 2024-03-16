@@ -1,0 +1,51 @@
+.department-category-card {
+  height: 360px;
+  width: 95%;
+  position: relative;
+  background: @white;
+  box-shadow: @card-shadow;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 5px;
+  display: flex;
+  justify-content: center;
+
+  .img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-head.rtl {
+    text-align: right;
+  }
+
+  .card-head.ltr {
+    text-align: left;
+  }
+
+  .card-head {
+    position: absolute;
+    width: 100%;
+    color: @text-color;
+    padding: 30px;
+
+    h4 {
+      font-size: @h5;
+      line-height: 1.85;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: @span;
+      line-height: 1.86;
+      color: @gray10;
+    }
+  }
+  .img-wrapper {
+    img {
+      position: absolute;
+      bottom: 0;
+      max-height: 260px;
+    }
+  }
+}

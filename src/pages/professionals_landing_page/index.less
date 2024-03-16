@@ -1,0 +1,78 @@
+.professional-landing-header {
+  padding-top: 64px;
+
+  @media screen and (max-width: 425px) {
+    padding-top: 128px;
+  }
+
+  .resend-code-container {
+    margin-bottom: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    .ant-input,
+    .ant-btn {
+      width: 100%;
+      border-radius: 16px;
+      height: 56px;
+      align-items: center;
+    }
+
+    .ant-input {
+      margin-bottom: 10px;
+      background-color: @gray11;
+      border-color: @tab-background;
+    }
+
+    .ant-btn {
+      max-width: 255px;
+      margin: 0 10px 10px 10px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .confirm-text {
+    display: none;
+  }
+
+  .social-btn {
+    display: flex;
+    justify-content: center;
+
+    .ant-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      max-width: 256px;
+      width: 100%;
+      min-width: 256px;
+      background-color: @gray8;
+      border-color: @gray8;
+      border-radius: 16px;
+
+      span {
+        font-size: @small;
+      }
+
+      img {
+        position: absolute;
+        left: 10px;
+      }
+    }
+
+    .ant-btn-rtl {
+      img {
+        right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.project {
+  .project-details-operations {
+    margin: 30px 0 40px 0;
+
+    .operations {
+      display: flex;
+      justify-content: flex-end;
+
+      .invite-col {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      @media screen and (max-width: 576px) {
+        justify-content: start;
+      }
+    }
+
+    .export button {
+      padding-top: 0;
+    }
+
+    .export button:hover,
+    .export button:focus {
+      background: transparent;
+    }
+  }
+
+  .filter {
+    .title {
+      color: @black2;
+      font-size: @description;
+      font-weight: @bold;
+    }
+
+    .rtl {
+      margin-left: 10px;
+    }
+
+    .ltr {
+      margin-right: 10px;
+    }
+
+    .ant-tag {
+      padding: 8px 10px;
+      font-size: @small;
+      border: none;
+      border-radius: 19px;
+      background: none;
+    }
+
+    .selected {
+      border: 1px solid @grey6;
+    }
+
+    .filter-icon {
+      padding: 0 4px;
+    }
+  }
+
+  .filter-tag::after {
+    content: none;
+  }
+
+  .change-layout-btn {
+    cursor: pointer;
+  }
+
+  .ideas {
+    margin: 35px 0 100px 0;
+  }
+
+  .upload-idea {
+    cursor: pointer;
+  }
+
+  .no-entities-data {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.status-switch {
+  .custom-switch {
+    .ant-switch.PUBLIC {
+      .ant-switch-handle::before {
+        content: 'Public';
+      }
+    }
+
+    .ant-switch-rtl.ant-switch.PUBLIC {
+      .ant-switch-handle::before {
+        content: 'عام';
+      }
+    }
+
+    .ant-switch-rtl.ant-switch.PRIVATE {
+      .ant-switch-handle::before {
+        content: 'خاص';
+      }
+    }
+
+    .ant-switch.PRIVATE {
+      .ant-switch-handle::before {
+        content: 'Private';
+      }
+    }
+    .ant-switch {
+      .ant-switch-handle {
+        width: 62px;
+        height: 34px;
+      }
+    }
+
+    .ant-switch-handle {
+      background: @primary-color;
+      color: @white;
+    }
+
+    .ant-switch-checked .ant-switch-handle {
+      background: @primary-color;
+      color: @white;
+    }
+  }
+}
+
+.infinite-scroll-component {
+  overflow-x: hidden !important;
+
+  .ant-spin-spinning {
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+  }
+}
+
+.success-message {
+  height: 65px;
+  margin: auto;
+  max-width: 350px;
+
+  .ant-message-notice-content {
+    background: @grey8;
+  }
+
+  .ant-message-success .anticon {
+    display: none;
+  }
+
+  .message-content {
+    width: fit-content;
+    flex-wrap: nowrap;
+
+    .project-feature-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+  }
+
+  .message-content.rtl {
+    * {
+      text-align: right;
+    }
+  }
+
+  .message-content.ltr {
+    * {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    .project-details-operations {
+      margin: 30px 0 10px 0;
+    }
+
+    .filter {
+      margin: 30px 0;
+    }
+
+    .project-tabs,
+    .project-details {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.tabs {
+  .tab {
+    font-size: @description;
+    line-height: 1.25;
+    border: none;
+    color: @black2;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: @regular;
+  }
+
+  .tab-active {
+    background: @grey8;
+    font-weight: @semi-bold;
+  }
+}

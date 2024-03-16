@@ -1,0 +1,124 @@
+.discussion-topics-modal {
+  .topics-checkbox {
+    width: 100%;
+  }
+
+  .sub-title {
+    font-size: @very-small;
+    text-align: center;
+    margin-bottom: 26px;
+    opacity: 0.7;
+  }
+
+  .ant-checkbox-inner {
+    border-color: @grey6;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background: @grey6;
+    border-color: @grey6;
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: @grey6;
+  }
+
+  .ant-form-item-control-input-content input {
+    opacity: 0;
+  }
+
+  .ant-checkbox + span {
+    font-size: @very-small;
+  }
+
+  .ant-form label {
+    margin-top: 15px;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    display: none;
+  }
+
+  .ant-checkbox-checked::after {
+    border: none;
+  }
+
+  .submit-btn {
+    width: 135px;
+    height: 50px;
+  }
+
+  .footer {
+    margin-top: 40px;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .ant-modal-body {
+    padding-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .selected-items {
+    font-size: @description;
+    margin: 0 30px;
+    opacity: 0.7;
+  }
+
+  .ant-input-affix-wrapper {
+    background: @grey8;
+    border-color: @grey8;
+    height: 40px;
+  }
+
+  .ant-input-affix-wrapper:hover {
+    border-color: @grey8;
+  }
+
+  .ant-modal-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: @h4;
+
+    img {
+      display: none;
+    }
+  }
+
+  .topics-container {
+    height: 220px;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    scrollbar-color: @grey6;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: @grey6;
+  }
+
+  .search-wrapper {
+    .ant-form-item-control-input-content input {
+      opacity: 0.7;
+    }
+  }
+
+  .form .ant-input {
+    min-height: auto;
+  }
+
+  .ant-tag {
+    padding: 8px 12px;
+    background: @grey8;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+}

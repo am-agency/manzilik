@@ -1,0 +1,18 @@
+<svg id="send" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101.277" height="77.987" viewBox="0 0 101.277 77.987">
+    <defs>
+        <filter id="Ellipse_187" x="34.103" y="10.813" width="67.174" height="67.174" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="5.5" result="blur"/>
+            <feFlood flood-opacity="0.071"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <path id="Path_5000" data-name="Path 5000" d="M2.355,34.368l8.777,6.648L41.783,27.393,18.021,46.121V69.107a3.406,3.406,0,0,0,6.011,2.19l10.66-12.666L56.847,75.237a3.406,3.406,0,0,0,5.384-2.043L75.854,5.079a3.406,3.406,0,0,0-4.6-3.831L3.135,28.493a3.406,3.406,0,0,0-.78,5.875Z" transform="translate(-1.003 -1.003)" fill="#bcb39a"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_187)">
+        <ellipse id="Ellipse_187-2" data-name="Ellipse 187" cx="17.087" cy="17.087" rx="17.087" ry="17.087" transform="translate(50.6 24.31)" fill="#fff"/>
+    </g>
+    <g id="c-check" transform="translate(56.847 30.885)">
+        <path id="Path_5001" data-name="Path 5001" d="M10.515,0A10.515,10.515,0,1,0,21.03,10.515,10.546,10.546,0,0,0,10.515,0ZM9.2,14.984,4.732,10.515l1.84-1.84L9.2,11.3l5.258-5.258,1.84,1.84Z" fill="#464774"/>
+    </g>
+</svg>

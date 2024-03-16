@@ -1,0 +1,105 @@
+.signup-form-container {
+  border: solid 1px @grey1;
+  min-height: 200px;
+  box-shadow: @box-shadow-base;
+  background: @white;
+  border-radius: 15px;
+  padding: 20px 30px;
+
+  @media screen and (max-width: 1400px) {
+    padding: 20px;
+  }
+
+  .ant-divider-inner-text {
+    color: @grey6;
+    font-size: @description;
+  }
+  .ant-form-item {
+    margin-bottom: 14px;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-input {
+    border-radius: 16px;
+    background: @white;
+    padding: 10px;
+  }
+
+  .signup-input:focus {
+    border-color: @primary-color;
+    box-shadow: 0px 1px 1px 1px @light-purple;
+  }
+  .signup-btn {
+    border-radius: 8px;
+    display: flex;
+    color: @white;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    font-size: @h6;
+    font-weight: @regular;
+  }
+  .social-btn {
+    margin: 20px auto 13px auto;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: @h6;
+    font-weight: @regular;
+    border-color: @gray8;
+    background-color: @gray8;
+    color: @text-color;
+    text-shadow: none;
+    .social-btn-icon {
+      margin: 0 7px 0 7px;
+    }
+  }
+  .puls-loading-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .terms-conditions-text,
+  .account-text,
+  .subscribe-text {
+    font-size: @span;
+    margin-bottom: 0;
+  }
+
+  .terms-wrapper,
+  .subscribe-wrapper {
+    display: flex;
+    a {
+      color: @google-blue;
+    }
+  }
+
+  .link {
+    text-decoration: underline;
+    color: @google-blue;
+    font-size: @span;
+  }
+
+  .home-auth-title {
+    font-size: @h6;
+  }
+}
+
+.switch-input-wrapper.ant-input-affix-wrapper-rtl {
+  padding: 6px 10px;
+
+  .ant-input {
+    direction: ltr;
+    display: block;
+    text-align: right;
+  }
+}

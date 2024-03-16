@@ -1,0 +1,88 @@
+.confirm-code-container {
+  width: 100%;
+
+  .form-header {
+    font-size: @h5;
+  }
+
+  .timer-wrapper {
+    text-align: center;
+  }
+}
+
+.confirmation-code-wrapper {
+  a.ant-typography,
+  .ant-typography a {
+    color: @google-blue;
+    text-decoration: underline;
+  }
+
+  .resend-code {
+    text-align: center;
+  }
+}
+
+.verification-code-numbers-container.rtl {
+  text-align: right;
+}
+
+.verification-code-numbers-container.ltr {
+  text-align: left;
+}
+
+.verification-code-numbers-container {
+  width: auto !important;
+
+  .styles_react-code-input__CRulA > input {
+    margin-right: 25px;
+    font-size: @h5;
+    border-radius: @border-radius;
+    border: solid 1px @grey6 !important;
+    border-color: @grey6;
+
+    @media screen and (max-width: 1300px) {
+      margin-right: 16px;
+    }
+  }
+
+  .styles_react-code-input__CRulA > input:last-child {
+    margin-right: 0;
+  }
+
+  .styles_react-code-input__CRulA > input:first-child,
+  .styles_react-code-input__CRulA > input:last-child {
+    border-radius: @border-radius;
+    border-color: @grey6;
+    border: solid 1px @grey6;
+  }
+
+  .styles_react-code-input__CRulA > input:focus {
+    border: solid 1px @grey6;
+    caret-color: @grey6;
+  }
+
+  .styles_react-code-input__CRulA > input[value='0'],
+  .styles_react-code-input__CRulA > input[value='1'],
+  .styles_react-code-input__CRulA > input[value='2'],
+  .styles_react-code-input__CRulA > input[value='3'],
+  .styles_react-code-input__CRulA > input[value='4'],
+  .styles_react-code-input__CRulA > input[value='5'],
+  .styles_react-code-input__CRulA > input[value='6'],
+  .styles_react-code-input__CRulA > input[value='7'],
+  .styles_react-code-input__CRulA > input[value='8'],
+  .styles_react-code-input__CRulA > input[value='9'] {
+    border-color: @grey6;
+    background: @grey6;
+  }
+
+  @media screen and (max-width: 600px) {
+    input[type='tel'] {
+      width: 45px !important;
+      height: 40px !important;
+    }
+  }
+}
+
+div.styles_react-code-input-container__tpiKG.verification-code-numbers-container > div {
+  direction: ltr !important;
+}

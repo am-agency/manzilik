@@ -1,0 +1,65 @@
+.step-three-payment {
+  height: 280px !important;
+  overflow-x: auto !important;
+}
+.package-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  border: 1px solid #464774;
+
+  .package-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .package-card-label {
+      font-size: 10px;
+      background-color: #49d259;
+      color: #fff;
+      border-radius: 10px;
+      padding: 2px 5px;
+    }
+
+    .package-card-title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      span {
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    .package-card-price {
+      font-size: 12px;
+      font-weight: bold;
+      span {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: line-through;
+      }
+    }
+  }
+  .package-card-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    .package-card-button {
+      background-color: #464774;
+      border-radius: 12px;
+      padding: 7px 10px;
+      font-size: 12px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      &.disabled {
+        background-color: #ccc;
+        color: #fff;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

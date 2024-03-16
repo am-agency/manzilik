@@ -1,0 +1,82 @@
+.badges-container {
+  position: relative;
+  p {
+    margin: 0px;
+  }
+  .close_icon {
+    position: absolute;
+    top: -24px;
+    right: -26px;
+    cursor: pointer;
+  }
+  .title {
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .bagdes-wrapper {
+    .badge-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0px;
+    }
+    .badge-item {
+      display: flex;
+      gap: 9px;
+      border-bottom: 1px solid rgb(236, 233, 233);
+      margin-top: 12px;
+      padding-bottom: 12px;
+      img {
+        width: 57px;
+        height: 57px;
+      }
+      .badge-content {
+        p:nth-child(1) {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        p:nth-child(2) {
+          font-size: 12px;
+          font-weight: 500;
+        }
+        .tag-counter {
+          font-size: 10px;
+          margin-top: 5px;
+          padding: 5px 10px;
+          background-color: #f5f5f5;
+          border-radius: 20px;
+          width: max-content;
+          border: 1px solid #e1e1e1;
+          span {
+            font-weight: 700;
+          }
+        }
+        .tag-achived {
+          font-size: 10px;
+          margin-top: 5px;
+          padding: 5px 10px;
+          background-color: #e8fbf3;
+          border-radius: 20px;
+          width: max-content;
+          color: #56d49b;
+          border: 1px solid #56d49b;
+          img {
+            width: 16px;
+            height: 16px;
+            margin-inline-end: 5px;
+          }
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rtl {
+  .badges-container {
+    .close_icon {
+      left: -26px;
+      right: auto;
+    }
+  }
+}

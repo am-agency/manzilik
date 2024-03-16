@@ -1,0 +1,50 @@
+.label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+
+  .label-dot {
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .label-container {
+    width: 157px;
+    background-color: #fff;
+    color: #000;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+
+    position: absolute;
+    right: -60px;
+    top: 25px;
+
+    .label-name,
+    .label-desc {
+      text-align: start;
+    }
+    .label-name {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .label-desc {
+      font-size: 12px;
+    }
+    .label-button {
+      background-color: #bcb39a;
+      color: #fff;
+      margin: 0 auto;
+    }
+  }
+}

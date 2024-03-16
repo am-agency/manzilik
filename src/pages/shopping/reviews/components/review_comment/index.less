@@ -1,0 +1,84 @@
+.comments-list-section {
+  .author-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .ant-tag {
+      height: 24px;
+      border-radius: 6px;
+      background-color: @grey8;
+      border-color: @grey8;
+      font-size: @span;
+      display: flex;
+      align-items: center;
+      margin: 0 8px;
+      img {
+        margin-right: 6px;
+        margin-left: 0;
+      }
+    }
+    .ant-tag-rtl {
+      img {
+        margin-left: 6px;
+        margin-right: 0;
+      }
+    }
+    .ant-typography {
+      margin: 0 6px;
+      font-size: @description;
+      color: @text-color;
+    }
+  }
+  .comment-date-rate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .ant-typography {
+      font-size: @very-small;
+      color: @black2;
+      margin: 0 6px;
+    }
+    .ant-rate {
+      line-height: 1;
+      font-size: @p;
+      margin: 0 4px;
+    }
+  }
+
+  .comment-content {
+    .ant-typography {
+      font-size: @very-small;
+      color: @gray10;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+
+      .ant-typography {
+        margin: 0 10px;
+      }
+
+      .ant-btn {
+        border-radius: 8px;
+        background-color: @grey8;
+        border-color: @grey8;
+        max-width: 115px;
+        width: 100%;
+
+        span {
+          font-size: @very-small;
+        }
+
+        .anticon {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+  .ant-list-split {
+    .ant-list-item {
+      border-color: @list-items-border;
+    }
+  }
+}

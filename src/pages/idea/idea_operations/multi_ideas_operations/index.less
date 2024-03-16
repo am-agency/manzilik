@@ -1,0 +1,56 @@
+.mutli-select-idea-modal {
+  position: fixed;
+  bottom: 50px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 50px;
+  margin: auto;
+  .mutli-select-idea-inner-content {
+    box-shadow: @card-box-shadow;
+    border-radius: 10px;
+    flex: 1;
+    padding: 5px 0px;
+    background-color: @white;
+  }
+  .operation-btn {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    margin: 10px 20px;
+    justify-content: center;
+    color: @primary-color;
+    font-size: @very-small;
+    background-color: @grey8;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .operation-btns-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .number-of-items-text {
+    text-align: end;
+    color: @primary-color;
+    font-size: @very-small;
+  }
+  .cancel-btn {
+    cursor: pointer;
+    font-size: @description;
+  }
+  .operation-btn-disabled {
+    color: @grey6;
+    svg {
+      margin: 0px 2px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .number-of-items-text {
+      display: none;
+    }
+  }
+}

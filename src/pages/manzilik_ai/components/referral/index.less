@@ -1,0 +1,134 @@
+// src/components/Referral.scss
+
+.referral {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #3c3d69;
+  padding: 25px;
+  border-radius: 10px;
+  margin-block: 20px;
+  .referral-column {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .referral-content {
+    display: flex;
+    gap: 8px;
+  }
+  .icon {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    gap: 8px;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.referral-small {
+  width: 240px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-block: 16px;
+  cursor: default;
+  .input-container input {
+    width: 50%;
+  }
+  .referral-small-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 2px;
+    .clickable {
+      cursor: pointer;
+    }
+
+    img {
+      width: 27px;
+      height: 27px;
+    }
+    .title {
+      font-size: 12px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #000;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: #5a5a5a;
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+.referral-modal-container {
+  width: 390px !important;
+  font-family: cairo;
+  p {
+    margin: 0;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #000;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #000;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .list {
+      display: flex;
+      gap: 8px;
+      align-self: flex-start;
+      img {
+        width: 30px;
+      }
+    }
+    .input-modal {
+      padding: 12px;
+      background-color: #fafafa;
+      border-radius: 10px;
+      border: 1px dashed #ccc;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .referral {
+    flex-direction: column;
+    .referral-column {
+      width: 100%;
+    }
+  }
+  .referral-small {
+    width: 100%;
+  }
+  .referral-modal-container {
+    width: 100% !important;
+  }
+}

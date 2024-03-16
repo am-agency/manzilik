@@ -1,0 +1,254 @@
+.checkout-process {
+  margin-top: 31px;
+
+  .basket-title {
+    font-weight: @bold;
+    font-size: @h5;
+  }
+
+  .basket-container {
+    border-radius: 8px;
+    box-shadow: @basket-shadow;
+    background-color: @white;
+    min-height: 408px;
+    padding: 38px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .steps-wrapper {
+    min-width: 646px;
+    background: @gray-background;
+    border-radius: 12px;
+    height: 39px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .alert {
+      margin-top: 1em;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-width: fit-content;
+    }
+  }
+
+  .steps-wrapper {
+    .ant-steps {
+      padding: 0 5px;
+
+      .ant-steps-item-title {
+        font-size: @description;
+        padding-top: 3px;
+      }
+    }
+
+    .ant-steps-rtl {
+      .ant-steps-item-finish,
+      .ant-steps-item-active {
+        .ant-steps-item-container {
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+
+    .ant-steps-item-finish,
+    .ant-steps-item-active {
+      .ant-steps-item-container {
+        background: @description-blue;
+        height: 39px;
+        border-radius: 12px;
+        width: fit-content;
+        padding: 0 10px 0 10px;
+
+        .ant-steps-item-content > .ant-steps-item-title,
+        .ant-steps-item-title:hover {
+          color: @white !important;
+        }
+      }
+    }
+
+    .ant-steps-rtl.ant-steps-horizontal:not(.ant-steps-label-vertical)
+      .ant-steps-item:last-child
+      .ant-steps-item-title {
+      padding-left: 8px;
+    }
+
+    .ant-steps-item-title::after {
+      height: 3px;
+      top: 18px;
+      margin: 0 5px;
+      width: 100px;
+      left: 135% !important;
+    }
+  }
+
+  .steps-content {
+    padding: 15px 30px;
+    height: auto;
+    overflow-y: initial;
+  }
+
+  .ant-table-thead > tr > th {
+    background: transparent;
+  }
+
+  .ant-table-cell {
+    width: 0;
+  }
+
+  .price-and-tax {
+    height: 336px;
+    border-radius: 8px;
+    box-shadow: @basket-shadow;
+    background-color: @white;
+
+    .head {
+      padding: 17px 31px 0 17px;
+
+      .original-price {
+        font-weight: @semi-bold;
+      }
+    }
+
+    .head,
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .body {
+      padding: 0px 31px 0 17px;
+
+      .text-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .ant-input-group.ant-input-group-compact {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .ant-input {
+        height: 50px;
+        border-radius: 10px !important;
+        background-color: @grey2;
+        border-color: @grey2;
+      }
+
+      .ant-btn,
+      .ant-btn:hover {
+        border-radius: 10px !important;
+        position: absolute;
+        height: 42px;
+        background: @gray7;
+        border-color: @gray7;
+        color: @white;
+        left: unset;
+        right: 7px;
+      }
+
+      .ant-btn-rtl,
+      .ant-btn-rtl:hover {
+        left: 7px;
+        right: unset;
+      }
+
+      .ant-input-group .ant-input:hover {
+        z-index: 0;
+      }
+    }
+
+    .footer {
+      padding: 0 31px 0 17px;
+
+      .final-price-text {
+        font-weight: @bold;
+        font-size: @h6;
+      }
+
+      .final-price {
+        color: @description-blue;
+        font-size: @h6;
+        font-weight: @bold;
+      }
+    }
+  }
+
+  .next-btn {
+    width: 100%;
+    margin: 0 5px;
+  }
+
+  .services-icons {
+    margin: 0 5px;
+
+    .service-container {
+      text-align: center;
+
+      h5 {
+        font-weight: @bold;
+      }
+    }
+  }
+
+  .confirm-order {
+    width: 100%;
+  }
+
+  .prev-btn {
+    background: @gray19;
+    border-color: @gray19;
+  }
+
+  @media screen and (max-width: 768px) {
+    .step-one {
+      .checkout-product-details {
+        min-width: 90px;
+      }
+
+      .quantity-container {
+        display: flex;
+      }
+    }
+  }
+}
+
+.product-status-box {
+  width: 100%;
+  background: @gray20;
+  padding: 10px 20px;
+  @media screen and (max-width: 480px) {
+    padding: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  button {
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+      width: 110px;
+      padding: 4px 10px;
+    }
+  }
+
+  .status-label {
+    font-weight: 800;
+  }
+
+  .status-canceled-label {
+    color: @gray13;
+  }
+}
+.rtl {
+  .checkout-process {
+    .steps-wrapper {
+      .ant-steps-item-title::after {
+        right: 135%;
+        left: auto;
+      }
+    }
+  }
+}

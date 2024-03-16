@@ -1,0 +1,30 @@
+.App {
+  // height: 100vh;
+  display: flex;
+}
+.sendbird-app__channellist-wrap,
+.sendbird-app__conversation-wrap {
+  height: 90vh;
+  overflow: scroll;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+}
+.sendbird-app__conversation-wrap {
+  flex: 1;
+}
+
+.chat-mobile-container {
+  height: 100vh;
+}
+
+/* Cheap trick to hide info button */
+.sendbird-chat-header__right__info {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sendbird-app__conversation-wrap {
+    width: 100%;
+  }
+}

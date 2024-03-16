@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Rectangle_3364" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.082"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="trash-can" transform="translate(8.851 5.851)">
+    <g transform="matrix(1, 0, 0, 1, -8.85, -5.85)" filter="url(#Rectangle_3364)">
+      <g id="Rectangle_3364-2" data-name="Rectangle 3364" transform="translate(9 6)" fill="#f6f6f6" stroke="#fff" stroke-width="1">
+        <rect width="30" height="30" rx="15" stroke="none"/>
+        <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="none"/>
+      </g>
+    </g>
+    <g id="trash" transform="translate(3.149 3.148)">
+      <path id="Path_13458" data-name="Path 13458" d="M19,10c-1,9-1,11-7,11S6,19,5,10" fill="none" stroke="#0a0c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_13459" data-name="Path 13459" d="M3,7a31.393,31.393,0,0,1,9-1,31.393,31.393,0,0,1,9,1" fill="none" stroke="#0a0c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_13460" data-name="Path 13460" d="M9,6c.375-1.5,0-3,3-3s2.625,1.5,3,3" fill="none" stroke="#0a0c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

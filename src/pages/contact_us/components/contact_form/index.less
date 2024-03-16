@@ -1,0 +1,55 @@
+.contact_form {
+  padding: 40px;
+  box-shadow: 0 10px 30px @tag-box-shadow-color;
+  border-radius: 10px;
+  .ant-typography {
+    font-size: @very-small;
+    font-weight: @bold;
+    &:after {
+      display: inline-block;
+      margin: 0 4px;
+      color: @red;
+      font-size: @description;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+
+  .ant-input-textarea {
+    &:after {
+      font-size: @very-small;
+      font-weight: @bold;
+      color: @text-color;
+    }
+  }
+  .msg-textarea-ar {
+    &:after {
+      position: absolute;
+      bottom: 36px;
+      left: 21px;
+    }
+  }
+  .msg-textarea-en {
+    &:after {
+      position: absolute;
+      bottom: 36px;
+      right: 21px;
+    }
+  }
+  .submit-button-item {
+    .ant-form-item-control-input-content {
+      display: flex;
+      justify-content: flex-end;
+      .ant-btn {
+        max-width: 290px;
+        width: 100%;
+      }
+    }
+  }
+  .ant-form-item-explain-error {
+    font-size: @span;
+    font-weight: @bold;
+    margin-top: 5px;
+  }
+}

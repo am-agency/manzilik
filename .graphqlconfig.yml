@@ -1,0 +1,18 @@
+projects:
+  flash-qa-graphql:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/graphql
+        region: eu-central-1
+        apiId: m26qcxwahvcatd7t6b5klorwbi
+        maxDepth: 4
+extensions:
+  amplify:
+    version: 3

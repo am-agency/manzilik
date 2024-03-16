@@ -1,0 +1,37 @@
+.suggested-image-item {
+  position: relative;
+  cursor: pointer;
+  max-width: 263px;
+  img:nth-child(1) {
+    max-height: 263px;
+    border-radius: 10px;
+    margin-bottom: 9px;
+    width: 100%;
+    &.unchecked {
+      filter: opacity(0.5);
+    }
+  }
+  .full-screen {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+  }
+  .check-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: green;
+  }
+}
+
+.rtl {
+  .suggested-image-item {
+    .full-screen {
+      right: 8px;
+      left: auto;
+    }
+  }
+}

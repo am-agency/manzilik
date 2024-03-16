@@ -1,0 +1,155 @@
+.user-box {
+  background-color: @white;
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 30px;
+  box-shadow: @card-box-shadow;
+  border-radius: 20px;
+  z-index: 100;
+  .ant-col {
+    width: 100%;
+  }
+
+  .user-box-header {
+    margin-bottom: 10px;
+    padding: 25px 16px 0 16px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    .avatar-md {
+      display: none;
+    }
+    .avatar-lg {
+      display: block;
+      cursor: pointer;
+    }
+    .name-link-wrapper {
+      width: 100%;
+      .user-name-text {
+        color: @black;
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+        text-transform: capitalize;
+      }
+    }
+    .edit-profile {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+  }
+
+  .view-link {
+    font-size: @very-small;
+    padding: 9px;
+    margin-inline: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-weight: @regular;
+    line-height: 1.25;
+    border: 1px solid rgba(212, 212, 214, 1);
+    border-radius: 10px;
+    text-align: center;
+    .projects-count {
+      margin-inline-start: 3px;
+    }
+  }
+  .loading-project-placeholder {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    span {
+      border-color: @light-grey6;
+    }
+  }
+  .latest-projects-wrapper {
+    padding-top: 6px;
+  }
+  .user-box-item {
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    padding-inline: 16px;
+    .square-40 {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .thumbnail-overlay {
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: @light-black;
+    }
+    .add-project-btn-text {
+      background-color: rgba(245, 245, 245, 1);
+      border: 1px dashed rgba(212, 212, 214, 1);
+      padding: 7px;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .project-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .add-project-btn-text,
+    .project-name-text {
+      display: block;
+
+      font-size: @very-small;
+      line-height: 1.25;
+      font-weight: @bold;
+      color: @text-color;
+    }
+    .project-name-text {
+      max-width: 80%;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .add-project-btn-text {
+      font-weight: @regular;
+      margin-bottom: 6px;
+    }
+    .items-number-text {
+      font-size: @very-small;
+      line-height: 1.25;
+      margin: 0px 20px;
+      margin-top: 8px;
+      color: @mid-light-black;
+    }
+  }
+  .horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(245, 245, 245, 1);
+  }
+  @media screen and (max-width: 1200px) {
+    .user-box-header {
+      .avatar-md {
+        display: block;
+        cursor: pointer;
+      }
+      .avatar-lg {
+        display: none;
+      }
+      .name-link-wrapper {
+        padding-inline: 11px;
+      }
+    }
+    .user-box-item {
+      padding-inline: 16px;
+    }
+  }
+}

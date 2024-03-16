@@ -1,0 +1,27 @@
+.banner {
+  height: 476px;
+  border-radius: 10px;
+  background-color: @grey3;
+
+  .img-wrapper {
+    height: 476px;
+  }
+
+  .content {
+    text-align: center;
+    font-weight: bold;
+    h2 {
+      font-size: @sub-heading;
+      b {
+        font-size: @heading;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    height: auto;
+    .content {
+      padding: 50px 0;
+    }
+  }
+}

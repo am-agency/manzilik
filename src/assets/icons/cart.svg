@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+    <defs>
+        <style>
+            .cls-2{fill:#bcb39a}
+        </style>
+    </defs>
+    <g id="Group_1372" data-name="Group 1372" transform="translate(-1087 -29)">
+        <g id="Group_1292" data-name="Group 1292">
+            <g id="shopping-cart" transform="translate(1088 -14)">
+                <path id="Path_780" data-name="Path 780" class="cls-2" d="M.631 47.262H3.35l3.028 10.9a.631.631 0 0 0 .608.462h11.362a.631.631 0 0 0 .606-.455l2.567-8.837a.631.631 0 0 0-.606-.807H5.011l-.573-2.063A.631.631 0 0 0 3.829 46H.631a.631.631 0 0 0 0 1.262zm19.443 2.525-2.2 7.575H7.465l-2.1-7.575z"/>
+                <path id="Path_781" data-name="Path 781" class="cls-2" d="M169.787 377.894a1.894 1.894 0 1 0-1.894 1.894 1.9 1.9 0 0 0 1.894-1.894zm-2.525 0a.631.631 0 1 1 .631.631.632.632 0 0 1-.631-.631z" transform="translate(-159.014 -316.113)"/>
+                <path id="Path_782" data-name="Path 782" class="cls-2" d="M349.787 377.894a1.894 1.894 0 1 0-1.894 1.894 1.9 1.9 0 0 0 1.894-1.894zm-2.525 0a.631.631 0 1 1 .631.631.632.632 0 0 1-.631-.631z" transform="translate(-331.44 -316.113)"/>
+                <path id="Path_783" data-name="Path 783" class="cls-2" d="M181.631 197.262h8.837a.631.631 0 1 0 0-1.262h-8.837a.631.631 0 1 0 0 1.262z" transform="translate(-173.383 -143.688)"/>
+                <path id="Path_784" data-name="Path 784" class="cls-2" d="M217.943 256h-6.312a.631.631 0 1 0 0 1.262h6.312a.631.631 0 1 0 0-1.262z" transform="translate(-202.121 -201.163)"/>
+            </g>
+        </g>
+    </g>
+</svg>

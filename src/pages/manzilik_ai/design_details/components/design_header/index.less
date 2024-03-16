@@ -1,0 +1,38 @@
+.design-header-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 354px;
+  .generatedImage {
+    width: 100%;
+    max-height: 354px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .selected-design-toggle {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-header-wrapper {
+    .selected-design-toggle {
+      bottom: 9px;
+      right: auto !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+    }
+    img {
+      height: 320px;
+    }
+  }
+}
+
+.rtl {
+  .design-header-wrapper {
+    .selected-design-toggle {
+      left: auto;
+      right: 18px;
+    }
+  }
+}

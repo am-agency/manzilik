@@ -1,0 +1,65 @@
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
+      - qa
+      - develop
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: 'eu-central-1'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update && \
+          sudo apt-get install -y python3-pip && \
+          sudo pip3 install awscli --upgrade --user
+      - name: Set stage based on branch name
+        run: |
+          if [[ ${{ github.ref_name }} == 'develop' ]]; then
+            echo "Setting stage to dev"
+            echo "STAGE=dev" >> $GITHUB_ENV
+          elif [[ ${{ github.ref_name }} == 'qa' ]]; then
+            echo "Setting stage to qa"
+            echo "STAGE=qa" >> $GITHUB_ENV
+            echo "SENDBIRD_APP_ID=${{ vars.QA_SENDBIRD_APP_ID }}" >> $GITHUB_ENV
+            echo "SENTRY_TOKEN=${{ vars.QA_SENTRY_TOKEN }}" >> $GITHUB_ENV
+          elif [[ ${{ github.ref_name }} == 'master' ]]; then
+            echo "Setting stage to prod"
+            echo "STAGE=prod" >> $GITHUB_ENV
+            echo "SENDBIRD_APP_ID=${{ vars.PROD_SENDBIRD_APP_ID }}" >> $GITHUB_ENV
+            echo "SENTRY_TOKEN=${{ vars.PROD_SENTRY_TOKEN }}" >> $GITHUB_ENV
+          else
+            echo "Branch name does not match any stage"
+            exit 1
+          fi
+      - name: Prepare Environments
+        run: |
+          ./scripts/prepare_env.sh ${{ env.STAGE }} eu-central-1 ${{ env.SENTRY_TOKEN }} ${{ env.SENDBIRD_APP_ID }}
+      - name: Remove existsing node_modules
+        run: |
+          rm -rf node_modules
+      - name: Install dependencies
+        run: |
+          npm cache clean --force
+          npm install --legacy-peer-deps
+      - name: Staging Build
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+        run: |
+          npm run build
+      - name: Deploy
+        run: |
+          aws s3 sync build s3://manz-${{ env.STAGE }}.manzilik.com --acl public-read

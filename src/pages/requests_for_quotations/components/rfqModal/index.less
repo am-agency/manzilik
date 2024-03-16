@@ -1,0 +1,44 @@
+.rfq-modal-wrapper {
+  padding: 16px;
+  .rfq-modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    .rfq-modal-header {
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .sub-title {
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+    .rfq-modal-body {
+      width: 100%;
+    }
+    .rfq-modal-footer {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      button {
+        width: 50%;
+      }
+      .btn-one {
+        background-color: #464774;
+        color: #fff;
+        &.cancel-mode {
+          background-color: rgba(255, 59, 48, 0.12);
+          color: #ff3b30;
+          span {
+            border-color: #ff3b30;
+          }
+        }
+      }
+    }
+  }
+}

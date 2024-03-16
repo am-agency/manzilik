@@ -1,0 +1,49 @@
+.about-me {
+  background-color: @gray11;
+  border-radius: 20px;
+  .awards {
+    background-color: @grey2;
+    padding: 30px 35px;
+    border-radius: 20px;
+    .text {
+      line-height: 1;
+      h4 {
+        font-size: @heading-5;
+        font-weight: @bold;
+      }
+      span.ant-typography {
+        font-size: @very-small;
+      }
+    }
+    .award-container-ar {
+      margin-left: 53px;
+      @media screen and (max-width: 720px) {
+        margin-bottom: 25px;
+      }
+    }
+    .award-container-en {
+      margin-right: 53px;
+      @media screen and (max-width: 720px) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .img-container {
+      width: 55px;
+      height: 55px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .about-me-brief {
+    padding: 15px 35px;
+    .title {
+      font-weight: @bold;
+      font-size: @h6;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+  }
+}

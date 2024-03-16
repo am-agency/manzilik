@@ -1,0 +1,127 @@
+.create-project-container,
+.general-form {
+  background-color: @white;
+
+  .header {
+    padding-bottom: 18px;
+
+    .header-text {
+      font-weight: @semi-bold;
+      font-size: @h6;
+      color: @primary-color;
+      margin: 0 5px;
+    }
+  }
+
+  .ant-typography,
+  .ant-input {
+    font-size: @very-small;
+  }
+
+  .project-name-text {
+    color: @black;
+  }
+
+  .private-text {
+    margin: 0 14px;
+    font-size: @description;
+    color: @black2;
+    line-height: 1.21;
+
+    @media screen and (max-width: 687px) {
+      margin: 5px 0;
+    }
+  }
+
+  .ant-form-item-explain-error {
+    font-size: @small;
+  }
+
+  .ant-input {
+    background-color: @grey8;
+    border: 0;
+    height: 50px;
+    margin-top: 12px;
+  }
+
+  .ant-form-item-has-error .ant-input {
+    background-color: @grey8;
+    border-color: red;
+  }
+
+  .ant-form-item-explain-error {
+    font-size: @span;
+  }
+
+  .ant-input:focus {
+    border: solid 0.5px @dark-purple;
+    background-color: @white;
+    box-shadow: 0 0 0 @white;
+  }
+
+  .optional-text {
+    font-size: @very-small;
+    color: @grey5;
+  }
+
+  .choose-space-label {
+    margin-bottom: 12px;
+  }
+
+  .ant-radio-button-wrapper {
+    border-radius: 19px !important;
+    background: @white;
+    color: @text-color !important;
+    font-size: @small;
+    border: solid 1px @light-grey6;
+    margin: 12px 8px;
+    height: 32px;
+
+    ::before {
+      background-color: @white;
+    }
+
+    .ant-radio-button span {
+      padding: 8px 14px;
+    }
+  }
+
+  .room-types-item {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 687px) {
+    .room-types-item.rtl {
+      .ant-radio-button-wrapper {
+        margin: 6px;
+        margin-right: 0;
+      }
+    }
+
+    .room-types-item.ltr {
+      .ant-radio-button-wrapper {
+        margin: 6px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    display: none;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    background-color: @light-grey6 !important;
+    border-color: @light-grey6 !important;
+    border: 0;
+  }
+
+  .margin-bottom-20 {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .ant-radio-button-wrapper.ant-radio-button-wrapper-rtl {
+    border-right-width: 1px;
+  }
+}

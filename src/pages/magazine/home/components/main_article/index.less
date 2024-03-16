@@ -1,0 +1,70 @@
+.main-article {
+  border-radius: 10px;
+  box-shadow: @magazine-card-shadow;
+  font-size: @description;
+  height: 336px;
+  padding: 26px 14px;
+  margin: 0 !important;
+
+  @media screen and (max-width: 991px) {
+    height: auto;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .img-wrapper {
+    max-height: 282px;
+  }
+
+  .card-title {
+    font-size: @h5;
+    font-weight: @semi-bold;
+  }
+
+  .comment-wrapper {
+    background: @light-gold;
+    border-radius: 48px;
+    padding: 0 2px;
+
+    .comment-icon {
+      border-radius: 48px;
+      width: 27px;
+      height: 27px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .comments-count {
+      padding: 0 10px;
+    }
+  }
+
+  .card-description,
+  .by-text {
+    font-size: @very-small;
+  }
+
+  .main-article-brief {
+    width: 60%;
+    max-height: 85px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .magazine-author {
+    font-weight: @semi-bold;
+    font-size: @very-small;
+    text-decoration: underline;
+  }
+}

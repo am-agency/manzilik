@@ -1,0 +1,33 @@
+.custom-carousal-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+
+  .arrows {
+    position: absolute;
+    font-size: @h4;
+    border-radius: 50%;
+    border: none;
+    color: @primary-color;
+    cursor: pointer;
+    background: @white;
+    width: 50px;
+    height: 50px;
+    box-shadow: @arrows-shadow;
+    z-index: 1;
+  }
+
+  .arrows::after {
+    display: none;
+  }
+
+  .left-arrow {
+    left: 0px;
+  }
+
+  .right-arrow {
+    right: 0px;
+  }
+}

@@ -1,0 +1,86 @@
+.project-card {
+  position: relative;
+  margin: 0 8px;
+  margin-bottom: 30px;
+  height: 250px;
+  cursor: pointer;
+
+  &.preview {
+    width: 250px;
+    height: 250px;
+    .project-name {
+      max-width: calc(100% - 20px);
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .cover-img-wrapper {
+    height: 161px;
+    position: relative;
+
+    .grey-bg {
+      background-color: @grey3;
+    }
+  }
+
+  .ant-card-body {
+    border: 0;
+    box-shadow: @card-box-shadow;
+    padding: 20px 16px;
+    color: @mid-light-black;
+  }
+
+  .project-name-link {
+    width: 85%;
+    display: flex;
+
+    .project-name {
+      max-width: 90%;
+      overflow-wrap: break-word;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .ant-card-meta-title {
+    span {
+      font-size: @description;
+      color: @black2;
+    }
+  }
+
+  .ant-card-meta-description {
+    span {
+      font-size: @span;
+      color: @black2;
+    }
+  }
+
+  .ellipsis-btn {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    margin: 20px 0;
+  }
+
+  .ellipsis-btn-rtl {
+    left: 20px;
+  }
+
+  .ellipsis-btn-ltr {
+    right: 20px;
+  }
+
+  .edit-icon {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .dot-divider {
+    margin: 0 5px;
+  }
+}

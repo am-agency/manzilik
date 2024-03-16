@@ -1,0 +1,51 @@
+.design-rating-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .rating-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .rating-main {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px 12.5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 58px;
+
+    .rating-success {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 600;
+      gap: 10px;
+      padding: 0px 60px;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background-color: #464774;
+      color: #fff;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      &.disabled {
+        background-color: rgba(70, 71, 116, 0.4);
+        color: rgba(255, 255, 255, 1);
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .design-rating-wrapper {
+    margin-top: 107px;
+  }
+}

@@ -1,0 +1,53 @@
+.related-product-wrapper {
+  min-width: 106px;
+  height: 147px;
+  position: relative;
+  cursor: pointer;
+  .price-container {
+    position: absolute;
+    bottom: 8px;
+    .price-contain {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      padding: 0px 9px;
+      .price-before {
+        font-size: 10px;
+        color: #6e6e6e;
+        text-decoration: line-through;
+      }
+      .current-price {
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .currency {
+        font-size: 8px;
+      }
+    }
+  }
+
+  .ant-card-body {
+    padding: 0;
+  }
+  .ant-card-cover {
+    height: 82px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .ant-card {
+    height: 100%;
+    width: 100%;
+  }
+  .ant-card-meta-title {
+    font-size: 12px;
+    margin-top: 11px;
+    padding: 0px 9px;
+    white-space: normal;
+    text-overflow: unset;
+    line-height: 1.3;
+  }
+}

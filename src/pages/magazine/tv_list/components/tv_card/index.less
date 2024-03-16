@@ -1,0 +1,43 @@
+.tv-card {
+  border-radius: 10px;
+  box-shadow: @card-box-shadow;
+  font-size: @very-small;
+  margin-bottom: 24px;
+  height: 400px;
+
+  .tv-card-img {
+    height: 323px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @media screen and (max-width: 992px) {
+      height: 250px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 200px;
+    }
+  }
+
+  .description {
+    padding: 20px;
+  }
+
+  .tv-title {
+    font-size: @h6;
+  }
+
+  .watch-now-btn {
+    position: absolute;
+    border-color: transparent;
+
+    .anticon.anticon-play-circle {
+      color: @white;
+      font-size: 50px;
+      box-shadow: @card-box-shadow;
+    }
+  }
+}

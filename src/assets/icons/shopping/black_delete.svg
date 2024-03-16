@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+    <g data-name="Group 462" transform="translate(-456 -1045)">
+        <rect data-name="Rectangle 180" width="29" height="29" rx="8" transform="translate(456 1045)" style="fill:#f5f5f5"/>
+        <g data-name="Group 387">
+            <path data-name="Path 353" d="M0 0h18.376v18.376H0z" style="fill:none" transform="translate(461.313 1050.313)"/>
+            <path data-name="Line 63" transform="translate(464.394 1056.002)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none" d="M0 0h11.732"/>
+            <path data-name="Line 64" transform="translate(469.608 1058.609)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none" d="M0 0v5.214"/>
+            <path data-name="Line 65" transform="translate(472.215 1058.609)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none" d="M0 0v5.214"/>
+            <path data-name="Path 354" d="m5 7 .766 8.905A1.508 1.508 0 0 0 7.3 17.39h6.125a1.508 1.508 0 0 0 1.531-1.484L15.719 7" transform="translate(460.141 1049.002)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+            <path data-name="Path 355" d="M9 6.063v-2.3A.766.766 0 0 1 9.766 3h3.063a.766.766 0 0 1 .766.766v2.3" transform="translate(459.204 1049.61)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+        </g>
+    </g>
+</svg>

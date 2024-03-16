@@ -1,0 +1,47 @@
+.inadmissible-container {
+  top: 15%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff8eb;
+  border: 1px solid #ffba3c;
+  border-radius: 12px;
+  padding: 10px 14px;
+  z-index: 1;
+  width: fit-content;
+  margin-block: 20px;
+  justify-content: space-between;
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+  .icon {
+    color: #ffba3c;
+  }
+
+  .text {
+    color: black;
+    width: 820px;
+    @media screen and (max-width: 1024px) {
+      width: unset !important;
+    }
+  }
+
+  .button {
+    background-color: #ffba3c;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffa83c;
+    }
+  }
+}

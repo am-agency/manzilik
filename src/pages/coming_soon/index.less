@@ -1,0 +1,118 @@
+.coming-soon {
+  margin-top: 70px;
+
+  .coming-soon-header-container {
+    text-align: center;
+    z-index: 1;
+    margin-top: -55px;
+
+    .coming-soon-signature {
+      color: @grey6;
+      font-size: @large-head;
+      font-family: @signature;
+    }
+
+    .coming-soon_title {
+      color: @primary-color;
+      font-weight: @bold;
+      font-size: @large-head;
+    }
+
+    .coming-soon_description {
+      color: @primary-color;
+      font-size: @h5;
+      margin-top: 10px;
+    }
+  }
+
+  .message-container {
+    bottom: unset;
+    padding: 0 10px;
+  }
+
+  .right-message-container {
+    width: 234px;
+    background-image: linear-gradient(to right, @list-items-border, @white);
+
+    @media screen and (max-width: 876px) {
+      width: 100px;
+      right: -40px !important;
+      top: -40px;
+    }
+  }
+
+  .right-message-container.ar {
+    right: 0;
+  }
+
+  .right-message-container.en {
+    left: 0;
+    right: unset;
+  }
+
+  .left-message-container.ar {
+    left: 50px;
+    right: unset;
+  }
+
+  .left-message-container.en {
+    right: 50px;
+    left: unset;
+  }
+
+  .left-body-message.ar {
+    left: 0;
+    right: unset;
+  }
+
+  .right-body-message.en {
+    right: 0;
+    left: unset;
+  }
+
+  .left-message-container {
+    background-image: linear-gradient(to right, @gray12, @white);
+    width: 755px;
+
+    @media screen and (max-width: 876px) {
+      width: auto;
+      background: transparent;
+      left: -20px !important;
+      top: -40px;
+    }
+  }
+
+  .ant-form {
+    z-index: 1;
+  }
+
+  .features {
+    min-height: 350px;
+    background-position: top;
+
+    .img-fit-content {
+      background-color: transparent;
+      width: auto;
+      margin-top: -400px;
+
+      @media screen and (max-width: 876px) {
+        margin-top: -200px;
+      }
+    }
+  }
+
+  .right-body-message {
+    background: none;
+    right: 20px;
+  }
+
+  .left-body-message {
+    height: 131px;
+    left: 0;
+  }
+
+  .social-media-container {
+    margin-top: -70px;
+    width: 100%;
+  }
+}

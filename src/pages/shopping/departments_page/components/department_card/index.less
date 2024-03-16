@@ -1,0 +1,62 @@
+.department-card {
+  height: 360px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 5px;
+
+  .card-head {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: @text-color;
+    padding-top: 38px;
+    .explore-button {
+      display: inline-block;
+    }
+
+    h4 {
+      font-size: @h4;
+      font-weight: bold;
+      line-height: 1.85;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: @description;
+      line-height: 1.86;
+      margin: 0 15px;
+    }
+  }
+
+  .img-wrapper {
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    img.ltr {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.gray-background {
+  background: @gray-bg;
+}
+
+.blue-background {
+  background: @blue-background;
+}
+
+.gold-background {
+  background: @gold-background;
+}
+
+.department-card:first-child {
+  margin: 17px 10px 15px 10px;
+}

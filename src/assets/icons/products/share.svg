@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Group_1565" data-name="Group 1565" transform="translate(-1204 -23)">
+    <rect id="Rectangle_156" data-name="Rectangle 156" width="44" height="44" rx="8" transform="translate(1204 23)" fill="#464674"/>
+  </g>
+  <g id="Group_398" data-name="Group 398" transform="translate(-1204 -18)">
+    <path id="Path_315" data-name="Path 315" d="M0,0H24V24H0Z" transform="translate(1214 28)" fill="none"/>
+    <circle id="Ellipse_39" data-name="Ellipse 39" cx="3" cy="3" r="3" transform="translate(1217 37)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="Ellipse_40" data-name="Ellipse 40" cx="3" cy="3" r="3" transform="translate(1229 31)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="Ellipse_41" data-name="Ellipse 41" cx="3" cy="3" r="3" transform="translate(1229 43)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_46" data-name="Line 46" y1="3.4" x2="6.6" transform="translate(1222.7 35.3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_47" data-name="Line 47" x2="6.6" y2="3.4" transform="translate(1222.7 41.3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

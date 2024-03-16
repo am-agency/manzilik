@@ -1,0 +1,102 @@
+.product-card-container {
+  margin: 0 10px 20px 10px;
+  background-color: @white;
+  box-shadow: @card-box-shadow;
+  font-size: @description;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 20px @gray8;
+
+  .product-photo {
+    background-color: @white;
+    max-height: 183px;
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+
+  .status-label {
+    z-index: 2;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    color: @white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+  }
+
+  .status-label.rtl {
+    right: 15px;
+    margin: 0;
+  }
+
+  .details-wrapper {
+    padding: 20px 16px;
+
+    .product-name {
+      margin-bottom: 11px;
+    }
+
+    .client-name-wrapper {
+      margin-bottom: 11px;
+      cursor: pointer;
+    }
+
+    .price {
+      font-size: @h6;
+      font-weight: @bold;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .extra.link {
+      font-size: @very-small;
+      font-weight: @regular;
+    }
+
+    .by {
+      font-weight: @bold;
+    }
+
+    .rate,
+    .rate .ant-rate,
+    .ant-rate .anticon {
+      font-size: @small;
+    }
+
+    .rate {
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      .rate-number {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.attributes-info {
+  display: flex;
+  padding: 8px 0;
+  background-color: @gray-background;
+  justify-content: space-between;
+  align-items: center;
+
+  .attribute-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    &.dimensions {
+      margin: 0 4px;
+    }
+  }
+
+  .multi-colors,
+  .color-box.large {
+    width: 16px;
+    height: 16px;
+  }
+}

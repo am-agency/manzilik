@@ -1,0 +1,24 @@
+.prof-actions {
+  p {
+    margin-bottom: 0px;
+  }
+  display: flex;
+  gap: 12px;
+  margin-inline-start: 12px;
+  @media screen and (max-width: 768px) {
+    margin-top: 27px;
+    margin-inline-start: 8px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 0px;
+  }
+}
+.ltr {
+  .prof-actions {
+    .send-request {
+      img {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

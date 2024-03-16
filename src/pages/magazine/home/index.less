@@ -1,0 +1,147 @@
+.magazine,
+.tv-list-page {
+  font-size: @very-small;
+
+  .side-bar-title {
+    font-size: @h6;
+    font-weight: @bold;
+    margin-bottom: 15px;
+  }
+
+  .side-bar-subtitle {
+    color: @dark-purple;
+    font-weight: @bold;
+    margin: 15px 0;
+  }
+
+  .side-bar-menu-item {
+    margin: 15px 0;
+  }
+
+  .sub-children-wrapper {
+    .side-bar-menu-item,
+    .side-bar-subtitle {
+      color: @dark-purple;
+      margin: 15px 10px;
+      font-weight: @regular;
+    }
+
+    .side-bar-subtitle {
+      color: @black;
+      text-decoration-line: underline;
+    }
+  }
+
+  .anticon.anticon-play-circle {
+    color: @dark-purple;
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  .list-title {
+    font-weight: @bold;
+    font-size: @h4;
+  }
+
+  .posts-number-text {
+    font-size: @very-small;
+  }
+
+  .post-text {
+    opacity: 0.7;
+  }
+
+  .pagination {
+    font-size: @description;
+
+    .pagination-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      max-width: 500px;
+    }
+
+    .pagination-num {
+      margin: 0 5px;
+      padding: 10px 15px;
+      border-radius: 2px;
+      font-size: @h5;
+      cursor: pointer;
+      max-width: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex: 1;
+      text-overflow: clip;
+    }
+
+    .pagination-num.selected {
+      background-color: @grey8;
+    }
+
+    @media screen and(max-width: 576px) {
+      font-size: 0;
+
+      .pagination-num {
+        padding: 5px;
+        font-size: @description;
+        max-width: 20px;
+      }
+    }
+  }
+
+  .ant-list-empty-text {
+    display: none;
+  }
+}
+
+.magazine.magazine-sm {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+
+  .side-bar {
+    min-width: 200px;
+    margin: 12px 20px;
+  }
+
+  .anticon-menu {
+    font-size: @h4;
+  }
+
+  .left-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.list-container-magazines {
+  display: flex;
+  flex-wrap: wrap;
+
+  .ant-col {
+    width: 33.333333%;
+    flex: none !important;
+    .magazine-list-item {
+      width: 100% !important;
+      max-width: none !important;
+    }
+  }
+}
+
+.rtl {
+  .magazine {
+    .anticon.anticon-play-circle {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.magazine-page-wrapper {
+  .ant-list-empty-text {
+    display: none;
+  }
+
+  .no-data {
+    text-align: center;
+  }
+}

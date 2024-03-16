@@ -1,0 +1,188 @@
+.my-gigs-list {
+  .ant-pagination-options {
+    display: none;
+  }
+  .my-gigs-list__header {
+    margin-bottom: 32px;
+    margin-top: 12px;
+    .btn-container {
+      position: relative;
+    }
+    .back-btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 10px;
+      .back-title {
+        margin: 0px;
+        cursor: pointer;
+      }
+    }
+  }
+  .my-gigs-list__body {
+    .empty-state-action-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .gigs-form {
+      .service-type-container {
+        position: relative;
+      }
+      p {
+        margin-bottom: 0px;
+      }
+      .required-input {
+        color: red;
+        margin-inline-start: 5px;
+      }
+      .ant-form-item-required::before {
+        display: none;
+      }
+      .ant-form-item .ant-form-item-label {
+        padding: 0px !important;
+      }
+      .ant-select-arrow {
+        color: #000;
+        top: 30%;
+      }
+      .ant-input-suffix {
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .area-emoji {
+        height: 14px;
+      }
+      .ant-upload-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        .ant-upload {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          height: auto;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        .upload-contents {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 1em;
+          border-radius: 8px;
+          border: 2px dashed @grey7;
+          .upload-title {
+            font-size: 0.8em;
+            display: flex;
+          }
+          .upload-subtitle {
+            font-size: 0.8em;
+            margin-bottom: 0;
+            display: flex;
+          }
+        }
+      }
+      .gig-status {
+        .gig-container {
+          background-color: #efefef;
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 32px;
+        }
+      }
+      .footer-actions {
+        .cancel-btn {
+          background-color: #efefef;
+          border: none;
+        }
+        .disabled-btn {
+          background-color: #46477466;
+          color: #fff;
+          pointer-events: none;
+          border: none;
+        }
+      }
+      .ant-upload-list-picture-card-container {
+        width: 93px;
+        height: 93px;
+        margin: 0 0 8px 15px !important;
+
+        @media screen and (max-width: 687px) {
+          width: 100%;
+          margin: 0 0 8px 0 !important;
+        }
+      }
+
+      .item-hint {
+        font-size: 0.8em;
+      }
+
+      .form-title {
+        font-size: 1.1em;
+        margin-top: 1em;
+      }
+
+      .ant-form-item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid @grey7;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow: hidden;
+        @media screen and (max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+        .ant-form-item-explain {
+          padding: 0 1em;
+          font-size: 0.9em;
+        }
+        .ant-form-item-label > label {
+          width: 100%;
+          font-size: 0.8em;
+          font-weight: bold;
+          margin: 0 0.8em;
+          background-color: #fff;
+        }
+        .ant-input,
+        .ant-input-affix-wrapper,
+        .ant-select .ant-select-selector,
+        .ant-input {
+          border: none;
+        }
+        .ant-select-selector {
+          border-radius: 0px;
+          box-shadow: none;
+        }
+      }
+      .ant-input-textarea-show-count::after {
+        float: right !important;
+        bottom: 25px;
+        position: absolute;
+        right: 11px;
+        font-size: 12px;
+      }
+      // .ant-form-item-control-input-content {
+      //   height: 40px !important;
+      // }
+    }
+  }
+}
+
+.rtl {
+  .my-gigs-list {
+    .my-gigs-list__body {
+      .gigs-form {
+        .ant-input-textarea-show-count::after {
+          float: left !important;
+          left: 11px;
+          right: auto;
+        }
+      }
+    }
+  }
+}

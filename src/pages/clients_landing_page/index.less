@@ -1,0 +1,30 @@
+@client-header-image: '../../../assets/backgrounds/client_landing_page.svg';
+@client-header-image-mobile: '../../../assets/backgrounds/client_landing_page_mobile_bg.svg';
+@client-header-image-en: '../../../assets/backgrounds/client_landing_page_en.svg';
+
+.client-page {
+  background-image: url(@client-header-image);
+  width: 100%;
+  min-height: 715px;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 64px;
+
+  @media screen and (max-width: 991px) {
+    background-position: bottom;
+    background-image: url(@client-header-image-mobile);
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.client-page.rtl {
+  background-image: url(@client-header-image-en);
+
+  @media screen and (max-width: 768px) {
+    background-image: url(@client-header-image-mobile);
+  }
+}

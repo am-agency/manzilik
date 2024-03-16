@@ -1,0 +1,29 @@
+.reviews-section {
+  h4 {
+    font-size: @h4;
+    color: @black2;
+  }
+  .no-reviews-wrapper {
+    h4 {
+      font-size: @description;
+      color: @gray9;
+    }
+    background: @grey8;
+    height: 206px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+  .review-product-btn {
+    text-align: end;
+    @media screen and (max-width: 576px) {
+      text-align: start;
+    }
+    .ant-btn {
+      padding: 12px 50px;
+      border-radius: 8px;
+    }
+  }
+}

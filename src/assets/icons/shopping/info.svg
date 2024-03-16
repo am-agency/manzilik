@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <g transform="translate(-.001 -.001)">
+        <rect data-name="Rectangle 3390" width="18" height="18" rx="9" transform="translate(.001 .001)" style="fill:#464771"/>
+        <g data-name="Group 9775" transform="translate(3.917 3.917)">
+            <circle data-name="Ellipse 8008" cx="5.083" cy="5.083" r="5.083" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="Line 345" transform="translate(5.083 5.621)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round" d="M0 0v2.772"/>
+            <circle data-name="Ellipse 8009" cx=".962" cy=".962" r=".962" transform="translate(4.121 2.31)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

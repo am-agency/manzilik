@@ -1,0 +1,52 @@
+.filters-modal {
+  width: 800px !important;
+
+  @media (max-width: 700px) {
+    width: auto !important;
+  }
+
+  .ant-menu-title-content {
+    text-transform: capitalize;
+  }
+
+  .ant-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .checkbox-option-wrapper {
+    min-width: 200px;
+  }
+
+  .code-title {
+    direction: ltr;
+  }
+
+  .color-box {
+    width: 14px;
+    height: 14px;
+    margin: 0 2px;
+    border: 1px solid @gray13;
+  }
+
+  .filters-wrapper {
+    height: 100%;
+  }
+
+  .container-wrapper {
+    padding-top: 20px;
+  }
+
+  .ant-slider {
+    width: 100%;
+  }
+
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .ant-checkbox-wrapper {
+      margin: 0;
+    }
+  }
+}

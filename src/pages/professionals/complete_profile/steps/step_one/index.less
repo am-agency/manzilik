@@ -1,0 +1,73 @@
+.complete-profile {
+  .select-acc-type-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4em;
+    .acc-type-icon {
+      font-weight: bold;
+      font-size: 0.8em;
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: @gray7;
+    }
+  }
+}
+
+.ant-btn.acc-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  height: auto;
+  margin: 0 0.4em;
+  border: 2px solid;
+  .anticon {
+    font-size: 2em;
+    margin: 1em 0 0.5em 0;
+  }
+  .user-label {
+    color: @gray9;
+    margin: 0 0 1em 0;
+    font-weight: 600;
+  }
+  color: @gray7;
+  &.selected {
+    color: @primary-blue;
+    .user-label {
+      color: @primary-blue;
+    }
+  }
+}
+
+.acc-modal-header {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 1em 0 1.5em 0;
+}
+
+.ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ant-modal-confirm-content {
+  padding-top: 30px;
+}
+
+.complete-profile .ant-alert.field-error {
+  background: @light-red;
+  border: none;
+  .ant-alert-message {
+    color: @white;
+  }
+}
+
+.upload-logo {
+  margin-top: 1em;
+}

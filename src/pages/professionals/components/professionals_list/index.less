@@ -1,0 +1,131 @@
+.professional-list,
+.stores-list {
+  .ant-list-item {
+    flex-direction: row-reverse !important;
+    padding: 0 !important;
+    height: 250px;
+    background: @white;
+    border-radius: 10px;
+
+    @media (max-width: 1100px) {
+      height: auto;
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  .ant-list-item-extra {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 377px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+  }
+
+  .ant-list-item-main {
+    padding: 28px 21px;
+
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
+    @media screen and (max-width: 420px) {
+      padding: 15px 0;
+    }
+  }
+
+  .ant-avatar {
+    width: 33px;
+    height: 33px;
+  }
+
+  .ant-list-pagination {
+    text-align: center;
+    margin-top: 65px;
+  }
+
+  .send-btn,
+  .send-btn:hover,
+  .send-btn:focus {
+    background: @primary-color;
+    width: 100%;
+    font-size: @description;
+    color: @white;
+    margin-bottom: 34px;
+    height: 50px;
+  }
+
+  .prof-mobile {
+    max-width: 150px;
+    overflow-wrap: break-word;
+  }
+
+  .ant-row-rtl .prof-mobile {
+    justify-content: flex-end;
+  }
+
+  .contact-info {
+    color: @gray9;
+    font-size: @very-small;
+  }
+
+  .carousal-container {
+    .carousel.carousel-slider {
+      height: 242px;
+    }
+    .carousal-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .carousal-btns,
+    .carousal-btns:hover,
+    .carousal-btns:focus {
+      top: calc(50% - 15px);
+      width: 35px;
+      height: 35px;
+      img {
+        width: 17px;
+      }
+    }
+
+    .carousal-img-wrapper {
+      height: 242px;
+      a {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.professional-list,
+.prof-reviews-list {
+  .ant-list-item-meta-content {
+    .ant-list-item-meta-title {
+      font-size: @description;
+      color: @black;
+      margin-bottom: 0;
+    }
+  }
+
+  .review-date {
+    font-size: @very-small;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .prof-list-skeleton {
+    flex-direction: column;
+    .skeleton-img {
+      width: 100% !important;
+    }
+    .prof-list-skeleton-data {
+      width: 100% !important;
+    }
+  }
+}

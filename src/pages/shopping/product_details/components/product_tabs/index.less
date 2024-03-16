@@ -1,0 +1,38 @@
+.product-tabs {
+  .ant-tabs-ink-bar {
+    background: @grey6;
+    height: 4px !important;
+  }
+
+  .ant-tabs-nav::before {
+    border-bottom: 1px solid @grey6 !important;
+  }
+
+  .ant-tabs-tab-btn,
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: @text-color;
+  }
+
+  .ant-tabs-content {
+    margin-top: 20px;
+    width: 40%;
+    border-radius: 6px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table {
+    border-right: 1px solid @table-border-color;
+    border-radius: 6px;
+  }
+
+  .ant-table-cell {
+    border-right: transparent !important;
+  }
+
+  .ant-table-rtl .ant-table-cell {
+    direction: ltr;
+  }
+}

@@ -1,0 +1,106 @@
+.autocomplete {
+  width: 100%;
+  background: @white;
+  box-shadow: @autocomplete-shadow;
+  border-radius: 30px;
+  padding: 15px 17px;
+  height: 81px;
+  display: flex;
+  align-items: center;
+
+  .ant-select {
+    background: @gray17;
+    border-radius: 16px;
+    height: 51px;
+  }
+
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    height: 51px;
+    background: @gray17;
+    border: 1px solid @gray17;
+    border-radius: 16px;
+    border-color: @gray17 !important;
+
+    .ant-select-selection-search-input {
+      height: 51px;
+    }
+  }
+
+  .ant-select-arrow {
+    top: 40%;
+    left: 15px;
+    right: initial;
+    transform: rotate(90deg);
+  }
+
+  .ant-select-rtl .ant-select-arrow {
+    right: 15px;
+    left: initial;
+    transform: rotate(0deg);
+  }
+
+  .ant-select-selection-search {
+    padding: 0 30px !important;
+  }
+
+  .ant-select-clear {
+    display: none;
+  }
+
+  .ant-select-selector .ant-select-selection-placeholder {
+    padding: 0 30px !important;
+    line-height: 51px !important;
+  }
+
+  .search-btn {
+    border-radius: 16px;
+    width: 100%;
+    height: 51px;
+  }
+
+  @media screen and (max-width: 687px) {
+    height: 60px;
+    padding: 5px;
+    border-radius: 20px;
+  }
+}
+
+.auto-complete-select {
+  width: fit-content !important;
+
+  .ant-select-item-group {
+    padding: 15px 20px 0 20px;
+
+    .title-wrapper {
+      font-size: @very-small;
+      color: @text-color;
+
+      .recent-text {
+        color: @description-blue;
+        font-weight: bold;
+      }
+    }
+
+    img {
+      padding: 0 6px;
+    }
+  }
+
+  .option-suffix {
+    color: @text-color;
+    opacity: 0.36;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+}
+
+.ant-select-auto-complete {
+  width: 100%;
+}

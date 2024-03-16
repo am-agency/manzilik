@@ -1,0 +1,32 @@
+.previous-questions-modal {
+  .ant-modal-footer .ant-btn-primary {
+    max-width: fit-content;
+  }
+
+  .ant-list-item {
+    cursor: pointer;
+    font-size: @description;
+  }
+
+  .questions-form {
+    .infinite-scroll-component {
+      height: 300px !important;
+      overflow-y: scroll !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .previous-questions-modal {
+    .ant-modal-footer {
+      .footer-cancel {
+        font-size: @span;
+        margin: 0 10px;
+      }
+
+      .ant-btn-primary {
+        font-size: @span;
+      }
+    }
+  }
+}

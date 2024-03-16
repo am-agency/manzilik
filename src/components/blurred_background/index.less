@@ -1,0 +1,42 @@
+.blurred-background {
+  position: relative;
+  width: 100%;
+  .blur-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); // You can adjust the blur amount as needed
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      p {
+        width: 65%;
+        text-align: center;
+      }
+    }
+    button {
+      background-color: rgba(0, 0, 0);
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}

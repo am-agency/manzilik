@@ -1,0 +1,249 @@
+.project-idea-card {
+  min-height: 350px;
+  padding: 0 5px;
+  position: relative;
+  .default-idea-icon {
+    position: absolute;
+    top: 60%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+
+  .ant-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: @card-box-shadow;
+  }
+
+  .ant-card-body {
+    display: none;
+  }
+
+  .ant-card-bordered {
+    border: none;
+  }
+
+  .cover-img-wrapper {
+    height: 250px;
+    position: relative;
+  }
+
+  .ant-card-cover {
+    height: 250px;
+  }
+
+  .idea-hover.discussion {
+    .cover-img-wrapper {
+      height: 178px;
+
+      img {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .discussion-title {
+      margin: 10px 15px 0 15px;
+
+      span {
+        font-weight: bold;
+        font-size: @span;
+      }
+
+      img {
+        background: @light-purple;
+        padding: 5px;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .idea-hover {
+    .ant-card-cover {
+      cursor: zoom-in;
+    }
+
+    .ant-card-head {
+      position: absolute;
+      border-bottom: none;
+      right: 0;
+      width: 100%;
+
+      .ant-card-extra {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+      }
+
+      span.ant-tag {
+        padding: 6px 10px 6px 8px;
+        opacity: 0.8;
+        border-radius: 19px;
+        background: @white;
+        border: none;
+        font-size: @span;
+      }
+    }
+
+    .ant-card-rtl {
+      .ant-card-head {
+        left: 0;
+      }
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: @very-small;
+      line-height: 1.25;
+      color: @black2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      box-shadow: @card-box-shadow;
+
+      .note-text {
+        padding: 10px 5px;
+        cursor: pointer;
+      }
+
+      textarea {
+        border: 0;
+        padding: 10px 7px;
+        margin: 0 2px;
+        font-size: @very-small;
+        line-height: 1.25;
+        color: @black2;
+        max-height: 70px;
+      }
+
+      img {
+        margin: 0 5px;
+      }
+    }
+
+    .image-container {
+      position: relative;
+      height: 250px;
+
+      .save-icon,
+      button {
+        position: absolute;
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        bottom: 14px;
+      }
+
+      .save-icon.rtl {
+        left: 14px;
+      }
+
+      .save-icon.ltr {
+        right: 14px;
+      }
+
+      .bts-wrapper {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+
+        button {
+          position: relative;
+          height: 40px;
+          font-size: @very-small;
+          color: @primary-color;
+          width: 90px;
+          border: none;
+        }
+      }
+
+      img,
+      .zoom-in {
+        cursor: zoom-in;
+      }
+    }
+  }
+
+  .idea {
+    .idea-note {
+      margin-top: 10px;
+      font-size: @very-small;
+      line-height: 1.25;
+      height: 15px;
+      width: 100%;
+      padding: 0 3px;
+      overflow-wrap: anywhere;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: @black2;
+    }
+
+    .checkbox-btn {
+      position: absolute;
+      z-index: 1;
+      margin: 20px 0;
+    }
+
+    .checkbox-btn-rtl {
+      left: 20px;
+    }
+
+    .checkbox-btn-ltr {
+      right: 20px;
+    }
+
+    .img-fit-content {
+      border-radius: 10px;
+    }
+  }
+
+  .operations {
+    border-radius: 8px;
+
+    div {
+      margin-bottom: 25px;
+      padding: 0 12px;
+
+      img {
+        margin: 0 8px;
+      }
+    }
+
+    div:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  .filtered-idea-details {
+    margin-top: 22px;
+
+    .title {
+      font-size: @description;
+      font-weight: bold;
+    }
+
+    .owner {
+      font-size: @span;
+      cursor: pointer;
+    }
+  }
+
+  .search-hover-idea .image-container,
+  .search-hover-idea .ant-card-cover,
+  .search-idea .ant-card-cover {
+    height: 350px;
+  }
+
+  @media (max-width: 768px) {
+    .operations {
+      div {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

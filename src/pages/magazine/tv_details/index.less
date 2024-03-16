@@ -1,0 +1,46 @@
+.tv-details-container {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+
+  .manzilik-tv-text {
+    color: @dark-purple;
+  }
+
+  .section-title {
+    font-size: @h4;
+  }
+
+  .options-and-share-btns-wrapper {
+    flex: 1;
+    min-width: 130px;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+
+  .video {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @black;
+    object-fit: contain;
+
+    iframe {
+      height: 100%;
+      width: 80%;
+      max-width: 773px;
+      border: 0;
+    }
+  }
+
+  .tv-title {
+    color: @black2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}

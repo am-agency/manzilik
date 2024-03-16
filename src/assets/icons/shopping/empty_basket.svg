@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142">
+    <defs>
+        <filter id="tqrxk6tcaa" x="13" y="16" width="116" height="116" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".082"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Group 9629">
+        <g style="filter:url(#tqrxk6tcaa)">
+            <g data-name="Ellipse 7995" transform="translate(22 22)" style="fill:#f6f6f6;stroke:#fff">
+                <circle cx="49" cy="49" r="49" style="stroke:none"/>
+                <circle cx="49" cy="49" r="48.5" style="fill:none"/>
+            </g>
+        </g>
+        <g data-name="Ellipse 7997" style="stroke:#e3e3e3;stroke-dasharray:10;fill:none">
+            <circle cx="71" cy="71" r="71" style="stroke:none"/>
+            <circle cx="71" cy="71" r="70.5" style="fill:none"/>
+        </g>
+        <g data-name="Group 9651" transform="translate(-118 -220.492)">
+            <rect data-name="Search Field" width="32" height="32" rx="16" transform="translate(228 223)" style="fill:#464771"/>
+            <path data-name="Path 14291" d="M14 4h-2a4 4 0 0 0-8 0H2a.945.945 0 0 0-1 1v10a.945.945 0 0 0 1 1h12a.945.945 0 0 0 1-1V5a.945.945 0 0 0-1-1zM8 2a2.006 2.006 0 0 1 2 2H6a2.006 2.006 0 0 1 2-2zm3 9H9v2H7v-2H5V9h2V7h2v2h2z" style="fill:#fff" transform="translate(236.059 231.246)"/>
+        </g>
+        <path data-name="Path 14292" d="M11.667 10a3.333 3.333 0 1 1 6.667 0v3.333H25V10a10 10 0 0 0-20 0v3.333h6.667z" transform="translate(56.001 44.334)" style="fill:#c4c4c4"/>
+        <path data-name="Path 14293" d="m46.96 34.264-2.92-26.3A3.333 3.333 0 0 0 40.726 5H7.392a3.333 3.333 0 0 0-3.313 2.967l-2.92 26.3a6.667 6.667 0 0 0 6.623 7.4h32.554a6.667 6.667 0 0 0 6.623-7.4z" transform="translate(46.942 56.001)" style="fill:#c4c4c4"/>
+    </g>
+</svg>

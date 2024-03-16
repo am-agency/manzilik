@@ -1,0 +1,65 @@
+.tv-list-page {
+  .heading-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @white;
+    object-fit: contain;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .heading {
+    color: @white;
+  }
+
+  .section-title {
+    font-size: @h4;
+  }
+
+  .carousel.carousel-slider {
+    height: auto;
+  }
+
+  .carousal-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tv-details-overlay {
+    top: 0;
+    position: absolute;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: @light-black;
+
+    .anticon-caret-right,
+    .anticon-right-circle,
+    .anticon-left-circle,
+    .anticon-play-circle {
+      color: @white;
+      margin: 5px;
+      font-size: 40px;
+    }
+
+    .ant-btn {
+      height: 50px;
+      display: flex;
+      width: 164px;
+      justify-content: center;
+      align-items: center;
+
+      .anticon-caret-right {
+        font-size: @h4;
+      }
+    }
+  }
+}

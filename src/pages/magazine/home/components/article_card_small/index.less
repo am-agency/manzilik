@@ -1,0 +1,42 @@
+.article-card-small {
+  border-radius: 10px;
+  box-shadow: @card-box-shadow;
+  font-size: @very-small;
+  margin-bottom: 24px;
+  min-height: 300px;
+
+  .article-card-img {
+    height: 192px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 992px) {
+      height: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 100px;
+    }
+  }
+
+  .watch-now-btn {
+    position: absolute;
+    z-index: 3;
+    border-color: @dark-purple;
+    color: @dark-purple;
+    background-color: @light-purple2;
+  }
+
+  .article-category.link,
+  .article-title {
+    font-size: @very-small;
+    margin-top: 10px;
+    text-transform: capitalize;
+  }
+
+  .article-title {
+    font-weight: @regular;
+  }
+}

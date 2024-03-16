@@ -1,0 +1,47 @@
+.contact_FAQ {
+  .ant-collapse > .ant-collapse-item:last-child,
+  .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+    border-radius: 10px;
+  }
+  .ant-collapse {
+    border: 1px solid @white;
+    background-color: @white;
+
+    .ant-collapse-item {
+      background-color: @grey8;
+      border-radius: 10px;
+      border-bottom: none;
+
+      .ant-collapse-header {
+        background-color: @grey8;
+        border-radius: 10px;
+        height: 50px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        .expand-icon-ar {
+          left: 6px;
+          right: auto;
+        }
+        .expand-icon-en {
+          right: -6px;
+          left: auto;
+          position: absolute;
+        }
+      }
+
+      .ant-collapse-content {
+        border-top: none;
+        background-color: @gray11;
+        border-radius: 10px;
+
+        .ant-collapse-content-box {
+          background-color: @gray11;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

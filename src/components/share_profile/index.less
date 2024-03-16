@@ -1,0 +1,35 @@
+.share-profile {
+  width: 240px;
+  padding: 15px 0px;
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 10px;
+    line-height: 1.3;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .text {
+    span {
+      font-size: 10px;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .action {
+    button {
+      background-color: #484674;
+      color: #fff;
+      padding: 5px 10px;
+    }
+  }
+}

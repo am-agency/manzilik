@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+  <g id="Cart_Icon" data-name="Cart Icon" transform="translate(-2.5 -2)">
+    <path id="Path_30" data-name="Path 30" d="M6,2.562,1.768,7.64A1,1,0,1,1,.232,6.36l5-6a1,1,0,0,1,1.536,0l5,6a1,1,0,0,1-1.536,1.28Z" transform="translate(6 2)" fill="#fff"/>
+    <path id="Combined_Shape" data-name="Combined Shape" d="M12.5,12h-6a2.991,2.991,0,0,1-2.769-1.846L.077,1.384A1,1,0,0,1,1,0H18a1,1,0,0,1,.923,1.384l-3.654,8.77A2.991,2.991,0,0,1,12.5,12Zm-3-8a2,2,0,1,0,2,2A2,2,0,0,0,9.5,4Z" transform="translate(2.5 9)" fill="#fff"/>
+  </g>
+</svg>

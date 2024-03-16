@@ -1,0 +1,95 @@
+.store-title {
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+
+  .store-title__tag {
+    background-color: @grey6;
+    padding-inline: 0.6rem;
+    padding-block: 0.35rem;
+    border-radius: 8px;
+    color: @white;
+    font-size: 12px;
+  }
+
+  .store-title__name,
+  .store-title__name a {
+    font-size: @h6;
+    color: @black2;
+    font-weight: @semi-bold;
+  }
+}
+
+.store-item,
+.store-profile {
+  .website-btn {
+    &:hover,
+    &:focus {
+      transform: scale(1.01);
+    }
+
+    transition: transform 200ms ease-in-out;
+    background-color: @primary-color;
+    color: @white;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    text-align: center;
+    padding-block: calc(0.5rem + 1px);
+    padding-inline: 1rem;
+    border-radius: 8px;
+    font-size: @very-small;
+    white-space: nowrap;
+    height: 50px;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+
+    @media (max-width: 1100px) {
+      width: unset;
+    }
+
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: @black;
+  }
+}
+
+.store-card-contact-section,
+.prof-card-contact-section {
+  padding-block-start: 0.75rem;
+  overflow-wrap: anywhere;
+  font-size: @very-small;
+  font-weight: @semi-bold;
+  text-align: initial;
+
+  a {
+    color: @black2;
+  }
+
+  .contact-info {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+
+    @media (max-width: 1100px) {
+      width: unset;
+    }
+
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: @black;
+  }
+}

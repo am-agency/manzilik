@@ -1,0 +1,198 @@
+.profile-sidebar-wrapper {
+  position: relative;
+  .profile-sidebar {
+    background-color: #ffffff;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 118px;
+    left: -300px;
+    overflow-x: hidden;
+    color: #313131;
+    transition: transform 0.8s ease-out;
+    padding: 0px 16px;
+    line-height: 1;
+    z-index: 1000;
+
+    .profile-sidebar-content {
+      height: 950px;
+      .account-info {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        background-color: #c7c7c70f;
+        border-radius: 10px;
+        border: 1px solid #f5f5f5;
+        padding: 22px 14px;
+        padding-inline-end: 5px;
+        margin-top: 16px;
+        .user-details {
+          .user-name {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            height: 22px;
+          }
+          .user-type {
+            display: flex;
+            gap: 3px;
+            align-items: center;
+            .icon-wrapper {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .user-points-info {
+        padding-block: 12px;
+        .add-points {
+          margin-inline-start: 116px;
+          background-color: #484674;
+          color: #ffffff;
+        }
+      }
+      .show-to-people {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        background-color: #f5f5f5;
+        border: 1px solid #4647740f;
+        padding: 6px;
+        font-size: 12px;
+        border-radius: 10px;
+        margin: 15px 0px;
+      }
+      .profile-menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        padding-top: 15px;
+        border-top: 1px solid #f5f5f5;
+        .list-item-profile {
+          height: 32px;
+          display: flex;
+          align-items: center;
+          gap: 7.5px;
+          span {
+            font-size: 12px;
+            &.bolded {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .log-out-mobile {
+        display: flex;
+        gap: 7.5px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 5px 0px;
+        margin-top: 15px;
+        font-size: 12px;
+      }
+    }
+
+    .first-lvl,
+    .second-lvl,
+    .third-lvl {
+      .item-wrapper {
+        .first-lvl-item {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+          .item-main {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .profile-lang {
+      border: 1px solid #c7c7c7;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      padding: 8px;
+      align-items: center;
+
+      .lang-options {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      button {
+        background-color: #f5f5f5;
+        width: fit-content;
+        height: 32px;
+        font-size: 12px;
+        border: none;
+        border-radius: 10px;
+        line-height: 1;
+        &.selected {
+          border: 1px solid #464774;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+      font-size: 14px;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    &.show {
+      transform: translateX(300px);
+    }
+  }
+  .lang-wrapper {
+    position: absolute;
+    bottom: 140px;
+    width: calc(100% - 32px);
+  }
+}
+.rtl {
+  .profile-sidebar-wrapper {
+    .profile-sidebar {
+      left: auto;
+      right: -300px;
+
+      &.show {
+        transform: translateX(-300px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .edit-profile {
+    .ant-tabs-nav {
+      visibility: hidden;
+    }
+  }
+}

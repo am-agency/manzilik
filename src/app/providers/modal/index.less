@@ -1,0 +1,72 @@
+.modal-wrapper {
+  width: 678px !important;
+
+  .ant-modal-content {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .ant-modal-title {
+    font-weight: bold;
+    font-size: @h6;
+
+    img {
+      margin: 0 5px;
+    }
+  }
+
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 16px 24px 2px 24px;
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+    margin-bottom: 10px;
+
+    .footer-cancel {
+      margin: 0 20px;
+      border-color: @light-blue;
+      color: @light-blue;
+    }
+
+    button {
+      height: 50px;
+      max-width: 135px;
+      width: 100%;
+    }
+  }
+
+  .ant-form-item-control-input-content {
+    input,
+    textarea {
+      opacity: 0.7;
+    }
+  }
+
+  .ant-form-item .ant-mentions,
+  .ant-form-item textarea.ant-input {
+    min-height: 120px;
+    resize: none;
+    background: @grey8;
+    padding: 18px 20px;
+  }
+
+  .ant-switch {
+    min-width: 45px;
+    height: 24px;
+
+    .ant-switch-handle {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-wrapper {
+    .ant-modal-footer button {
+      max-width: 105px;
+    }
+  }
+}

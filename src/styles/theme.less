@@ -1,0 +1,103 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less';
+@import './colors.less';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+@font-face {
+  font-family: 'BwMitga';
+  src: url('../assets/fonts/FontsFree-Net-BwMitga-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'BwMitga';
+  src: url('../assets/fonts/FontsFree-Net-BwMitga-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'BrittanySignature';
+  src: url('../assets/fonts/FontsFree-Net-BrittanySignature.ttf') format('truetype');
+}
+
+html,
+body {
+  display: block;
+  place-items: unset;
+  height: unset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  .rtl,
+  .rtl .ant-pagination-prev,
+  .rtl .ant-pagination-next,
+  .ltr .lng-text {
+    font-family: @primary-font-ar !important;
+  }
+
+  .ltr,
+  .ltr .ant-pagination-prev,
+  .ltr .ant-pagination-next,
+  .rtl .lng-text {
+    font-family: @primary-font-en !important;
+  }
+
+  .ant-btn {
+    height: 50px;
+  }
+
+  ::placeholder {
+    font-size: @very-small;
+    color: @grey5;
+  }
+
+  .ant-checkbox-inner {
+    border-radius: 3px;
+  }
+}
+
+.discussions-header,
+.professional-profile-header,
+.store-profile-header {
+  background-image: url(../assets/backgrounds/professional_bg.png);
+  background-position: top;
+}
+
+.vendor-profile_header {
+  background-image: url(../assets/backgrounds/vendor_bg.svg);
+  background-size: cover;
+}
+
+.locked-wrapper {
+  background-image: url('../assets/backgrounds/lock-wrapper.png');
+}
+
+@font-size-base: 14px;
+@text-color: #313131;
+@primary-color: #464674;
+@link-color: @primary-color;
+@border-radius-base: 10px;
+@border-radius: 16px;
+
+.dev-debugger {
+  border: 1px solid @light-grey6;
+  padding: 5px;
+  color: @primary-color;
+  background: whitesmoke;
+
+  p {
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 12px;
+  }
+}

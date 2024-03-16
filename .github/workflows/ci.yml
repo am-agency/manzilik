@@ -1,0 +1,31 @@
+name: continuous deployment
+on:
+  pull_request:
+    branches: [develop, master, qa]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Stage
+        run: |
+          if [[ ${{ github.base_ref }} == 'develop' ]]; then
+            echo "Setting stage to dev"
+            echo "STAGE=dev" >> $GITHUB_ENV
+          elif [[ ${{ github.base_ref }} == 'qa' ]]; then
+            echo "Setting stage to qa"
+            echo "STAGE=qa" >> $GITHUB_ENV
+          elif [[ ${{ github.base_ref }} == 'master' ]]; then
+            echo "Setting stage to prod"
+            echo "STAGE=prod" >> $GITHUB_ENV
+          else
+            echo "Branch name does not match any stage"
+          fi
+          echo "deploy to ${{ env.STAGE }}"

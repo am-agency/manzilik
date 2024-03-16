@@ -1,0 +1,46 @@
+.service-item {
+  width: 267px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-inline-start: 5px;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #3c3d69 !important;
+    border-radius: 20px !important;
+  }
+  &.white-theme {
+    color: #ffffff;
+  }
+  .img-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+
+    &.white-theme {
+      border: 1px solid #ffffff;
+    }
+    img {
+      width: 64px !important;
+      height: 64px !important;
+    }
+  }
+  .vertical-line {
+    width: 1px;
+    height: 22px;
+    background-color: #f5f5f5;
+  }
+  .service-item-details {
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .sub-title {
+      font-size: 12px;
+      font-weight: 400;
+      max-width: 165px;
+    }
+  }
+}

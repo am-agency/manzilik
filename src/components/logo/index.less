@@ -1,0 +1,27 @@
+.logo-img {
+  width: 100%;
+  min-width: 100px;
+  @media screen and (max-width: 576px) {
+    width: 70px;
+  }
+}
+
+.homepage-header {
+  .logo-wrapper.ltr {
+    padding-left: 15px;
+
+    @media screen and (max-width: 1270px) {
+      padding-left: 0;
+    }
+  }
+
+  .logo-wrapper.rtl {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logo-wrapper {
+    padding: 0 !important;
+  }
+}

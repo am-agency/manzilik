@@ -1,0 +1,77 @@
+.photos {
+  .project-container {
+    margin: 0 20px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 575px) {
+      margin-bottom: 16px;
+    }
+    .ant-card {
+      height: 476px !important;
+      @media screen and (max-width: 575px) {
+        height: 450px !important;
+      }
+    }
+  }
+
+  margin-top: 30px !important;
+  .ant-list-item.ant-list-item-no-flex {
+    padding: 0 !important;
+  }
+
+  .ant-list-pagination,
+  .ant-list-rtl .ant-list-pagination {
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  .idea-title-wrapper {
+    margin-top: 29px;
+    margin-bottom: 13px;
+  }
+
+  .idea-title {
+    font-size: @h4;
+    font-weight: bold;
+  }
+
+  .search-result-text {
+    font-size: @very-small;
+    font-weight: bold;
+  }
+
+  .ant-list-grid .ant-col > .ant-list-item {
+    margin-bottom: 50px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+}
+
+.pagination {
+  .ant-pagination-item {
+    border-color: transparent;
+  }
+
+  .ant-pagination-item:hover {
+    border-radius: 0;
+  }
+
+  .ant-pagination-item-active {
+    background: @grey8;
+    border-radius: 0;
+  }
+
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: @primary-color;
+  }
+
+  .navigator {
+    font-size: @description;
+  }
+
+  li.ant-pagination-options {
+    display: none;
+  }
+}

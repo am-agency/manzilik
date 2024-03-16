@@ -1,0 +1,72 @@
+#img-mapper {
+  max-height: 490px !important;
+  height: 100% !important;
+  @media screen and (max-height: 7876px) {
+    max-height: none;
+    height: auto;
+  }
+}
+
+.img-mapper-container {
+  max-height: 490px;
+  height: 100%;
+  width: 100%;
+
+  .img-mapper-img {
+    position: unset !important;
+    max-height: 490px !important;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: 876px) {
+      height: auto;
+      object-fit: unset;
+    }
+  }
+
+  .default-image {
+    border-radius: 10px;
+  }
+
+  .img-mapper-tooltip {
+    position: absolute;
+    border: 1px solid @white;
+    background: @light-white;
+    opacity: 1;
+    padding: 3px 12px;
+    color: @black2;
+    font-size: @span;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .selected-area {
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .img-mapper-container {
+    img {
+      height: 300px !important;
+    }
+    .selected-area {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .img-mapper-container {
+    img {
+      height: 214px !important;
+    }
+  }
+}

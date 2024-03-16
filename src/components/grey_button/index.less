@@ -1,0 +1,32 @@
+.grey-btn {
+  background-color: @grey8;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  width: 100%;
+  outline: transparent;
+  border: none;
+  margin: 5px 0;
+  max-height: 44px;
+  cursor: pointer;
+  font-size: @very-small;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  max-width: 167px;
+
+  span {
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    &.grey-btn__img {
+      width: max-content;
+      &.solo {
+        width: inherit;
+      }
+      img {
+        max-width: 24px;
+      }
+    }
+  }
+}

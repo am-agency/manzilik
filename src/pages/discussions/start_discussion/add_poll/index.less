@@ -1,0 +1,68 @@
+.add-poll {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+
+  .poll-options-text {
+    font-size: @h5;
+    font-weight: @bold;
+  }
+
+  .you-can-enter-text {
+    font-size: @small;
+  }
+
+  .add-option {
+    display: flex;
+    width: 100%;
+    padding: 6px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid @light-black;
+
+    input {
+      flex: 1;
+      border: none;
+    }
+
+    input:focus {
+      border: none;
+      box-shadow: none;
+    }
+
+    .option-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+  }
+
+  .add-img-btn {
+    background-color: @grey8;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .ant-upload {
+    background-color: @grey8;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-option-btn {
+    width: 40px;
+  }
+
+  .add-option-btn-text {
+    font-size: @very-small;
+    color: @primary-color;
+    align-self: center;
+    padding: 0 15px;
+  }
+}

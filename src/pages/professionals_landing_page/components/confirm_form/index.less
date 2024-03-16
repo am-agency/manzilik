@@ -1,0 +1,44 @@
+.professional-landing-confirm-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
+  .professional-landing-confirm-text {
+    text-align: center;
+    .ant-typography {
+      line-height: 1.25;
+      margin: 10px 0;
+      font-size: @h5;
+      text-align: center;
+      color: @black2;
+    }
+  }
+
+  .ant-input {
+    width: 100%;
+    height: 56px;
+    background-color: @gray11;
+    border-color: @tab-background;
+    border-radius: 16px;
+
+    &::placeholder {
+      color: @black;
+    }
+  }
+
+  .ant-btn {
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+
+    @media screen and (max-width: 768px) {
+      min-width: 170px;
+      width: 100%;
+    }
+  }
+}

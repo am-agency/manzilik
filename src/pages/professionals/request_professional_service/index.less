@@ -1,0 +1,236 @@
+.request-service-container {
+  padding: 3em 2em;
+  background-color: @grey7;
+  margin-bottom: -48px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  &.mobile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .clear-spacing {
+    margin-bottom: 0;
+  }
+  .ant-form-item-explain.ant-form-item-explain-error {
+    background-color: @white;
+    z-index: 9;
+    border-radius: 12px;
+  }
+  .ant-form-item-with-help {
+    margin-bottom: 20px;
+  }
+}
+
+.request-service-header {
+  display: flex;
+  border-bottom: 1px solid @grey8;
+  margin: 0 -20px;
+  padding: 0 20px 10px 20px;
+
+  .title {
+    flex-grow: 1;
+    font-size: 1.3em;
+  }
+  .avatar {
+    margin: 0 0.5em;
+  }
+  .subtitle {
+    font-size: 0.6em;
+    margin: 0 0.2em;
+  }
+  .review-section {
+    transform: translateX(0.3em) scale(0.6);
+  }
+  .ant-rate {
+    color: @stars;
+  }
+  .rating {
+    margin-top: -0.6em;
+  }
+}
+.rfq-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 375px;
+  background: #fff;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 16px;
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(10, 12, 16, 1);
+  }
+  .detail-item-create {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  button {
+    width: 100%;
+  }
+}
+.request-service-form {
+  padding: 20px;
+  background-color: @white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  .quotation-tabs {
+    width: 100%;
+    .ant-tabs-nav-list {
+      width: 100%;
+    }
+    .ant-tabs-tab {
+      width: 50%;
+      text-align: center !important;
+      margin: 0 aut;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ant-tabs-tab-btn {
+      display: flex;
+      gap: 8px;
+      .step-num {
+        background-color: #eaeaea;
+        color: #000;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        font-weight: bold;
+        &.active {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .hr-line {
+    border-bottom: 1px solid #cccccc5c;
+    margin: 1em 0;
+  }
+
+  .form-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .form-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .area-emoji {
+    height: 14px;
+  }
+  .ant-upload-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ant-upload {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .upload-contents {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 100%;
+      padding: 1em;
+      border-radius: 8px;
+      border: 2px dashed @grey7;
+      .upload-title {
+        font-size: 0.8em;
+        display: flex;
+      }
+      .upload-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 0;
+        display: flex;
+      }
+    }
+  }
+  button {
+    display: flex;
+  }
+
+  .item-hint {
+    font-size: 0.8em;
+  }
+
+  .form-title {
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+
+  .phone-number {
+    display: flex !important;
+    flex-direction: row !important;
+    .antd-country-phone-input {
+      &:focus {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+    input {
+      padding: 16px 8px !important;
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+  .ant-form-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid @grey7;
+    border-radius: 8px;
+    .ant-form-item-explain {
+      padding: 0 1em;
+      font-size: 0.9em;
+    }
+    .ant-form-item-label > label {
+      width: 100%;
+      font-size: 0.8em;
+      font-weight: bold;
+      margin: 0 0.8em;
+    }
+    .ant-input,
+    .ant-input-affix-wrapper,
+    .ant-select .ant-select-selector,
+    .ant-input {
+      border: none;
+    }
+  }
+}
+
+.service-request-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+  &.rtl {
+    font-family: cairo !important;
+  }
+
+  .service-provider-btn {
+    background-color: rgb(189, 179, 154);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .title {
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+}

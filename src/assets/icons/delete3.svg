@@ -1,0 +1,8 @@
+<svg id="Group_387" data-name="Group 387" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_353" data-name="Path 353" d="M0,0H24V24H0Z" fill="none"/>
+  <line id="Line_63" data-name="Line 63" x2="16" transform="translate(4 7)" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_64" data-name="Line 64" y2="6" transform="translate(10 11)" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_65" data-name="Line 65" y2="6" transform="translate(14 11)" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_354" data-name="Path 354" d="M5,7,6,19a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2L19,7" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_355" data-name="Path 355" d="M9,7V4a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1V7" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

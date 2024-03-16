@@ -1,0 +1,55 @@
+.normal-switch {
+  .custom-switch {
+    .ant-switch {
+      width: 123px;
+      height: 37px;
+      background-color: @gray14;
+      border-radius: 11px;
+    }
+
+    .ant-switch-handle {
+      width: 65px;
+      height: 33px;
+      background-color: @white;
+      color: @black2;
+      border-radius: 11px;
+    }
+    .ant-switch-inner button:hover {
+      background-color: @gray14;
+    }
+
+    .ant-switch-checked .ant-switch-handle {
+      background-color: @white;
+      color: @black2;
+    }
+
+    .ant-switch-inner,
+    .ant-switch-rtl .ant-switch-inner,
+    .ant-switch-rtl.ant-switch-checked .ant-switch-inner {
+      .ant-btn {
+        width: 50px;
+        height: 37px;
+        margin-top: 0;
+      }
+    }
+
+    .ant-switch-rtl.ant-switch-checked .ant-switch-handle {
+      right: calc(100% - 65px - 2px);
+    }
+
+    .ant-switch-checked .ant-switch-handle {
+      left: calc(100% - 65px - 2px);
+    }
+  }
+}
+.signUp-names-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  .group-floating-label {
+    width: 50%;
+    margin: 0 0 16px 0;
+  }
+}

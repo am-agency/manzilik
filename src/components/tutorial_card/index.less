@@ -1,0 +1,87 @@
+.tutorialContainer {
+  width: 175px; // adjust based on your requirements
+  background: #464774;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  &.disappear {
+    display: none;
+  }
+  .arrow {
+    width: 50px;
+    height: 50px;
+    background: #464774;
+    position: absolute;
+    z-index: -1;
+    &.top {
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    &.bottom {
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    }
+    &.left {
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    }
+    &.right {
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .closeButton {
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      color: #000000;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+    }
+
+    .counter {
+      // Add your counter styles here
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+
+    .text {
+      font-size: 14px;
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .button {
+      background: #bdb39a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}

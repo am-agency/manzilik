@@ -1,0 +1,71 @@
+.vendor-profile {
+  .vendor-wrapper {
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  .vendor-profile_header {
+    height: 249px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 28px;
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+
+  .vendor-picture {
+    width: 176px;
+    height: 160px;
+    box-shadow: @autocomplete-shadow;
+  }
+
+  .personal-info {
+    margin: auto 0;
+
+    .vendor-name {
+      font-size: @h4;
+      font-weight: @bold;
+      @media screen and (max-width: 768px) {
+        font-size: @h6;
+      }
+    }
+
+    .vendor-address {
+      font-size: @very-small;
+    }
+  }
+
+  .txt {
+    color: @text-color;
+  }
+
+  .website-btn {
+    width: 188px;
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
+  }
+
+  .extra-info {
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+  .review-section {
+    .total-review,
+    .review-number {
+      font-size: @description;
+      color: @text-color;
+    }
+  }
+}

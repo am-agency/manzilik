@@ -1,0 +1,106 @@
+.related-professionals-list .related-professional-item {
+  box-shadow: 0 10px 30px @about-box-shadow;
+  padding: 16px;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: @white;
+  p {
+    margin-bottom: 0px;
+  }
+
+  .actions-wrapper {
+    position: absolute;
+    &.bottom {
+      position: static;
+      margin-top: 16px;
+    }
+    display: flex;
+    right: 110px;
+    top: 16px;
+  }
+  .follow-btn {
+    position: absolute;
+    right: 12px;
+    top: 15px;
+  }
+  .related-professional-item-title {
+    display: flex;
+    flex-direction: column;
+
+    .related-professional-item-rate,
+    .ant-list-item-meta-description {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      .rating {
+        display: flex;
+      }
+    }
+  }
+
+  .ant-list-item-meta {
+    align-items: flex-start;
+    margin-inline-end: 12px;
+    .ant-list-item-meta-avatar {
+      margin-top: 5px;
+    }
+
+    .ant-list-item-meta-title {
+      margin: 0;
+      font-size: @p;
+      font-weight: @bold;
+    }
+
+    .ant-list-item-meta-description {
+      .ant-typography {
+        font-size: @span;
+        color: @primary-color;
+      }
+
+      .projects-number {
+        color: @text-color;
+        font-weight: @bold;
+      }
+    }
+
+    .ant-rate {
+      font-size: @p;
+      display: flex;
+    }
+
+    .rating-number {
+      color: @text-color;
+      font-weight: @bold;
+    }
+  }
+
+  .ant-btn {
+    width: fit-content;
+    height: 41px;
+    margin-inline-start: 12px;
+    background-color: @grey9;
+    border-color: @grey9;
+    color: @text-color;
+    font-size: @very-small;
+    &:hover,
+    &:focus {
+      background-color: @grey8;
+    }
+    img {
+      margin-inline-end: 5px;
+    }
+  }
+}
+.rtl {
+  .related-professionals-list .related-professional-item {
+    .actions-wrapper {
+      left: 110px;
+      right: auto;
+    }
+    .follow-btn {
+      left: 12px;
+      right: auto;
+    }
+  }
+}

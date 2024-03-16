@@ -1,0 +1,185 @@
+.profile-header {
+  .profile-header-avatar {
+    width: 88px;
+    height: 88px;
+
+    @media screen and (max-width: 1024px) {
+      width: 75px;
+      height: 75px;
+    }
+
+    .ant-avatar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .profile-header-name {
+    margin: 0 2px;
+
+    @media screen and (max-width: 991px) {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .ant-col {
+    @media screen and (max-width: 991px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .ant-avatar {
+    border: 1px solid @grey6;
+  }
+
+  .header-name {
+    .ant-typography {
+      display: block;
+      font-weight: @bold;
+      font-size: @h4;
+    }
+  }
+
+  .follow-details {
+    display: flex;
+    justify-content: center;
+
+    .follow-count {
+      display: flex;
+      cursor: pointer;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          font-size: @p;
+          font-weight: @bold;
+        }
+
+        .follow-text {
+          font-weight: @light;
+          color: @primary-color;
+        }
+      }
+    }
+
+    .ant-divider-vertical {
+      height: 47px;
+    }
+  }
+
+  .header-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+    }
+
+    .ant-btn {
+      height: 50px;
+      border-radius: 8px;
+      font-weight: @semi-bold;
+      font-size: @description;
+
+      &:first-child {
+        background-color: @gray12;
+        border-color: @gray12;
+      }
+
+      &:last-child {
+        background-color: @grey9;
+        border-color: @grey9;
+      }
+    }
+  }
+}
+
+.follow-modal {
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 12px 16px 0px 16px;
+  }
+
+  .ant-modal-body {
+    height: 378px;
+    overflow: scroll;
+    padding: 16px;
+    padding-top: 4px;
+  }
+
+  .ant-modal-close-x {
+    width: 36px;
+    height: 36px;
+    background-color: @white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 8px 0px #e8e7e7;
+
+    .anticon {
+      color: @black;
+    }
+  }
+
+  .ant-list-split {
+    .ant-list-item {
+      border-bottom: none;
+    }
+  }
+
+  .ant-switch.followers {
+    .ant-switch-handle::before {
+      content: 'Followers';
+    }
+  }
+
+  .ant-switch-rtl.ant-switch.followers {
+    .ant-switch-handle::before {
+      content: 'متابعون';
+    }
+  }
+
+  .ant-switch-rtl.ant-switch.following {
+    .ant-switch-handle::before {
+      content: 'أتابعهم';
+    }
+  }
+
+  .ant-switch.following {
+    .ant-switch-handle::before {
+      content: 'Following';
+    }
+  }
+}
+
+.ant-modal-wrap-rtl {
+  .follow-modal {
+    .ant-modal-content {
+      .ant-modal-close {
+        left: 16px !important;
+        right: auto !important;
+        top: 12px !important;
+      }
+    }
+  }
+}
+
+.ant-modal-wrap {
+  .follow-modal {
+    .ant-modal-content {
+      button.ant-modal-close {
+        left: auto;
+        right: 16px;
+        top: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.801" height="21.405" viewBox="0 0 50.499 51.26">
+  <defs>
+    <filter id="Path_5161" x="0" y="0" width="50.499" height="35.778" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_5162" x="3.307" y="15.487" width="43.884" height="35.772" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_5163" x="5.992" y="4.768" width="38.516" height="39.43" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2009" data-name="Group 2009" transform="translate(15.25 12.66)">
+    <g transform="matrix(1, 0, 0, 1, -15.25, -12.66)" filter="url(#Path_5161)">
+      <path id="Path_5161-2" data-name="Path 5161" d="M1.2,6.372,11.2,1.8l10,4.572" transform="translate(14.05 10.86)" fill="none" stroke="#fff" stroke-width="1.2"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15.25, -12.66)" filter="url(#Path_5162)">
+      <path id="Path_5162-2" data-name="Path 5162" d="M18.684,26.172H6v-1.2a2.739,2.739,0,0,1,1.673-2.535,12.031,12.031,0,0,1,4.67-.837,12.031,12.031,0,0,1,4.67.837,2.739,2.739,0,0,1,1.673,2.535Z" transform="translate(12.91 6.49)" fill="none" stroke="#fff" stroke-width="1.2"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15.25, -12.66)" filter="url(#Path_5163)">
+      <path id="Path_5163-2" data-name="Path 5163" d="M9.6,11.458a3.658,3.658,0,1,1,7.316,0c0,2.02-1.638,4.572-3.658,4.572S9.6,13.478,9.6,11.458Z" transform="translate(11.99 9.57)" fill="none" stroke="#fff" stroke-width="1.2"/>
+    </g>
+  </g>
+</svg>

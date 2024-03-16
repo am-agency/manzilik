@@ -1,0 +1,59 @@
+.dropdown-popover {
+  .ant-btn {
+    padding: 0;
+  }
+
+  .ant-popover-inner {
+    padding: 5px 10px;
+  }
+
+  .ant-popover-inner-content {
+    padding: 12px 0;
+    width: fit-content;
+
+    button img,
+    .popover-item img {
+      margin: 0 5px;
+    }
+  }
+
+  .popover-item:hover {
+    background-color: @very-light-grey6;
+  }
+
+  .popover-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+    padding: 5px 15px;
+    min-width: 65px;
+    color: @primary-color;
+    font-size: @very-small;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  .popover-item-disabled {
+    color: @grey6;
+    background-color: @very-light-grey6;
+  }
+}
+
+.rtl {
+  .popover-item,
+  .popover-btn,
+  .icon,
+  .icon-wrapper {
+    img,
+    svg {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.popover-btn {
+  img {
+    cursor: pointer;
+  }
+}

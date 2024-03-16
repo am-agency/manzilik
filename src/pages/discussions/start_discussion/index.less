@@ -1,0 +1,227 @@
+.start-discussion {
+  background-color: @white;
+  z-index: 7;
+  box-shadow: @card-box-shadow;
+  min-height: 450px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  animation: white-overlay 0.3s ease;
+
+  .hi-text {
+    color: @primary-color;
+    font-weight: @bold;
+    font-size: @h6;
+  }
+
+  .what-are-you-working-text {
+    color: @black2;
+    font-weight: @bold;
+    font-size: @h4;
+  }
+
+  .get-help-text {
+    color: @black2;
+    font-size: @small;
+  }
+
+  .avatar-start-discussion-wrapper {
+    display: flex;
+    width: 80%;
+
+    .ant-input,
+    .ant-input:focus {
+      border: none;
+      box-shadow: none;
+      background-color: @grey8;
+    }
+
+    .start-discussion-input.error {
+      border: 1px solid @danger;
+    }
+
+    .start-discussion-input {
+      display: flex;
+      flex: 1;
+      border-radius: 8px;
+      height: 50px;
+      background-color: @grey8;
+      padding: 0 20px;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .footer {
+    width: 80%;
+    align-self: center;
+    margin: 50px 0 30px 0;
+
+    .tip {
+      color: @black;
+      font-size: @very-small;
+      opacity: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ant-btn {
+      font-size: @description;
+      min-width: 135px;
+    }
+  }
+}
+
+.editor-wrapper.error {
+  border: 1px solid @danger;
+}
+
+.editor-wrapper {
+  width: 80%;
+  border: 1px solid @light-black;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  .toolbar {
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .ql-toolbar.ql-snow {
+    border: 1px solid @light-black;
+    padding: 15px 15px;
+    border-bottom: 0;
+    display: flex;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .editor,
+  .quill {
+    align-self: center;
+    min-height: 200px;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: start;
+    padding: 10px;
+  }
+
+  .ql-editor,
+  .ql-container.ql-snow,
+  .ql-editor.ql-blank:focus-visible {
+    border: none;
+    min-height: 200px;
+    outline: none;
+    font-family: @primary-font-en !important;
+  }
+
+  .editor-btn,
+  .ql-snow.ql-toolbar button,
+  .ql-snow .ql-toolbar button {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: @white;
+    border: none;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .editor-btn {
+    opacity: 0.7;
+  }
+
+  .editor-btn.ql-active {
+    opacity: 1;
+  }
+
+  .ql-editor a {
+    color: @primary-color;
+  }
+
+  .ql-snow .ql-editor img,
+  .img-editor {
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .ql-tooltip {
+    display: none;
+  }
+
+  .add-poll-btn {
+    flex: 1;
+    font-size: @very-small;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.editor-wrapper.rtl {
+  .ql-editor {
+    max-height: 400px;
+    overflow-y: scroll;
+    font-family: @primary-font-ar !important;
+  }
+
+  .ql-editor ol,
+  .ql-editor ul {
+    padding-right: 1.5em;
+  }
+
+  .ql-editor .ql-video {
+    margin-bottom: 5px;
+  }
+
+  .ql-editor ol li:not(.ql-direction-rtl),
+  .ql-editor ul li:not(.ql-direction-rtl) {
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+
+  .ql-editor li:not(.ql-direction-rtl)::before {
+    margin-left: 0.5em;
+    margin-right: 0.3em;
+  }
+
+  .editor-btn,
+  .ql-snow.ql-toolbar button,
+  .ql-snow .ql-toolbar button {
+    margin-left: 20px;
+    margin-right: 0;
+
+    @media screen and (max-width: 576px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.ant-form.add-link {
+  * {
+    font-size: @small;
+  }
+}
+
+.img-editor {
+  max-width: 400px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

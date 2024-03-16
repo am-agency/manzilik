@@ -1,0 +1,53 @@
+.group-floating-label {
+  position: relative;
+
+  .ant-input::placeholder {
+    color: transparent;
+  }
+
+  .form-input,
+  .single-input,
+  .input {
+    .ant-input,
+    .ant-input-password {
+      &:focus + .ant-input-suffix,
+      &:not(:placeholder-shown) + .ant-input-suffix {
+        .floating-label {
+          transform: translate3d(0, -14px, 0);
+          color: @grey5;
+          font-size: @very-small;
+          font-weight: @medium;
+          letter-spacing: 0.45px;
+        }
+      }
+    }
+  }
+
+  .ant-input-suffix {
+    .floating-label {
+      position: absolute;
+      padding: 0;
+      transition: all 200ms;
+      line-height: 30px;
+      font-size: @very-small;
+      color: @grey5;
+      font-weight: @medium;
+      letter-spacing: 0.45px;
+    }
+
+    .rtl {
+      right: 13px;
+    }
+
+    .ltr {
+      left: 13px;
+    }
+  }
+
+  .ant-input-affix-wrapper > input.ant-input {
+    padding: 0;
+    border: none;
+    outline: none;
+    padding-top: 6px;
+  }
+}

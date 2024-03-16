@@ -1,0 +1,83 @@
+.magazine-page-header {
+  .magazine-tabs {
+    .main-title {
+      font-weight: @bold;
+      font-size: @h1;
+
+      @media screen and (max-width: 687px) {
+        font-size: @description;
+      }
+    }
+  }
+
+  .tv-and-discussion {
+    font-size: @very-small;
+    font-weight: @semi-bold;
+    color: @black;
+
+    img {
+      padding: 0 6px;
+    }
+  }
+
+  .mag-categories {
+    background: @gray11;
+    padding: 12px 16px;
+    border-radius: 20px;
+
+    .ant-tabs-nav .ant-tabs-tab {
+      margin: 0;
+    }
+
+    .categories-title {
+      font-size: @h4;
+      font-weight: @semi-bold;
+    }
+
+    .category-tag {
+      background: @grey3;
+      border: 1px solid @gray16;
+      border-radius: 10px;
+      padding: 4px 13px;
+      font-size: @very-small;
+      margin: 0;
+    }
+
+    .right-arrow.ar {
+      right: 120px;
+    }
+
+    .right-arrow.en {
+      right: 10px;
+    }
+
+    .left-arrow.ar {
+      left: 10px;
+    }
+
+    .left-arrow.en {
+      left: 140px;
+    }
+
+    .arrows {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .custom-carousal-wrapper {
+      opacity: 0.89;
+    }
+
+    .ant-tag-checkable-checked {
+      background: @white;
+      box-shadow: @magazine-card-shadow;
+      border: 1px solid @icon-background;
+      border-radius: 10px;
+      color: @black;
+      font-weight: @semi-bold;
+    }
+  }
+}

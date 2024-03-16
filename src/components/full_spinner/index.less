@@ -1,0 +1,73 @@
+.custom-switch {
+  .ant-switch {
+    width: 174px;
+    height: 40px;
+    background-color: @grey;
+  }
+
+  .ant-switch-handle {
+    width: 87px;
+    height: 36px;
+    background-color: @primary-color;
+    color: @white;
+    border-radius: 100px;
+    z-index: 1;
+  }
+
+  .ant-switch-inner,
+  .ant-switch-rtl .ant-switch-inner,
+  .ant-switch-rtl.ant-switch-checked .ant-switch-inner {
+    margin: 0 !important;
+    padding: 0 5px;
+
+    .ant-btn {
+      padding: 0;
+    }
+  }
+
+  .ant-switch.email {
+    .ant-switch-handle::before {
+      content: 'Email';
+    }
+  }
+
+  .ant-switch-rtl.ant-switch.email {
+    .ant-switch-handle::before {
+      content: 'الايميل';
+    }
+  }
+
+  .ant-switch-rtl.ant-switch.mobile {
+    .ant-switch-handle::before {
+      content: 'الجوال';
+    }
+  }
+
+  .ant-switch.mobile {
+    .ant-switch-handle::before {
+      content: 'Mobile';
+    }
+  }
+
+  .ant-switch-handle::before {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 82px - 2px);
+    background-color: @primary-color;
+    color: @white;
+  }
+
+  .ant-switch-rtl.ant-switch-checked .ant-switch-handle {
+    right: calc(100% - 82px - 2px);
+    background-color: @primary-color;
+    color: @white;
+  }
+}

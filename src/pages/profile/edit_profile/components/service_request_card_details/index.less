@@ -1,0 +1,107 @@
+.record {
+  border: 1px solid @grey9;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.order-details-table {
+  border: 1px solid @grey9;
+  border-radius: 8px;
+  padding: 20px 10px 17px 10px;
+  background-color: #c7c7c70f;
+  margin-bottom: 16px;
+  p {
+    margin-bottom: 0px;
+  }
+  .order-num-and-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .order-status {
+      .circle(@color) {
+        content: '';
+        border-radius: 14px;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        background-color: @color;
+        margin-inline-end: 8px;
+      }
+      .accepted::before {
+        .circle(@serviceRequestAccept);
+      }
+      .completed::before {
+        .circle(@serviceRequestCompleted);
+      }
+      .cancelled::before {
+        .circle(@serviceRequestCanceled);
+      }
+      .rejected::before {
+        .circle(@serviceRequestReject);
+      }
+
+      .waiting_response::before {
+        .circle(@serviceRequestWaiting);
+      }
+      .accepted::before,
+      .rejected::before,
+      .completed::before,
+      .cancelled::before,
+      .waiting_response::before {
+        display: flex;
+        align-items: center;
+      }
+      .accepted,
+      .rejected,
+      .waiting_response,
+      .completed,
+      .cancelled {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .order-num {
+      padding-inline-start: 15px;
+    }
+    .order-num-title,
+    .order-status-title {
+      font-weight: 600;
+    }
+    .middle-line {
+      height: 48px;
+      width: 1px;
+      background-color: @grey9;
+      margin-inline-start: 33px;
+      margin-inline-end: 17px;
+    }
+  }
+  .btns-wrapper {
+    display: flex;
+    gap: 9px;
+
+    .custom-button {
+      width: 62%;
+      font-size: 14px;
+      @media screen and (max-width: 420px) {
+        font-size: 10px;
+      }
+    }
+    .more-details {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 18px;
+      background-color: #f5f5f5;
+      border-radius: 30px;
+      border: 1px solid #e1e1e1;
+      width: 38%;
+      @media screen and (max-width: 420px) {
+        font-size: 10px;
+      }
+    }
+  }
+}

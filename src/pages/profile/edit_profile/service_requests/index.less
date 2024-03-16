@@ -1,0 +1,615 @@
+.service-request-details {
+  padding: 20px;
+  border-radius: 8px;
+  .record {
+    border: 1px solid @grey9;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 400px) {
+      padding-inline-end: 6px;
+    }
+    .word-wrap {
+      word-wrap: break-word;
+    }
+
+    &.vertical {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .photo {
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .gig-desc {
+    background-color: #f5f5f5;
+    padding: 10px 16px;
+    border-radius: 8px;
+    min-width: 410px;
+
+    p {
+      font-size: 12px;
+
+      &.bold {
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .accept-request-btn {
+    color: @white;
+    background-color: @acceptTone;
+    border: none;
+  }
+
+  .complete-request-btn {
+    background-color: #3366ff;
+    border: none;
+    color: #fff;
+  }
+
+  .cancel-request-btn {
+    background-color: #414757;
+    border: none;
+    color: #fff;
+  }
+
+  .reject-request-btn {
+    background-color: @grey200;
+    border: none;
+  }
+  .popover {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    grid-gap: 5px;
+    gap: 5px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 99px;
+    z-index: 9999999999;
+    justify-content: center;
+    align-items: center;
+    button {
+      padding: 10px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+
+      &.cancel {
+        background-color: #33394a;
+        color: #fff;
+      }
+      &.complete {
+        background-color: #3366ff;
+        color: #fff;
+      }
+      &.accept {
+        background-color: #56d49b;
+        color: #fff;
+      }
+    }
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .phone-wrapper {
+    display: flex;
+    gap: 4px;
+    .ltr-phone {
+      direction: ltr;
+    }
+  }
+  .images {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    .images-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+  }
+  .loader-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .order-details-table {
+    border: 1px solid @grey9;
+    border-radius: 8px;
+    padding: 20px 10px 17px 10px;
+    background-color: #c7c7c70f;
+    p {
+      margin-bottom: 0px;
+    }
+    .order-num-and-status {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      .order-status {
+        .circle(@color) {
+          content: '';
+          border-radius: 14px;
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          background-color: @color;
+          margin-inline-end: 8px;
+        }
+        .accepted::before {
+          .circle(@serviceRequestAccept);
+        }
+        .draft::before {
+          .circle(@serviceRequestDraft);
+        }
+        .completed::before {
+          .circle(@serviceRequestCompleted);
+        }
+        .opened::before {
+          .circle(@serviceRequestOpened);
+        }
+        .contracted::before {
+          .circle(@serviceRequestContracted);
+        }
+        .cancelled::before {
+          .circle(@serviceRequestCanceled);
+        }
+        .cancelled::before {
+          .circle(@serviceRequestOpened);
+        }
+        .rejected::before {
+          .circle(@serviceRequestReject);
+        }
+
+        .waiting_response::before {
+          .circle(@serviceRequestWaiting);
+        }
+        .accepted::before,
+        .rejected::before,
+        .completed::before,
+        .cancelled::before,
+        .opened::before,
+        .contracted::before,
+        .draft::before,
+        .waiting_response::before {
+          display: flex;
+          align-items: center;
+        }
+        .accepted,
+        .rejected,
+        .waiting_response,
+        .completed,
+        .opened,
+        .contracted,
+        .draft,
+        .cancelled {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .order-num {
+        padding-inline-start: 15px;
+      }
+      .order-num-title,
+      .order-status-title {
+        font-weight: 600;
+      }
+      .middle-line {
+        height: 48px;
+        width: 1px;
+        background-color: @grey9;
+        margin-inline-start: 33px;
+        margin-inline-end: 17px;
+      }
+    }
+  }
+
+  .accept-toast {
+    position: fixed;
+    left: 100px;
+    top: -20px;
+    background-color: @lightAcceptTone;
+    color: @acceptTone;
+    border: 1px solid;
+    padding: 4px 10px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    &.show {
+      top: 80px;
+    }
+  }
+}
+.service-request-list {
+  h4 {
+    margin-bottom: 0 !important;
+    font-weight: 700;
+  }
+  .review-container {
+    display: flex;
+    gap: 5px;
+    .review-text {
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    .rate {
+      ul {
+        display: flex;
+      }
+      li {
+        font-size: 10px;
+      }
+    }
+  }
+  .categories-container {
+    .category-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #5a5a5a;
+    }
+    .collapse-btn {
+      border-radius: 20px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+}
+.service-request-details {
+  .review-container {
+    display: flex;
+    gap: 5px;
+    .review-text {
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    .rate {
+      ul {
+        display: flex;
+      }
+      li {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.service-request-details .data-table,
+.service-request-list .data-table {
+  &.select-row .ant-table-row {
+    cursor: pointer;
+  }
+  .ant-table-content {
+    overflow: auto;
+  }
+
+  .ant-table-container table > thead > tr:first-child th:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .ant-table-container table > thead > tr:first-child th:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+  .ant-table-thead {
+    background-color: @grey200;
+    .ant-table-cell {
+      background-color: transparent;
+    }
+  }
+
+  .ant-table-cell {
+    border: none;
+    &::before {
+      display: none;
+    }
+
+    .circle(@color) {
+      content: '';
+      border-radius: 14px;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background-color: @color;
+      margin: 0 8px;
+    }
+
+    .accepted::before {
+      .circle(@serviceRequestAccept);
+    }
+    .draft::before {
+      .circle(@serviceRequestDraft);
+    }
+    .completed::before {
+      .circle(@serviceRequestCompleted);
+    }
+    .opened::before {
+      .circle(@serviceRequestOpened);
+    }
+    .contracted::before {
+      .circle(@serviceRequestContracted);
+    }
+    .cancelled::before {
+      .circle(@serviceRequestCanceled);
+    }
+    .rejected::before {
+      .circle(@serviceRequestReject);
+    }
+
+    .waiting_response::before {
+      .circle(@serviceRequestWaiting);
+    }
+  }
+}
+
+.reject-form {
+  hr {
+    border-top: 1px solid @grey100;
+    border-width: 0 0 1px 0;
+    margin: 5px -24px 15px -24px;
+  }
+  .request-id {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+  }
+  .hash {
+    margin: 0 4px;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: @grey100;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    display: inline-block;
+    line-height: 1em;
+    text-align: center;
+  }
+  .reject-tip {
+    display: flex;
+    align-items: center;
+    border: 1px solid @serviceRequestInfo;
+    color: @serviceRequestInfo;
+    background-color: fade(@serviceRequestInfo, 10%);
+    padding: 1em 0.5em;
+    border-radius: 10px;
+  }
+  .btn() {
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  .reject-btn {
+    color: fade(@white, 80%);
+    background-color: @serviceRequestReject;
+    .btn();
+  }
+  .undo-btn {
+    background-color: @grey100;
+    .btn();
+  }
+  .rejection-reason {
+    margin: 8px 0;
+    font-size: 1.1em;
+    .ant-form-item-control-input-content {
+      display: flex;
+      height: 1.2em;
+    }
+  }
+
+  button.disabled {
+    opacity: 0.5;
+  }
+}
+
+.reject-inquiry-form {
+  width: 376px !important;
+  display: flex;
+  flex-direction: column;
+  font-family: cairo;
+  .btns-wrapper {
+    margin-bottom: 10px;
+  }
+  .center-content-vertically {
+    display: flex;
+    flex-direction: column;
+  }
+  .ant-modal-body {
+    padding: 16px;
+  }
+  .ant-form-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid @grey7;
+    border-radius: 8px;
+    .ant-form-item-explain {
+      padding: 0 1em;
+      font-size: 0.9em;
+    }
+    .ant-form-item-label > label {
+      width: 100%;
+      font-size: 0.8em;
+      font-weight: bold;
+      margin: 0 0.8em;
+    }
+    .ant-form-item-label > label::after {
+      content: '*';
+      color: red;
+      margin: 0 2px 0 2px;
+    }
+    .ant-input-textarea-show-count::after {
+      float: right;
+      bottom: 20px;
+      position: absolute;
+      right: 12px;
+    }
+    .ant-input,
+    .ant-input-affix-wrapper,
+    .ant-select .ant-select-selector,
+    .ant-input {
+      border: none;
+    }
+  }
+  .dismiss {
+    cursor: pointer;
+  }
+  .request-id {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+  }
+  .hash {
+    margin: 0 4px;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: @grey100;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    display: inline-block;
+    line-height: 1em;
+    text-align: center;
+  }
+  .reject-tip {
+    display: flex;
+    align-items: center;
+    border: 1px solid @serviceRequestInfo;
+    color: @serviceRequestInfo;
+    background-color: fade(@serviceRequestInfo, 10%);
+    padding: 1em 0.5em;
+    border-radius: 10px;
+    font-size: 11px;
+    gap: 2px;
+  }
+  .btn() {
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  .reject-btn {
+    color: fade(@white, 80%);
+    background-color: @serviceRequestReject;
+    .btn();
+  }
+  .undo-btn {
+    background-color: @grey100;
+    .btn();
+  }
+  .rejection-reason {
+    margin: 8px 0;
+    font-size: 1.1em;
+    .ant-form-item-control-input-content {
+      display: flex;
+      height: 1.2em;
+    }
+  }
+
+  button.disabled {
+    opacity: 0.5;
+  }
+}
+.actions-header {
+  .ant-select-arrow {
+    color: black;
+  }
+  .ant-btn {
+    height: 35px !important;
+  }
+  .request-status-select {
+    display: flex;
+    background-color: @grey200;
+    padding: 0 1em;
+    border-radius: 12px;
+    .ant-select-selection-search {
+      display: none;
+      width: 0;
+    }
+    .ant-select-selector {
+      height: 100%;
+    }
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+      width: 6em;
+    }
+  }
+  .search-input {
+    border-radius: 12px !important;
+    background-color: #eeeeee;
+    border: none;
+
+    .ant-input {
+      background-color: transparent;
+
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+  .search-btn {
+    border-radius: 12px;
+    font-size: 12px;
+    padding: 7.5px 26.5px;
+  }
+  .search-btn-works-on {
+    height: 50px !important;
+  }
+}
+.request-button {
+  background-color: @primary-blue;
+  color: @white;
+}
+
+.modal-x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .service-request-list {
+    .service-request-list-header {
+      display: flex !important;
+      justify-content: center !important;
+      margin-block: 18px !important;
+    }
+  }
+}
+
+.rtl {
+  .service-request-details .data-table,
+  .service-request-list .data-table {
+    .ant-table-container table > thead > tr:first-child th:first-child {
+      border-radius: 0 8px 8px 0;
+    }
+    .ant-table-container table > thead > tr:first-child th:last-child {
+      border-radius: 8px 0 0 8px;
+    }
+  }
+
+  .ant-form-item {
+    .ant-input-textarea-show-count::after {
+      float: left;
+      bottom: 20px;
+      position: absolute;
+      left: 12px;
+    }
+  }
+}

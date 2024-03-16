@@ -1,0 +1,91 @@
+.rfq-list-header {
+  p:nth-child(1) {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  p:nth-child(2) {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+}
+
+.rfq-list-container {
+  flex-wrap: wrap;
+  min-height: 60vh;
+  margin-top: 40px;
+
+  @media screen and (max-width: 800px) {
+    padding-top: 30px;
+  }
+}
+
+.rfq-list-container,
+.discussions-list {
+  .ant-card {
+    margin: 10px 10px 29px 10px;
+    box-shadow: 0 10px 30px 0 @tag-box-shadow-color;
+    background-color: @white;
+
+    .ant-card-meta-detail > div:not(:last-child) {
+      margin-bottom: 0px;
+    }
+    .ant-card-body {
+      padding: 24px 30px 14px 30px;
+      background-color: @white;
+    }
+    .ant-card-actions {
+      padding: 0px 28px;
+      border-top: none;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .ant-card-rtl .ant-card-actions > li,
+  .ant-card-actions > li {
+    width: auto !important;
+    display: flex;
+    padding: 0px 3% 0px 0px;
+    margin: 0px 0px 24px 0px;
+    justify-content: center;
+    align-items: center;
+    div {
+      color: @text-color;
+      font-size: @very-small;
+      line-height: 1.25;
+      .number-text {
+        margin: 0px 6px;
+      }
+    }
+  }
+  .ant-card-rtl .ant-card-actions > li:not(:last-child),
+  .ant-card-actions > li:not(:last-child) {
+    border-right: none;
+    border-left: none;
+  }
+  .logged-in {
+    .idea-card {
+      .by-text {
+        color: @grey6;
+      }
+    }
+  }
+
+  .idea-card.rtl {
+    .ant-card-rtl .ant-card-actions > li,
+    .ant-card-actions > li {
+      padding: 0px 0px 0px 3%;
+    }
+  }
+
+  .head {
+    font-weight: @bold;
+    font-size: @h1;
+    margin: 10px;
+  }
+  .sub-head {
+    font-size: @description;
+    margin: 10px;
+  }
+}

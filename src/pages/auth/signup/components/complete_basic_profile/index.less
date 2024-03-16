@@ -1,0 +1,58 @@
+.complete-basic-profile {
+  .block-select {
+    display: flex;
+    .field-txt {
+      color: @grey700;
+    }
+    &.vertical {
+      flex-direction: column;
+    }
+    &.center {
+      align-items: center;
+    }
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid @grey300;
+    background-color: @grey100;
+    .block-select-input {
+      .ant-select-selector {
+        border: none;
+        background-color: #fff;
+      }
+    }
+    .ant-select {
+      flex-grow: 1;
+    }
+  }
+
+  .asterisk {
+    color: @danger;
+  }
+
+  .ant-input {
+    height: 40px;
+  }
+
+  &.ar {
+    font-family: cairo;
+    .ant-btn-rtl {
+      font-family: cairo;
+    }
+  }
+
+  .country-city {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item {
+      flex-grow: 1;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+  }
+}

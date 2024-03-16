@@ -1,0 +1,69 @@
+.client-slider {
+  margin-top: 90px;
+
+  .products-carousel-wrapper {
+    .next-btn {
+      right: 16px;
+    }
+  }
+
+  .slider-title {
+    display: flex;
+    justify-content: center;
+    .ant-typography {
+      font-weight: @bold;
+      font-size: @heading-3;
+      color: @description-blue;
+
+      @media screen and (max-width: 1024px) {
+        font-size: @h3-2;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: @h3-2;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .card-custom {
+    height: 187px;
+    border-radius: 26px;
+    overflow: hidden;
+
+    div:first-child {
+      width: 95%;
+    }
+
+    img {
+      border-radius: 26px;
+    }
+  }
+
+  .carousal-btns,
+  .products-carousel-wrapper .carousal-btns:focus,
+  .products-carousel-wrapper .carousal-btns:hover {
+    top: calc(50% - 30px);
+  }
+
+  .products-carousel-wrapper .next-btn {
+    right: -15px;
+
+    @media screen and (max-width: 768px) {
+      right: -10px;
+    }
+    @media screen and (max-width: 425px) {
+      right: -5px;
+    }
+  }
+
+  .products-carousel-wrapper .prev-btn {
+    left: -25px;
+  }
+
+  .card-custom {
+    height: auto;
+  }
+}

@@ -1,0 +1,132 @@
+.related-professional-small-card {
+  box-shadow: 0 10px 30px @about-box-shadow;
+  padding: 16px;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: @white;
+  p {
+    margin-bottom: 0px;
+  }
+
+  .actions-wrapper {
+    margin-inline-start: -48px;
+    margin-top: 20px;
+  }
+  .follow-btn {
+    position: absolute;
+    right: 12px;
+    top: 15px;
+  }
+
+  .related-professional-item-title {
+    display: flex;
+    flex-direction: column;
+
+    .related-professional-item-rate {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      .rating {
+        display: flex;
+        align-items: center;
+        .ant-rate {
+          @media screen and (max-width: 1024px) {
+            font-size: 10px;
+            .ant-rate-star {
+              margin-right: 5px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-list-item-meta {
+    align-items: flex-start;
+    margin: 0px 12px;
+
+    .ant-list-item-meta-avatar {
+      margin-top: 5px;
+      margin-right: 6px;
+    }
+
+    .ant-list-item-meta-title {
+      margin: 0;
+      font-size: @p;
+      font-weight: @bold;
+    }
+
+    .ant-list-item-meta-description {
+      .ant-typography {
+        font-size: @span;
+        color: @primary-color;
+      }
+
+      .projects-number {
+        color: @text-color;
+        font-weight: @bold;
+      }
+    }
+
+    .ant-rate {
+      font-size: @p;
+      display: flex;
+    }
+
+    .rating-number {
+      color: @text-color;
+      font-weight: @bold;
+      font-size: 11px;
+    }
+  }
+
+  .ant-btn {
+    width: fit-content;
+    height: 41px;
+    margin-inline-start: 12px;
+    background-color: @grey9;
+    border-color: @grey9;
+    color: @text-color;
+    font-size: @very-small;
+    &:hover,
+    &:focus {
+      background-color: @grey8;
+    }
+    img {
+      margin-inline-end: 5px;
+    }
+  }
+}
+
+.rtl {
+  .related-professional-small-card {
+    .follow-btn {
+      left: 12px;
+      right: auto;
+    }
+    .related-professional-item-title {
+      .related-professional-item-rate {
+        .rating {
+          .ant-rate {
+            @media screen and (max-width: 420px) {
+              .ant-rate-star {
+                margin-left: 5px !important;
+                margin-right: 0px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ant-list-item-meta {
+      align-items: flex-start;
+      margin: 0px 12px;
+
+      .ant-list-item-meta-avatar {
+        margin-left: 6px;
+        margin-right: 0px;
+      }
+    }
+  }
+}

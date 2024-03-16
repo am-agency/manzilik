@@ -1,0 +1,43 @@
+.who-we-are-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-size: @heading;
+    font-weight: @bold;
+    margin-bottom: 23px;
+  }
+  .ant-typography {
+    font-weight: @light;
+    line-height: 1.8;
+  }
+  .description-wrapper {
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      @media screen and (min-width: 576px) {
+        top: 40px;
+      }
+    }
+    .img-position-ar {
+      right: 40px;
+    }
+    .img-position-en {
+      left: 40px;
+    }
+    .description {
+      max-width: 511px;
+      padding: 40px;
+      width: 100%;
+      background-color: @description-blue;
+      border-radius: 10px;
+      .ant-typography {
+        color: @white;
+        line-height: 1.8;
+      }
+    }
+  }
+}

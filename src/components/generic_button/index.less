@@ -1,0 +1,22 @@
+.generic-button {
+  display: flex;
+  background-color: #464774;
+  color: #ffffff;
+  padding: 7px 15.5px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  @media screen and (max-width: 1100px) {
+    gap: 5px;
+  }
+}
+
+.ltr {
+  .generic-button {
+    img {
+      transform: rotateY(180deg);
+    }
+  }
+}

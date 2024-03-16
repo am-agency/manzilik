@@ -1,0 +1,99 @@
+.services {
+  margin-top: 90px;
+
+  .services-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      color: @light-blue;
+      font-size: @heading-3;
+      font-weight: bold;
+      text-align: center;
+
+      @media screen and (max-width: 768px) {
+        font-size: @h3-2;
+        text-align: revert;
+      }
+    }
+
+    .ant-typography {
+      color: @light-blue;
+      font-size: @h5;
+      font-weight: @light;
+      text-align: center;
+
+      @media screen and (max-width: 768px) {
+        font-size: @h6;
+        text-align: justify;
+      }
+    }
+  }
+
+  .services-section {
+    padding-top: 84px;
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .service {
+        position: relative;
+        background-color: @very-light-grey7;
+        width: 100%;
+        height: 163px;
+        border-radius: 26px;
+        padding: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .service-icon {
+          width: 79px;
+          height: 79px;
+          position: absolute;
+          left: 12%;
+          top: -26%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .ant-typography {
+          color: @gray9;
+        }
+      }
+    }
+
+    .service-container.ant-col-rtl {
+      .service-icon {
+        right: 12%;
+      }
+    }
+  }
+
+  .join-us-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    a {
+      max-width: 376px;
+      width: 100%;
+      height: 56px;
+      background-color: @light-blue;
+      border-color: @light-blue;
+      color: @white;
+      font-weight: @light;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

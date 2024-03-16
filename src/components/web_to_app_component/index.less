@@ -1,0 +1,53 @@
+.webToApp {
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  bottom: 1rem;
+  background-color: #464774;
+  color: white;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  width: 96%;
+  z-index: 99999999999;
+  &.hide {
+    display: none;
+  }
+  @media (max-width: 480px) {
+    display: block;
+  }
+  .webToAppContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    p {
+      margin-bottom: 0px;
+    }
+    .closeIcon {
+      cursor: pointer;
+      color: #fff;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 16px;
+      @media (max-width: 400px) {
+        width: 80px;
+        line-height: 1.2;
+      }
+    }
+    .subTitle {
+      font-size: 12px;
+    }
+    button {
+      border-radius: 13px;
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      border: none;
+      padding: 8px 16px;
+      background: #3c3d69;
+    }
+  }
+}

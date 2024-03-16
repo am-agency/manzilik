@@ -1,0 +1,62 @@
+.magazine-card {
+  padding: 0px;
+  max-height: fit-content !important;
+  height: auto !important;
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .img-wrapper {
+    height: 172px;
+    img {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  .content-wrapper {
+    max-height: 220px;
+    padding: 16px 14px;
+    background-color: #d9d9d947;
+  }
+
+  .small-card_content-wrapper {
+    max-height: 100px;
+  }
+
+  .ant-tag {
+    margin-right: 3px;
+  }
+
+  .category-tag {
+    background: @grey3;
+    padding: 3px 10px;
+    border: 1px solid @gray16;
+    border-radius: 10px;
+    font-size: @very-small;
+    margin-top: 3px;
+  }
+
+  .category-tag::after {
+    display: none;
+  }
+
+  .ant-badge {
+    .ant-badge-count {
+      background: @white;
+      box-shadow: 0 0 0 1px @white;
+      border: 1px solid @icon-background;
+      border-radius: 10px;
+      width: 33px;
+      height: 30px;
+      color: @black2;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.magazine-expanded-card {
+  height: 446px;
+}

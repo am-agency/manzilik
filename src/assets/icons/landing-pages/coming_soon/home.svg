@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <g data-name="Group 1932">
+        <g data-name="Ellipse 226" style="fill:#fff;stroke:#fff;stroke-width:2px">
+            <circle cx="30" cy="30" r="30" style="stroke:none"/>
+            <circle cx="30" cy="30" r="29" style="fill:none"/>
+        </g>
+        <g data-name="Iconly/Bulk/Home">
+            <path data-name="Iconly/Bulk/Home (Background)" style="fill:none" d="M0 0h24v24H0z" transform="translate(18 18)"/>
+            <path data-name="Home" d="M6.644 15.715A1.418 1.418 0 0 1 8.058 14.3h2.874a1.419 1.419 0 0 1 1.424 1.413v3.058A1.231 1.231 0 0 0 13.583 20h1.961a3.46 3.46 0 0 0 2.443-1A3.41 3.41 0 0 0 19 16.578V7.866a2.473 2.473 0 0 0-.9-1.9L11.443.674a3.115 3.115 0 0 0-3.958.071L.967 5.964A2.474 2.474 0 0 0 0 7.866v8.7A3.444 3.444 0 0 0 3.456 20h1.916a1.231 1.231 0 0 0 .873-.354 1.213 1.213 0 0 0 .362-.864h.036z" style="fill:#464774" transform="translate(20.5 20)"/>
+        </g>
+    </g>
+</svg>

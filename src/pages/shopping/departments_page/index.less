@@ -1,0 +1,67 @@
+.departments-page {
+  .title {
+    line-height: 1.85;
+    text-align: left;
+    font-size: @h4;
+  }
+
+  .department-wrapper {
+    display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+
+    .department-card {
+      width: 25%;
+      @media (max-width: 900px) {
+        width: 33%;
+      }
+
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .slick-slider {
+    width: 75%;
+
+    @media (max-width: 900px) {
+      width: 67%;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  .products-carousel-wrapper {
+    .next-btn {
+      right: 12px;
+      left: auto;
+    }
+    .prev-btn {
+      left: 15px;
+      right: auto;
+    }
+  }
+
+  .slick-track {
+    margin: 0 5px;
+  }
+}
+
+.shopping-search-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  justify-content: center;
+  margin: 2em auto;
+  text-align: center;
+  .ant-typography + h1.ant-typography.sub-heading {
+    margin-top: 0.5em;
+  }
+  .search-input {
+    height: 40px;
+  }
+}

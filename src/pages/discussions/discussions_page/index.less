@@ -1,0 +1,374 @@
+.discussions-page,
+.start-discussion {
+  .icon {
+    cursor: pointer;
+  }
+
+  .discussions-header {
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+
+    .hi-text {
+      color: @white;
+      font-weight: @bold;
+      font-size: @h6;
+    }
+
+    .what-are-you-working-text {
+      color: @white;
+      font-weight: @bold;
+      font-size: @h4;
+      text-align: center;
+    }
+
+    .get-help-text {
+      color: @white;
+      font-size: @small;
+      text-align: center;
+    }
+
+    .avatar-start-discussion-wrapper {
+      max-width: 100vw;
+      width: 520px;
+      padding: 0 10px;
+
+      .separator {
+        margin: 0 10px;
+      }
+
+      .ant-input,
+      .ant-input:focus {
+        border: none;
+        box-shadow: none;
+      }
+
+      .start-discussion-input {
+        display: flex;
+        flex: 1;
+        border-radius: 8px;
+        height: 50px;
+        background-color: @white;
+        padding: 0 20px;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .header-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 5;
+    background-color: @mid-light-black;
+  }
+
+  .ant-tabs-tab {
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0 10px;
+    min-width: 94px;
+    max-width: 100%;
+    height: 30px;
+    margin: 0;
+    background-color: @grey8;
+    overflow: hidden;
+    opacity: 0.7;
+    border: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-and-boxes-wrapper {
+    margin-top: 60px;
+    flex-wrap: wrap-reverse;
+
+    .list-title {
+      font-weight: @bold;
+      font-size: @h4;
+    }
+
+    .posts-number-text {
+      font-size: @very-small;
+    }
+
+    .post-text {
+      opacity: 0.7;
+    }
+
+    .users-icons-wrapper {
+      display: flex;
+      margin: 5px 0;
+
+      .users-icon {
+        box-shadow: @card-box-shadow;
+        margin-right: -12px;
+        background-color: @light-grey-shadow;
+        z-index: 1;
+      }
+
+      .comments-number-wrapper {
+        height: 25px;
+        border-radius: 50px;
+        font-size: @very-small;
+        min-width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: @card-box-shadow;
+        margin-right: -12px;
+        background-color: @grey8;
+        z-index: 2;
+      }
+    }
+
+    .users-icons-wrapper::before {
+      content: '';
+      margin: 0 10px;
+    }
+
+    .tag.discussions-tags,
+    .ant-tabs-nav .ant-tabs-tab {
+      min-width: 77px;
+      height: 34px;
+      border: none;
+      font-size: @h6;
+      color: @black;
+      margin: 0;
+      opacity: 0.7;
+      background-color: @white;
+    }
+
+    .ant-tag.ant-tag-rtl {
+      margin: 0;
+    }
+
+    .tag.discussions-tags.selected {
+      background-color: @grey8;
+      opacity: 1;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab {
+      background-color: @white;
+      color: @grey6;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab-active {
+      background-color: @grey8;
+      color: @black;
+      opacity: 1;
+    }
+
+    .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
+      overflow: visible;
+    }
+
+    .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations,
+    .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-operations {
+      display: none;
+    }
+
+    .side-box-top {
+      box-shadow: @card-box-shadow;
+      padding: 0 20px;
+      max-width: 308px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+      span {
+        font-size: @very-small;
+      }
+
+      .comments-number-text {
+        background-color: @grey8;
+        border-radius: 3px;
+        min-width: 25px;
+        margin: 0 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .topic-tags {
+        border: solid 1px @grey6;
+        opacity: 0.5;
+      }
+
+      .selected {
+        color: @black;
+        opacity: 1;
+        border: none;
+      }
+
+      .section-title {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .section-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        cursor: pointer;
+      }
+
+      .tag.topic-tags {
+        border: solid 1px @grey6;
+        margin: 5px 0;
+        opacity: 0.5;
+      }
+
+      .tag.topic-tags.selected {
+        margin: 5px 0;
+        color: @black;
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    .commenters-nav {
+      max-width: 308px;
+      padding: 0 20px;
+      font-size: @very-small;
+
+      .circle {
+        margin: 0 5px;
+      }
+
+      @media screen and (max-width: 992px) {
+        .nav-text {
+          display: none;
+        }
+      }
+    }
+
+    .side-box-bottom {
+      max-width: 308px;
+      padding: 0 20px;
+
+      .commenters-list {
+        min-height: 450px;
+      }
+
+      .commenter-wrapper {
+        margin: 10px 0;
+      }
+    }
+
+    .discussions-list {
+      .ant-divider {
+        border-color: @shadow-grey;
+      }
+
+      .ant-card .ant-card-actions {
+        padding: 0;
+
+        li {
+          padding: 0;
+          margin: 0;
+
+          span {
+            ::after {
+              content: '';
+              margin: 0 4px;
+            }
+          }
+        }
+      }
+
+      .ant-card {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+      }
+
+      .ant-card-body {
+        padding: 0;
+        padding-bottom: 10px;
+      }
+
+      .ant-card-meta-detail {
+        overflow: visible;
+      }
+
+      .ant-card-meta-detail > div:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      .ant-card-meta-title {
+        font-size: @h6;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+
+      .discussion-details-right-side {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1300px) {
+          justify-content: space-between;
+          flex: 1;
+        }
+      }
+
+      .discussion-details-left-side {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .by-text,
+      .created-at-text,
+      .updated-at-text,
+      .client-name-text {
+        font-size: @very-small;
+        opacity: 0.7;
+        white-space: nowrap;
+      }
+
+      .client-name-text {
+        opacity: 1;
+        font-weight: @regular;
+      }
+    }
+  }
+
+  // common
+  .ant-tabs-ink-bar {
+    display: none;
+  }
+
+  .ant-tabs-nav::before {
+    border-bottom: none !important;
+  }
+
+  .ant-tabs {
+    overflow: visible;
+  }
+}
+
+.discussions-page.rtl {
+  .ant-tabs-nav .ant-tabs-tab {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}

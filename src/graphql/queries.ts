@@ -1,0 +1,22032 @@
+/* tslint:disable */
+/* eslint-disable */
+// this is an auto generated file. This will be overwritten
+
+import * as APITypes from '../API';
+type GeneratedQuery<InputType, OutputType> = string & {
+  __generatedQueryInput: InputType;
+  __generatedQueryOutput: OutputType;
+};
+
+export const listPackages = /* GraphQL */ `query ListPackages($input: PaymentPagination) {
+  listPackages(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      name
+      title
+      credit_amount
+      price
+      discount
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListPackagesQueryVariables, APITypes.ListPackagesQuery>;
+export const listCategories = /* GraphQL */ `query ListCategories($input: Pagination) {
+  listCategories(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCategoriesQueryVariables, APITypes.ListCategoriesQuery>;
+export const listCategoriesWithSubCategories = /* GraphQL */ `query ListCategoriesWithSubCategories {
+  listCategoriesWithSubCategories {
+    result {
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      children {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCategoriesWithSubCategoriesQuery, APITypes.ListCategoriesWithSubCategoriesQuery>;
+export const getCategory = /* GraphQL */ `query GetCategory($id: ID!) {
+  getCategory(id: $id) {
+    id
+    title
+    english_title
+    description
+    parent {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    photo
+    status
+    created_at
+    updated_at
+    filters
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetCategoryQueryVariables, APITypes.GetCategoryQuery>;
+export const listRoomTypes = /* GraphQL */ `query ListRoomTypes($input: Pagination) {
+  listRoomTypes(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      arabic_title
+      english_title
+      category {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      status
+      created_at
+      updated_at
+      photo
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRoomTypesQueryVariables, APITypes.ListRoomTypesQuery>;
+export const getProject = /* GraphQL */ `query GetProject($id: ID!) {
+  getProject(id: $id) {
+    id
+    room_type {
+      id
+      title
+      arabic_title
+      english_title
+      category {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      status
+      created_at
+      updated_at
+      photo
+      __typename
+    }
+    is_default
+    title
+    status
+    created_at
+    updated_at
+    visibility
+    client_id
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    discussions_count
+    ideas_count
+    likes_count
+    shares_count
+    questions_count
+    description
+    ideas {
+      id
+      tag
+      created_at
+      updated_at
+      title
+      photo
+      status
+      source
+      description
+      project_id
+      project {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      questions_count
+      shares_count
+      likes_count
+      is_liked
+      is_photo_uploaded
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      google_vision_result
+      paint_colors {
+        count
+        next
+        previous
+        results {
+          __typename
+        }
+        __typename
+      }
+      ideaLabels {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          related_stockrecords_count
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    ideasList {
+      count
+      next
+      previous
+      results {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    is_liked
+    collaborators {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    default_idea {
+      id
+      tag
+      created_at
+      updated_at
+      title
+      photo
+      status
+      source
+      description
+      project_id
+      project {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      questions_count
+      shares_count
+      likes_count
+      is_liked
+      is_photo_uploaded
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      google_vision_result
+      paint_colors {
+        count
+        next
+        previous
+        results {
+          __typename
+        }
+        __typename
+      }
+      ideaLabels {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          related_stockrecords_count
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    questions {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        status
+        title
+        description
+        idea_id
+        idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        likes_count
+        comments_count
+        is_liked
+        __typename
+      }
+      __typename
+    }
+    entities {
+      count
+      next
+      previous
+      results {
+        created_at
+        updated_at
+        status
+        photo
+        description
+        tag
+        client_id
+        project_id
+        entity_id
+        title
+        is_main_entity
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetProjectQueryVariables, APITypes.GetProjectQuery>;
+export const listProjects = /* GraphQL */ `query ListProjects($input: Pagination) {
+  listProjects(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProjectsQueryVariables, APITypes.ListProjectsQuery>;
+export const listHomePageProjects = /* GraphQL */ `query ListHomePageProjects($input: Pagination) {
+  listHomePageProjects(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListHomePageProjectsQueryVariables, APITypes.ListHomePageProjectsQuery>;
+export const listMyProjects = /* GraphQL */ `query ListMyProjects($input: Pagination) {
+  listMyProjects(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMyProjectsQueryVariables, APITypes.ListMyProjectsQuery>;
+export const listSimilarProjects = /* GraphQL */ `query ListSimilarProjects($input: Pagination!) {
+  listSimilarProjects(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSimilarProjectsQueryVariables, APITypes.ListSimilarProjectsQuery>;
+export const listProjectEntities = /* GraphQL */ `query ListProjectEntities($input: Pagination!) {
+  listProjectEntities(input: $input) {
+    count
+    next
+    previous
+    results {
+      created_at
+      updated_at
+      status
+      photo
+      description
+      tag
+      client_id
+      project_id
+      entity_id
+      title
+      is_main_entity
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProjectEntitiesQueryVariables, APITypes.ListProjectEntitiesQuery>;
+export const listProjectIdeasByIdeaId = /* GraphQL */ `query ListProjectIdeasByIdeaId($input: Pagination!) {
+  listProjectIdeasByIdeaId(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      title
+      photo
+      status
+      source
+      description
+      project_id
+      project {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      questions_count
+      shares_count
+      likes_count
+      is_liked
+      is_photo_uploaded
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      google_vision_result
+      paint_colors {
+        count
+        next
+        previous
+        results {
+          __typename
+        }
+        __typename
+      }
+      ideaLabels {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          related_stockrecords_count
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProjectIdeasByIdeaIdQueryVariables, APITypes.ListProjectIdeasByIdeaIdQuery>;
+export const getIdea = /* GraphQL */ `query GetIdea($id: ID!) {
+  getIdea(id: $id) {
+    id
+    tag
+    created_at
+    updated_at
+    title
+    photo
+    status
+    source
+    description
+    project_id
+    project {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    client_id
+    questions_count
+    shares_count
+    likes_count
+    is_liked
+    is_photo_uploaded
+    questions {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        status
+        title
+        description
+        idea_id
+        idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        likes_count
+        comments_count
+        is_liked
+        __typename
+      }
+      __typename
+    }
+    google_vision_result
+    paint_colors {
+      count
+      next
+      previous
+      results {
+        color {
+          id
+          title
+          rgb
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    ideaLabels {
+      count
+      next
+      previous
+      results {
+        id
+        coordinates {
+          x
+          y
+          __typename
+        }
+        name
+        related_stockrecords_count
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetIdeaQueryVariables, APITypes.GetIdeaQuery>;
+export const listMoreIdeas = /* GraphQL */ `query ListMoreIdeas($input: Pagination!) {
+  listMoreIdeas(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      title
+      photo
+      status
+      source
+      description
+      project_id
+      project {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      questions_count
+      shares_count
+      likes_count
+      is_liked
+      is_photo_uploaded
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      google_vision_result
+      paint_colors {
+        count
+        next
+        previous
+        results {
+          __typename
+        }
+        __typename
+      }
+      ideaLabels {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          related_stockrecords_count
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMoreIdeasQueryVariables, APITypes.ListMoreIdeasQuery>;
+export const getPresignedUrl = /* GraphQL */ `query GetPresignedUrl($input: PresignedUrlInput!) {
+  getPresignedUrl(input: $input) {
+    result
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetPresignedUrlQueryVariables, APITypes.GetPresignedUrlQuery>;
+export const listClientIdeasByClientId = /* GraphQL */ `query ListClientIdeasByClientId($input: Pagination!) {
+  listClientIdeasByClientId(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      title
+      photo
+      status
+      source
+      description
+      project_id
+      project {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      questions_count
+      shares_count
+      likes_count
+      is_liked
+      is_photo_uploaded
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      google_vision_result
+      paint_colors {
+        count
+        next
+        previous
+        results {
+          __typename
+        }
+        __typename
+      }
+      ideaLabels {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          related_stockrecords_count
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListClientIdeasByClientIdQueryVariables, APITypes.ListClientIdeasByClientIdQuery>;
+export const listRelatedProfessionals = /* GraphQL */ `query ListRelatedProfessionals($input: Pagination!) {
+  listRelatedProfessionals(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRelatedProfessionalsQueryVariables, APITypes.ListRelatedProfessionalsQuery>;
+export const listRelatedStockRecords = /* GraphQL */ `query ListRelatedStockRecords($input: Pagination!) {
+  listRelatedStockRecords(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      currency
+      price
+      original_price
+      discount_value
+      available_number_in_stock
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      reviews_total
+      reviews_count
+      partner_sku
+      is_reviewable
+      is_purchased
+      vendor_variants {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRelatedStockRecordsQueryVariables, APITypes.ListRelatedStockRecordsQuery>;
+export const getAuthenticatedClient = /* GraphQL */ `query GetAuthenticatedClient {
+  getAuthenticatedClient {
+    id
+    created_at
+    updated_at
+    status
+    first_name
+    last_name
+    email
+    mobile
+    country_code
+    gender
+    type
+    about_me
+    my_fav_style
+    my_next_style
+    city_id
+    country_id
+    city {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    country {
+      id
+      created_at
+      updated_at
+      status
+      name
+      country_flag
+      is_default
+      __typename
+    }
+    zip
+    state
+    following_count
+    followers_count
+    followees_count
+    is_followed
+    total_review
+    discussions_count
+    comments_count
+    is_verified
+    is_add_gigs_tutorial_showed
+    last_login
+    profile_image
+    facebook
+    twitter
+    linkedin
+    blog
+    project_role
+    client_awards {
+      id
+      created_at
+      updated_at
+      status
+      title
+      code
+      image
+      __typename
+    }
+    client_badges {
+      id
+      created_at
+      updated_at
+      status
+      key
+      title
+      value
+      image
+      description
+      client_progress
+      is_claimed
+      __typename
+    }
+    projects {
+      count
+      next
+      previous
+      results {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    addresses {
+      count
+      next
+      previous
+      results {
+        id
+        name
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        neighborhood {
+          id
+          created_at
+          updated_at
+          status
+          name
+          city_id
+          __typename
+        }
+        description
+        first_name
+        last_name
+        phone_number
+        email
+        is_default
+        __typename
+      }
+      __typename
+    }
+    bankcards {
+      count
+      next
+      previous
+      results {
+        id
+        card_type
+        number
+        name
+        expiry_date
+        partner_reference
+        payment_method {
+          id
+          name
+          logo
+          brand
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    related_professional {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    sendbird_access_token
+    apns_token
+    balance
+    is_purchased
+    referral_url
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAuthenticatedClientQuery, APITypes.GetAuthenticatedClientQuery>;
+export const getClient = /* GraphQL */ `query GetClient($id: ID!) {
+  getClient(id: $id) {
+    id
+    created_at
+    updated_at
+    status
+    first_name
+    last_name
+    email
+    mobile
+    country_code
+    gender
+    type
+    about_me
+    my_fav_style
+    my_next_style
+    city_id
+    country_id
+    city {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    country {
+      id
+      created_at
+      updated_at
+      status
+      name
+      country_flag
+      is_default
+      __typename
+    }
+    zip
+    state
+    following_count
+    followers_count
+    followees_count
+    is_followed
+    total_review
+    discussions_count
+    comments_count
+    is_verified
+    is_add_gigs_tutorial_showed
+    last_login
+    profile_image
+    facebook
+    twitter
+    linkedin
+    blog
+    project_role
+    client_awards {
+      id
+      created_at
+      updated_at
+      status
+      title
+      code
+      image
+      __typename
+    }
+    client_badges {
+      id
+      created_at
+      updated_at
+      status
+      key
+      title
+      value
+      image
+      description
+      client_progress
+      is_claimed
+      __typename
+    }
+    projects {
+      count
+      next
+      previous
+      results {
+        id
+        room_type {
+          id
+          title
+          arabic_title
+          english_title
+          status
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        is_default
+        title
+        status
+        created_at
+        updated_at
+        visibility
+        client_id
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        discussions_count
+        ideas_count
+        likes_count
+        shares_count
+        questions_count
+        description
+        ideas {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        ideasList {
+          count
+          next
+          previous
+          __typename
+        }
+        is_liked
+        collaborators {
+          count
+          next
+          previous
+          __typename
+        }
+        default_idea {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        entities {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    addresses {
+      count
+      next
+      previous
+      results {
+        id
+        name
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        neighborhood {
+          id
+          created_at
+          updated_at
+          status
+          name
+          city_id
+          __typename
+        }
+        description
+        first_name
+        last_name
+        phone_number
+        email
+        is_default
+        __typename
+      }
+      __typename
+    }
+    bankcards {
+      count
+      next
+      previous
+      results {
+        id
+        card_type
+        number
+        name
+        expiry_date
+        partner_reference
+        payment_method {
+          id
+          name
+          logo
+          brand
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    related_professional {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    sendbird_access_token
+    apns_token
+    balance
+    is_purchased
+    referral_url
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetClientQueryVariables, APITypes.GetClientQuery>;
+export const listCollaboratorsByProject = /* GraphQL */ `query ListCollaboratorsByProject($input: Pagination) {
+  listCollaboratorsByProject(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCollaboratorsByProjectQueryVariables, APITypes.ListCollaboratorsByProjectQuery>;
+export const listSuggestedCollaborators = /* GraphQL */ `query ListSuggestedCollaborators($input: Pagination) {
+  listSuggestedCollaborators(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSuggestedCollaboratorsQueryVariables, APITypes.ListSuggestedCollaboratorsQuery>;
+export const listFeeds = /* GraphQL */ `query ListFeeds($input: Pagination) {
+  listFeeds(input: $input) {
+    count
+    results {
+      data
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFeedsQueryVariables, APITypes.ListFeedsQuery>;
+export const listCities = /* GraphQL */ `query ListCities($input: Pagination) {
+  listCities(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCitiesQueryVariables, APITypes.ListCitiesQuery>;
+export const listLocations = /* GraphQL */ `query ListLocations($input: Pagination) {
+  listLocations(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListLocationsQueryVariables, APITypes.ListLocationsQuery>;
+export const listCountries = /* GraphQL */ `query ListCountries($input: Pagination) {
+  listCountries(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      country_flag
+      is_default
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCountriesQueryVariables, APITypes.ListCountriesQuery>;
+export const listNeighborhoods = /* GraphQL */ `query ListNeighborhoods($input: Pagination) {
+  listNeighborhoods(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      city_id
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListNeighborhoodsQueryVariables, APITypes.ListNeighborhoodsQuery>;
+export const listCitiesByRegion = /* GraphQL */ `query ListCitiesByRegion($input: Pagination) {
+  listCitiesByRegion(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCitiesByRegionQueryVariables, APITypes.ListCitiesByRegionQuery>;
+export const listRegions = /* GraphQL */ `query ListRegions($input: Pagination) {
+  listRegions(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      name
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRegionsQueryVariables, APITypes.ListRegionsQuery>;
+export const listQuestionsByIdea = /* GraphQL */ `query ListQuestionsByIdea($input: Pagination!) {
+  listQuestionsByIdea(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      title
+      description
+      idea_id
+      idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      likes_count
+      comments_count
+      is_liked
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListQuestionsByIdeaQueryVariables, APITypes.ListQuestionsByIdeaQuery>;
+export const listTopics = /* GraphQL */ `query ListTopics($input: Pagination) {
+  listTopics(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      paren_id
+      created_at
+      updated_at
+      status
+      title
+      description
+      is_interested
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListTopicsQueryVariables, APITypes.ListTopicsQuery>;
+export const listMainTopics = /* GraphQL */ `query ListMainTopics($input: Pagination) {
+  listMainTopics(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      paren_id
+      created_at
+      updated_at
+      status
+      title
+      description
+      is_interested
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMainTopicsQueryVariables, APITypes.ListMainTopicsQuery>;
+export const listTopicsInterestedFlagByClient =
+  /* GraphQL */ `query ListTopicsInterestedFlagByClient($input: Pagination) {
+  listTopicsInterestedFlagByClient(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      paren_id
+      created_at
+      updated_at
+      status
+      title
+      description
+      is_interested
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListTopicsInterestedFlagByClientQueryVariables,
+    APITypes.ListTopicsInterestedFlagByClientQuery
+  >;
+export const listInterestedTopicsByClient = /* GraphQL */ `query ListInterestedTopicsByClient($input: Pagination) {
+  listInterestedTopicsByClient(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      paren_id
+      created_at
+      updated_at
+      status
+      title
+      description
+      is_interested
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListInterestedTopicsByClientQueryVariables, APITypes.ListInterestedTopicsByClientQuery>;
+export const getDiscussion = /* GraphQL */ `query GetDiscussion($id: ID!) {
+  getDiscussion(id: $id) {
+    id
+    tag
+    created_at
+    updated_at
+    status
+    title
+    description
+    client_id
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    youtube_url
+    photo
+    web_url
+    likes_count
+    comments_count
+    topics {
+      id
+      paren_id
+      created_at
+      updated_at
+      status
+      title
+      description
+      is_interested
+      __typename
+    }
+    polls {
+      id
+      created_at
+      updated_at
+      status
+      title
+      photo_url
+      __typename
+    }
+    is_liked
+    latest_two_commenters {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetDiscussionQueryVariables, APITypes.GetDiscussionQuery>;
+export const listDiscussions = /* GraphQL */ `query ListDiscussions($input: Pagination) {
+  listDiscussions(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDiscussionsQueryVariables, APITypes.ListDiscussionsQuery>;
+export const listMostRecentDiscussions = /* GraphQL */ `query ListMostRecentDiscussions($input: Pagination) {
+  listMostRecentDiscussions(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMostRecentDiscussionsQueryVariables, APITypes.ListMostRecentDiscussionsQuery>;
+export const listSameTopicsDiscussions = /* GraphQL */ `query ListSameTopicsDiscussions($input: Pagination!) {
+  listSameTopicsDiscussions(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSameTopicsDiscussionsQueryVariables, APITypes.ListSameTopicsDiscussionsQuery>;
+export const listUserDiscussions = /* GraphQL */ `query ListUserDiscussions($input: Pagination!) {
+  listUserDiscussions(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListUserDiscussionsQueryVariables, APITypes.ListUserDiscussionsQuery>;
+export const listDiscussionsWhereUserInteracted =
+  /* GraphQL */ `query ListDiscussionsWhereUserInteracted($input: Pagination!) {
+  listDiscussionsWhereUserInteracted(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListDiscussionsWhereUserInteractedQueryVariables,
+    APITypes.ListDiscussionsWhereUserInteractedQuery
+  >;
+export const listTopCommenters = /* GraphQL */ `query ListTopCommenters($input: Pagination) {
+  listTopCommenters(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListTopCommentersQueryVariables, APITypes.ListTopCommentersQuery>;
+export const getUserDiscussionsCommentsCount = /* GraphQL */ `query GetUserDiscussionsCommentsCount {
+  getUserDiscussionsCommentsCount {
+    total
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetUserDiscussionsCommentsCountQuery, APITypes.GetUserDiscussionsCommentsCountQuery>;
+export const getUserDiscussionsCount = /* GraphQL */ `query GetUserDiscussionsCount {
+  getUserDiscussionsCount {
+    total
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetUserDiscussionsCountQuery, APITypes.GetUserDiscussionsCountQuery>;
+export const listComments = /* GraphQL */ `query ListComments($input: Pagination!) {
+  listComments(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      content
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      client_id
+      likes_count
+      is_liked
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListCommentsQueryVariables, APITypes.ListCommentsQuery>;
+export const listLikes = /* GraphQL */ `query ListLikes($input: Pagination!) {
+  listLikes(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListLikesQueryVariables, APITypes.ListLikesQuery>;
+export const listShares = /* GraphQL */ `query ListShares($input: Pagination!) {
+  listShares(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSharesQueryVariables, APITypes.ListSharesQuery>;
+export const listReviews = /* GraphQL */ `query ListReviews($input: Pagination!) {
+  listReviews(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      content
+      rating
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListReviewsQueryVariables, APITypes.ListReviewsQuery>;
+export const getMyReviewForProfessional = /* GraphQL */ `query GetMyReviewForProfessional($input: Pagination!) {
+  getMyReviewForProfessional(input: $input) {
+    id
+    created_at
+    updated_at
+    content
+    rating
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetMyReviewForProfessionalQueryVariables, APITypes.GetMyReviewForProfessionalQuery>;
+export const listSpamReasons = /* GraphQL */ `query ListSpamReasons {
+  listSpamReasons {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      title
+      description
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSpamReasonsQuery, APITypes.ListSpamReasonsQuery>;
+export const listFilters = /* GraphQL */ `query ListFilters {
+  listFilters {
+    filters
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFiltersQuery, APITypes.ListFiltersQuery>;
+export const getTV = /* GraphQL */ `query GetTV($id: ID!) {
+  getTV(id: $id) {
+    id
+    video_url
+    photo
+    page
+    likes_count
+    is_liked
+    comments_count
+    title
+    meta_description
+    categories {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    created_at
+    video_length
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetTVQueryVariables, APITypes.GetTVQuery>;
+export const listTVs = /* GraphQL */ `query ListTVs($input: Pagination) {
+  listTVs(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      video_url
+      photo
+      page
+      likes_count
+      is_liked
+      comments_count
+      title
+      meta_description
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      created_at
+      video_length
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListTVsQueryVariables, APITypes.ListTVsQuery>;
+export const getMagazine = /* GraphQL */ `query GetMagazine($id: ID!) {
+  getMagazine(id: $id) {
+    id
+    page
+    photo
+    likes_count
+    comments_count
+    title
+    meta_description
+    is_liked
+    categories {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    created_at
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetMagazineQueryVariables, APITypes.GetMagazineQuery>;
+export const listMagazines = /* GraphQL */ `query ListMagazines($input: Pagination) {
+  listMagazines(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      page
+      photo
+      likes_count
+      comments_count
+      title
+      meta_description
+      is_liked
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      created_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMagazinesQueryVariables, APITypes.ListMagazinesQuery>;
+export const listRecentMagazines = /* GraphQL */ `query ListRecentMagazines($input: Pagination) {
+  listRecentMagazines(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      page
+      photo
+      likes_count
+      comments_count
+      title
+      meta_description
+      is_liked
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      created_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRecentMagazinesQueryVariables, APITypes.ListRecentMagazinesQuery>;
+export const listNotificationTypes = /* GraphQL */ `query ListNotificationTypes($input: Pagination) {
+  listNotificationTypes(input: $input) {
+    count
+    next
+    previous
+    results {
+      verb
+      options {
+        id
+        value
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListNotificationTypesQueryVariables, APITypes.ListNotificationTypesQuery>;
+export const listNotificationSettings = /* GraphQL */ `query ListNotificationSettings($input: PlatformInput) {
+  listNotificationSettings(input: $input) {
+    count
+    next
+    previous
+    results {
+      text
+      settings {
+        id
+        title
+        status
+        blocked
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListNotificationSettingsQueryVariables, APITypes.ListNotificationSettingsQuery>;
+export const listNotifications = /* GraphQL */ `query ListNotifications($input: Pagination) {
+  listNotifications(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      body
+      created_at
+      unread
+      notification_class
+      sender {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      notification_payload {
+        page
+        section
+        id
+        url
+        icon
+        image
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListNotificationsQueryVariables, APITypes.ListNotificationsQuery>;
+export const getUserUnreadNotificationsCount = /* GraphQL */ `query GetUserUnreadNotificationsCount {
+  getUserUnreadNotificationsCount {
+    total
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetUserUnreadNotificationsCountQuery, APITypes.GetUserUnreadNotificationsCountQuery>;
+export const search = /* GraphQL */ `query Search($input: SearchInput) {
+  search(input: $input) {
+    count
+    results {
+      index
+      data
+      __typename
+    }
+    suggestions {
+      original
+      suggestion
+      __typename
+    }
+    filters
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchQueryVariables, APITypes.SearchQuery>;
+export const findRelated = /* GraphQL */ `query FindRelated($input: FindRelated) {
+  findRelated(input: $input) {
+    count
+    results {
+      index
+      data
+      __typename
+    }
+    suggestions {
+      original
+      suggestion
+      __typename
+    }
+    filters
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.FindRelatedQueryVariables, APITypes.FindRelatedQuery>;
+export const autoComplete = /* GraphQL */ `query AutoComplete($input: AutoCompleteInput) {
+  autoComplete(input: $input) {
+    count
+    results {
+      projects
+      ideas
+      magazines
+      tvs
+      discussions
+      professionals
+      brands
+      stockrecords
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.AutoCompleteQueryVariables, APITypes.AutoCompleteQuery>;
+export const autoCompleteObjects = /* GraphQL */ `query AutoCompleteObjects($input: AutoCompleteInput) {
+  autoCompleteObjects(input: $input) {
+    count
+    results {
+      projects {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      magazines {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      tvs {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      discussions {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      professionals {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      brands {
+        id
+        title
+        key_id
+        key
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.AutoCompleteObjectsQueryVariables, APITypes.AutoCompleteObjectsQuery>;
+export const getMenu = /* GraphQL */ `query GetMenu {
+  getMenu {
+    data
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetMenuQuery, APITypes.GetMenuQuery>;
+export const getShoppingMenu = /* GraphQL */ `query GetShoppingMenu {
+  getShoppingMenu {
+    departments
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetShoppingMenuQuery, APITypes.GetShoppingMenuQuery>;
+export const listProfessionals = /* GraphQL */ `query ListProfessionals($input: Pagination) {
+  listProfessionals(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProfessionalsQueryVariables, APITypes.ListProfessionalsQuery>;
+export const getProfessional = /* GraphQL */ `query GetProfessional($id: ID!) {
+  getProfessional(id: $id) {
+    id
+    created_at
+    updated_at
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    address
+    categories {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    services {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    locations {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    is_profile_completed
+    reviews_total
+    reviews_count
+    gallery_photos
+    photos {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      __typename
+    }
+    is_reviewable
+    projects_count
+    videos {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        video
+        __typename
+      }
+      __typename
+    }
+    contacts {
+      count
+      next
+      previous
+      results {
+        contact_type
+        value
+        __typename
+      }
+      __typename
+    }
+    professional_type
+    company_name
+    company_logo
+    company_registration_ref
+    personal_freelance_license
+    is_verified
+    is_gig_professional
+    gigs_count
+    score
+    quotations {
+      count
+      next
+      previous
+      results {
+        id
+        service_inquiry {
+          id
+          number
+          status
+          created_at
+          description
+          budget_limits
+          phone_number
+          whatsapp_number
+          gig_service_id
+          gig_service_title
+          gig_service_price
+          gig_service_description
+          sendbird_channel_name
+          sendbird_channel_url
+          reviews_total
+          reviews_count
+          type
+          __typename
+        }
+        professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        created_at
+        status
+        budget_limits
+        execution_time
+        sendbird_channel_name
+        sendbird_channel_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetProfessionalQueryVariables, APITypes.GetProfessionalQuery>;
+export const getAuthenticatedProfessional = /* GraphQL */ `query GetAuthenticatedProfessional {
+  getAuthenticatedProfessional {
+    id
+    created_at
+    updated_at
+    client {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    address
+    categories {
+      id
+      title
+      english_title
+      description
+      parent {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      photo
+      status
+      created_at
+      updated_at
+      filters
+      __typename
+    }
+    services {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    locations {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    is_profile_completed
+    reviews_total
+    reviews_count
+    gallery_photos
+    photos {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      __typename
+    }
+    is_reviewable
+    projects_count
+    videos {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        video
+        __typename
+      }
+      __typename
+    }
+    contacts {
+      count
+      next
+      previous
+      results {
+        contact_type
+        value
+        __typename
+      }
+      __typename
+    }
+    professional_type
+    company_name
+    company_logo
+    company_registration_ref
+    personal_freelance_license
+    is_verified
+    is_gig_professional
+    gigs_count
+    score
+    quotations {
+      count
+      next
+      previous
+      results {
+        id
+        service_inquiry {
+          id
+          number
+          status
+          created_at
+          description
+          budget_limits
+          phone_number
+          whatsapp_number
+          gig_service_id
+          gig_service_title
+          gig_service_price
+          gig_service_description
+          sendbird_channel_name
+          sendbird_channel_url
+          reviews_total
+          reviews_count
+          type
+          __typename
+        }
+        professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        created_at
+        status
+        budget_limits
+        execution_time
+        sendbird_channel_name
+        sendbird_channel_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAuthenticatedProfessionalQuery, APITypes.GetAuthenticatedProfessionalQuery>;
+export const listGalleryPhotos = /* GraphQL */ `query ListGalleryPhotos($input: Pagination) {
+  listGalleryPhotos(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      photo
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListGalleryPhotosQueryVariables, APITypes.ListGalleryPhotosQuery>;
+export const listVideos = /* GraphQL */ `query ListVideos($input: Pagination) {
+  listVideos(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      video
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListVideosQueryVariables, APITypes.ListVideosQuery>;
+export const listServices = /* GraphQL */ `query ListServices($input: Pagination) {
+  listServices(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListServicesQueryVariables, APITypes.ListServicesQuery>;
+export const getService = /* GraphQL */ `query GetService($id: ID!) {
+  getService(id: $id) {
+    id
+    created_at
+    updated_at
+    title
+    image
+    short_description
+    long_description
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetServiceQueryVariables, APITypes.GetServiceQuery>;
+export const listDepartments = /* GraphQL */ `query ListDepartments($input: Pagination) {
+  listDepartments(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      slug
+      photo_url
+      products_count
+      filters
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      sub_departments {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      children_count
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDepartmentsQueryVariables, APITypes.ListDepartmentsQuery>;
+export const listDepartmentsBySlug = /* GraphQL */ `query ListDepartmentsBySlug($input: Pagination) {
+  listDepartmentsBySlug(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      slug
+      photo_url
+      products_count
+      filters
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      sub_departments {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      children_count
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDepartmentsBySlugQueryVariables, APITypes.ListDepartmentsBySlugQuery>;
+export const getDepartment = /* GraphQL */ `query GetDepartment($id: ID!) {
+  getDepartment(id: $id) {
+    id
+    title
+    description
+    slug
+    photo_url
+    products_count
+    filters
+    breadcrumbs {
+      title
+      slug
+      __typename
+    }
+    sub_departments {
+      id
+      title
+      description
+      slug
+      photo_url
+      products_count
+      filters
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      sub_departments {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      children_count
+      __typename
+    }
+    children_count
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetDepartmentQueryVariables, APITypes.GetDepartmentQuery>;
+export const getHomePageSlider = /* GraphQL */ `query GetHomePageSlider {
+  getHomePageSlider {
+    result
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetHomePageSliderQuery, APITypes.GetHomePageSliderQuery>;
+export const getBreadcrumb = /* GraphQL */ `query GetBreadcrumb($slug: String!, $model: String!) {
+  getBreadcrumb(slug: $slug, model: $model) {
+    breadcrumbs {
+      title
+      slug
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetBreadcrumbQueryVariables, APITypes.GetBreadcrumbQuery>;
+export const listHomePageSpecialProducts = /* GraphQL */ `query ListHomePageSpecialProducts($input: Pagination) {
+  listHomePageSpecialProducts(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      slug
+      upc
+      photo_url
+      labels {
+        id
+        title
+        description
+        color
+        is_extra
+        __typename
+      }
+      manufactory {
+        id
+        name
+        website_url
+        __typename
+      }
+      images {
+        id
+        original
+        is_default
+        display_order
+        __typename
+      }
+      attributes {
+        name
+        value
+        __typename
+      }
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      offer {
+        type
+        value
+        __typename
+      }
+      section {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      categories {
+        title
+        slug
+        __typename
+      }
+      color
+      dimensions
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListHomePageSpecialProductsQueryVariables, APITypes.ListHomePageSpecialProductsQuery>;
+export const listHomePageSpecialStockRecords =
+  /* GraphQL */ `query ListHomePageSpecialStockRecords($input: Pagination) {
+  listHomePageSpecialStockRecords(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      currency
+      price
+      original_price
+      discount_value
+      available_number_in_stock
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      reviews_total
+      reviews_count
+      partner_sku
+      is_reviewable
+      is_purchased
+      vendor_variants {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListHomePageSpecialStockRecordsQueryVariables,
+    APITypes.ListHomePageSpecialStockRecordsQuery
+  >;
+export const listDepartmentProducts = /* GraphQL */ `query ListDepartmentProducts($input: Pagination) {
+  listDepartmentProducts(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      slug
+      upc
+      photo_url
+      labels {
+        id
+        title
+        description
+        color
+        is_extra
+        __typename
+      }
+      manufactory {
+        id
+        name
+        website_url
+        __typename
+      }
+      images {
+        id
+        original
+        is_default
+        display_order
+        __typename
+      }
+      attributes {
+        name
+        value
+        __typename
+      }
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      offer {
+        type
+        value
+        __typename
+      }
+      section {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      categories {
+        title
+        slug
+        __typename
+      }
+      color
+      dimensions
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDepartmentProductsQueryVariables, APITypes.ListDepartmentProductsQuery>;
+export const listDepartmentStockRecords = /* GraphQL */ `query ListDepartmentStockRecords($input: Pagination) {
+  listDepartmentStockRecords(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      currency
+      price
+      original_price
+      discount_value
+      available_number_in_stock
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      reviews_total
+      reviews_count
+      partner_sku
+      is_reviewable
+      is_purchased
+      vendor_variants {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDepartmentStockRecordsQueryVariables, APITypes.ListDepartmentStockRecordsQuery>;
+export const listProductSliders = /* GraphQL */ `query ListProductSliders($input: Pagination) {
+  listProductSliders(input: $input) {
+    count
+    next
+    previous
+    results {
+      stock_records {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      title
+      show_all_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProductSlidersQueryVariables, APITypes.ListProductSlidersQuery>;
+export const getProduct = /* GraphQL */ `query GetProduct($id: ID!) {
+  getProduct(id: $id) {
+    id
+    title
+    description
+    slug
+    upc
+    photo_url
+    labels {
+      id
+      title
+      description
+      color
+      is_extra
+      __typename
+    }
+    manufactory {
+      id
+      name
+      website_url
+      __typename
+    }
+    images {
+      id
+      original
+      is_default
+      display_order
+      __typename
+    }
+    attributes {
+      name
+      value
+      __typename
+    }
+    breadcrumbs {
+      title
+      slug
+      __typename
+    }
+    offer {
+      type
+      value
+      __typename
+    }
+    section {
+      id
+      title
+      description
+      slug
+      photo_url
+      products_count
+      filters
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      sub_departments {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      children_count
+      __typename
+    }
+    categories {
+      title
+      slug
+      __typename
+    }
+    color
+    dimensions
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetProductQueryVariables, APITypes.GetProductQuery>;
+export const getStockRecord = /* GraphQL */ `query GetStockRecord($id: ID!) {
+  getStockRecord(id: $id) {
+    id
+    currency
+    price
+    original_price
+    discount_value
+    available_number_in_stock
+    product {
+      id
+      title
+      description
+      slug
+      upc
+      photo_url
+      labels {
+        id
+        title
+        description
+        color
+        is_extra
+        __typename
+      }
+      manufactory {
+        id
+        name
+        website_url
+        __typename
+      }
+      images {
+        id
+        original
+        is_default
+        display_order
+        __typename
+      }
+      attributes {
+        name
+        value
+        __typename
+      }
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      offer {
+        type
+        value
+        __typename
+      }
+      section {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      categories {
+        title
+        slug
+        __typename
+      }
+      color
+      dimensions
+      __typename
+    }
+    partner {
+      id
+      name
+      code
+      logo
+      address
+      email
+      reviews_total
+      reviews_count
+      is_reviewable
+      mobile
+      blog
+      policy
+      __typename
+    }
+    reviews_total
+    reviews_count
+    partner_sku
+    is_reviewable
+    is_purchased
+    vendor_variants {
+      id
+      currency
+      price
+      original_price
+      discount_value
+      available_number_in_stock
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      reviews_total
+      reviews_count
+      partner_sku
+      is_reviewable
+      is_purchased
+      vendor_variants {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetStockRecordQueryVariables, APITypes.GetStockRecordQuery>;
+export const getBasketLineByStockrecord =
+  /* GraphQL */ `query GetBasketLineByStockrecord($input: StockRecordBasketLineInput) {
+  getBasketLineByStockrecord(input: $input) {
+    id
+    product {
+      id
+      title
+      description
+      slug
+      upc
+      photo_url
+      labels {
+        id
+        title
+        description
+        color
+        is_extra
+        __typename
+      }
+      manufactory {
+        id
+        name
+        website_url
+        __typename
+      }
+      images {
+        id
+        original
+        is_default
+        display_order
+        __typename
+      }
+      attributes {
+        name
+        value
+        __typename
+      }
+      breadcrumbs {
+        title
+        slug
+        __typename
+      }
+      offer {
+        type
+        value
+        __typename
+      }
+      section {
+        id
+        title
+        description
+        slug
+        photo_url
+        products_count
+        filters
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        sub_departments {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        children_count
+        __typename
+      }
+      categories {
+        title
+        slug
+        __typename
+      }
+      color
+      dimensions
+      __typename
+    }
+    quantity
+    stockrecord_id
+    basket_id
+    price_currency
+    price_excl_tax
+    price_incl_tax
+    price_incl_tax_excl_discounts
+    price_excl_tax_excl_discounts
+    original_price_incl_tax
+    original_price_excl_tax
+    stockrecord {
+      id
+      currency
+      price
+      original_price
+      discount_value
+      available_number_in_stock
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      reviews_total
+      reviews_count
+      partner_sku
+      is_reviewable
+      is_purchased
+      vendor_variants {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetBasketLineByStockrecordQueryVariables, APITypes.GetBasketLineByStockrecordQuery>;
+export const getPartner = /* GraphQL */ `query GetPartner($id: ID!) {
+  getPartner(id: $id) {
+    id
+    name
+    code
+    logo
+    address
+    email
+    reviews_total
+    reviews_count
+    is_reviewable
+    mobile
+    blog
+    policy
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetPartnerQueryVariables, APITypes.GetPartnerQuery>;
+export const listProductReviewsByStockRecordId =
+  /* GraphQL */ `query ListProductReviewsByStockRecordId($input: Pagination) {
+  listProductReviewsByStockRecordId(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      stockrecord
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      body
+      general_score
+      client_bought_product
+      created_at
+      status
+      detailed_review_scores {
+        id
+        title
+        status
+        score
+        detailed_score {
+          id
+          title
+          status
+          __typename
+        }
+        __typename
+      }
+      review_images {
+        id
+        image
+        status
+        __typename
+      }
+      likes_count
+      is_liked
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListProductReviewsByStockRecordIdQueryVariables,
+    APITypes.ListProductReviewsByStockRecordIdQuery
+  >;
+export const listDetailedScore = /* GraphQL */ `query ListDetailedScore($input: Pagination) {
+  listDetailedScore(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      status
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListDetailedScoreQueryVariables, APITypes.ListDetailedScoreQuery>;
+export const list_stockrecord_reviews_aggregation =
+  /* GraphQL */ `query List_stockrecord_reviews_aggregation($input: Pagination) {
+  list_stockrecord_reviews_aggregation(input: $input) {
+    rates_aggregation {
+      rate
+      count
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.List_stockrecord_reviews_aggregationQueryVariables,
+    APITypes.List_stockrecord_reviews_aggregationQuery
+  >;
+export const getBannerDetails = /* GraphQL */ `query GetBannerDetails($slug: BannerSlug!) {
+  getBannerDetails(slug: $slug) {
+    title
+    sub_title
+    description
+    photo_url
+    slug
+    button_title
+    responsive_photo_url
+    url
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetBannerDetailsQueryVariables, APITypes.GetBannerDetailsQuery>;
+export const listFAQs = /* GraphQL */ `query ListFAQs($input: Pagination) {
+  listFAQs(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFAQsQueryVariables, APITypes.ListFAQsQuery>;
+export const listFollowersByClientId = /* GraphQL */ `query ListFollowersByClientId($input: Pagination) {
+  listFollowersByClientId(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFollowersByClientIdQueryVariables, APITypes.ListFollowersByClientIdQuery>;
+export const listFolloweesByClientId = /* GraphQL */ `query ListFolloweesByClientId($input: Pagination) {
+  listFolloweesByClientId(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFolloweesByClientIdQueryVariables, APITypes.ListFolloweesByClientIdQuery>;
+export const fetchImagesFromUrl = /* GraphQL */ `query FetchImagesFromUrl($url: String!) {
+  fetchImagesFromUrl(url: $url)
+}
+` as GeneratedQuery<APITypes.FetchImagesFromUrlQueryVariables, APITypes.FetchImagesFromUrlQuery>;
+export const listBrands = /* GraphQL */ `query ListBrands($input: Pagination) {
+  listBrands(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      arabic_title
+      english_title
+      title
+      arabic_description
+      english_description
+      description
+      website
+      logo
+      email
+      phone
+      address
+      type
+      rate
+      rates_count
+      rank
+      tags {
+        count
+        next
+        previous
+        results {
+          english_title
+          arabic_title
+          title
+          __typename
+        }
+        __typename
+      }
+      images {
+        count
+        next
+        previous
+        results {
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListBrandsQueryVariables, APITypes.ListBrandsQuery>;
+export const getBrand = /* GraphQL */ `query GetBrand($id: ID!) {
+  getBrand(id: $id) {
+    id
+    arabic_title
+    english_title
+    title
+    arabic_description
+    english_description
+    description
+    website
+    logo
+    email
+    phone
+    address
+    type
+    rate
+    rates_count
+    rank
+    tags {
+      count
+      next
+      previous
+      results {
+        english_title
+        arabic_title
+        title
+        __typename
+      }
+      __typename
+    }
+    images {
+      count
+      next
+      previous
+      results {
+        photo
+        __typename
+      }
+      __typename
+    }
+    is_reviewable
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetBrandQueryVariables, APITypes.GetBrandQuery>;
+export const getAuthenticatedClientBasket = /* GraphQL */ `query GetAuthenticatedClientBasket {
+  getAuthenticatedClientBasket {
+    id
+    status
+    total_excl_tax
+    total_excl_tax_excl_discounts
+    total_incl_tax
+    total_incl_tax_excl_discounts
+    total_original_excl_tax
+    total_original_incl_tax
+    total_quantity
+    total_tax
+    currency
+    discount_price
+    discount_amount
+    lines {
+      id
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      quantity
+      stockrecord_id
+      basket_id
+      price_currency
+      price_excl_tax
+      price_incl_tax
+      price_incl_tax_excl_discounts
+      price_excl_tax_excl_discounts
+      original_price_incl_tax
+      original_price_excl_tax
+      stockrecord {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAuthenticatedClientBasketQuery, APITypes.GetAuthenticatedClientBasketQuery>;
+export const listBasketProducts = /* GraphQL */ `query ListBasketProducts($input: Pagination) {
+  listBasketProducts(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      quantity
+      stockrecord_id
+      basket_id
+      price_currency
+      price_excl_tax
+      price_incl_tax
+      price_incl_tax_excl_discounts
+      price_excl_tax_excl_discounts
+      original_price_incl_tax
+      original_price_excl_tax
+      stockrecord {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListBasketProductsQueryVariables, APITypes.ListBasketProductsQuery>;
+export const listBasketProductsGroupedByPartner =
+  /* GraphQL */ `query ListBasketProductsGroupedByPartner($input: Pagination) {
+  listBasketProductsGroupedByPartner(input: $input) {
+    result {
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      lines {
+        id
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        quantity
+        stockrecord_id
+        basket_id
+        price_currency
+        price_excl_tax
+        price_incl_tax
+        price_incl_tax_excl_discounts
+        price_excl_tax_excl_discounts
+        original_price_incl_tax
+        original_price_excl_tax
+        stockrecord {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListBasketProductsGroupedByPartnerQueryVariables,
+    APITypes.ListBasketProductsGroupedByPartnerQuery
+  >;
+export const listMyOrders = /* GraphQL */ `query ListMyOrders($input: OrderListInput) {
+  listMyOrders(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      number
+      currency
+      total_incl_tax
+      total_excl_tax
+      shipping_incl_tax
+      shipping_excl_tax
+      status
+      date_placed
+      shipping_address {
+        id
+        name
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        neighborhood {
+          id
+          created_at
+          updated_at
+          status
+          name
+          city_id
+          __typename
+        }
+        description
+        first_name
+        last_name
+        phone_number
+        email
+        is_default
+        __typename
+      }
+      num_items
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMyOrdersQueryVariables, APITypes.ListMyOrdersQuery>;
+export const getOrderById = /* GraphQL */ `query GetOrderById($id: Int!) {
+  getOrderById(id: $id) {
+    id
+    number
+    currency
+    total_incl_tax
+    total_excl_tax
+    total_discount_incl_tax
+    total_discount_excl_tax
+    shipping_incl_tax
+    shipping_excl_tax
+    status
+    date_placed
+    shipping_address {
+      id
+      name
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      neighborhood {
+        id
+        created_at
+        updated_at
+        status
+        name
+        city_id
+        __typename
+      }
+      description
+      first_name
+      last_name
+      phone_number
+      email
+      is_default
+      __typename
+    }
+    num_items
+    products_price
+    total_tax
+    discount_price
+    discount_amount
+    payment_method {
+      id
+      name
+      logo
+      brand
+      __typename
+    }
+    payment_card {
+      id
+      card_type
+      number
+      name
+      expiry_date
+      partner_reference
+      payment_method {
+        id
+        name
+        logo
+        brand
+        __typename
+      }
+      __typename
+    }
+    lines {
+      count
+      next
+      previous
+      results {
+        id
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        quantity
+        stockrecord {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        price_currency
+        price_excl_tax
+        price_incl_tax
+        price_incl_tax_excl_discounts
+        price_excl_tax_excl_discounts
+        original_price_incl_tax
+        original_price_excl_tax
+        status
+        product_review {
+          id
+          stockrecord
+          body
+          general_score
+          client_bought_product
+          created_at
+          status
+          likes_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetOrderByIdQueryVariables, APITypes.GetOrderByIdQuery>;
+export const getOrderByNumber = /* GraphQL */ `query GetOrderByNumber($id: String!) {
+  getOrderByNumber(id: $id) {
+    id
+    number
+    currency
+    total_incl_tax
+    total_excl_tax
+    total_discount_incl_tax
+    total_discount_excl_tax
+    shipping_incl_tax
+    shipping_excl_tax
+    status
+    date_placed
+    shipping_address {
+      id
+      name
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      neighborhood {
+        id
+        created_at
+        updated_at
+        status
+        name
+        city_id
+        __typename
+      }
+      description
+      first_name
+      last_name
+      phone_number
+      email
+      is_default
+      __typename
+    }
+    num_items
+    products_price
+    total_tax
+    discount_price
+    discount_amount
+    payment_method {
+      id
+      name
+      logo
+      brand
+      __typename
+    }
+    payment_card {
+      id
+      card_type
+      number
+      name
+      expiry_date
+      partner_reference
+      payment_method {
+        id
+        name
+        logo
+        brand
+        __typename
+      }
+      __typename
+    }
+    lines {
+      count
+      next
+      previous
+      results {
+        id
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        quantity
+        stockrecord {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        price_currency
+        price_excl_tax
+        price_incl_tax
+        price_incl_tax_excl_discounts
+        price_excl_tax_excl_discounts
+        original_price_incl_tax
+        original_price_excl_tax
+        status
+        product_review {
+          id
+          stockrecord
+          body
+          general_score
+          client_bought_product
+          created_at
+          status
+          likes_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetOrderByNumberQueryVariables, APITypes.GetOrderByNumberQuery>;
+export const getOrderStatusPipeline = /* GraphQL */ `query GetOrderStatusPipeline {
+  getOrderStatusPipeline {
+    status_pipeline
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetOrderStatusPipelineQuery, APITypes.GetOrderStatusPipelineQuery>;
+export const listOrderProducts = /* GraphQL */ `query ListOrderProducts($input: Pagination) {
+  listOrderProducts(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      product {
+        id
+        title
+        description
+        slug
+        upc
+        photo_url
+        labels {
+          id
+          title
+          description
+          color
+          is_extra
+          __typename
+        }
+        manufactory {
+          id
+          name
+          website_url
+          __typename
+        }
+        images {
+          id
+          original
+          is_default
+          display_order
+          __typename
+        }
+        attributes {
+          name
+          value
+          __typename
+        }
+        breadcrumbs {
+          title
+          slug
+          __typename
+        }
+        offer {
+          type
+          value
+          __typename
+        }
+        section {
+          id
+          title
+          description
+          slug
+          photo_url
+          products_count
+          filters
+          children_count
+          __typename
+        }
+        categories {
+          title
+          slug
+          __typename
+        }
+        color
+        dimensions
+        __typename
+      }
+      quantity
+      stockrecord {
+        id
+        currency
+        price
+        original_price
+        discount_value
+        available_number_in_stock
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        partner {
+          id
+          name
+          code
+          logo
+          address
+          email
+          reviews_total
+          reviews_count
+          is_reviewable
+          mobile
+          blog
+          policy
+          __typename
+        }
+        reviews_total
+        reviews_count
+        partner_sku
+        is_reviewable
+        is_purchased
+        vendor_variants {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        __typename
+      }
+      price_currency
+      price_excl_tax
+      price_incl_tax
+      price_incl_tax_excl_discounts
+      price_excl_tax_excl_discounts
+      original_price_incl_tax
+      original_price_excl_tax
+      status
+      product_review {
+        id
+        stockrecord
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        body
+        general_score
+        client_bought_product
+        created_at
+        status
+        detailed_review_scores {
+          id
+          title
+          status
+          score
+          __typename
+        }
+        review_images {
+          id
+          image
+          status
+          __typename
+        }
+        likes_count
+        is_liked
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListOrderProductsQueryVariables, APITypes.ListOrderProductsQuery>;
+export const listOrderProductsGroupedByPartner =
+  /* GraphQL */ `query ListOrderProductsGroupedByPartner($input: Pagination) {
+  listOrderProductsGroupedByPartner(input: $input) {
+    result {
+      partner {
+        id
+        name
+        code
+        logo
+        address
+        email
+        reviews_total
+        reviews_count
+        is_reviewable
+        mobile
+        blog
+        policy
+        __typename
+      }
+      lines {
+        id
+        product {
+          id
+          title
+          description
+          slug
+          upc
+          photo_url
+          color
+          dimensions
+          __typename
+        }
+        quantity
+        stockrecord {
+          id
+          currency
+          price
+          original_price
+          discount_value
+          available_number_in_stock
+          reviews_total
+          reviews_count
+          partner_sku
+          is_reviewable
+          is_purchased
+          __typename
+        }
+        price_currency
+        price_excl_tax
+        price_incl_tax
+        price_incl_tax_excl_discounts
+        price_excl_tax_excl_discounts
+        original_price_incl_tax
+        original_price_excl_tax
+        status
+        product_review {
+          id
+          stockrecord
+          body
+          general_score
+          client_bought_product
+          created_at
+          status
+          likes_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListOrderProductsGroupedByPartnerQueryVariables,
+    APITypes.ListOrderProductsGroupedByPartnerQuery
+  >;
+export const listMyOrdersCountByStatus = /* GraphQL */ `query ListMyOrdersCountByStatus {
+  listMyOrdersCountByStatus {
+    my_orders_statuses {
+      status
+      count
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMyOrdersCountByStatusQuery, APITypes.ListMyOrdersCountByStatusQuery>;
+export const listPaymentMethods = /* GraphQL */ `query ListPaymentMethods($input: Pagination) {
+  listPaymentMethods(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      name
+      logo
+      brand
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListPaymentMethodsQueryVariables, APITypes.ListPaymentMethodsQuery>;
+export const getPaymentCheckoutId = /* GraphQL */ `query GetPaymentCheckoutId($input: PaymentCheckoutIdInput) {
+  getPaymentCheckoutId(input: $input) {
+    result {
+      code
+      description
+      __typename
+    }
+    order_number
+    id
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetPaymentCheckoutIdQueryVariables, APITypes.GetPaymentCheckoutIdQuery>;
+export const getPaymentStatus = /* GraphQL */ `query GetPaymentStatus($input: PaymentStatusInput) {
+  getPaymentStatus(input: $input) {
+    payment_status
+    description
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetPaymentStatusQueryVariables, APITypes.GetPaymentStatusQuery>;
+export const listWebPages = /* GraphQL */ `query ListWebPages($input: Pagination) {
+  listWebPages(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListWebPagesQueryVariables, APITypes.ListWebPagesQuery>;
+export const getWebPageMetaData = /* GraphQL */ `query GetWebPageMetaData($id: String!) {
+  getWebPageMetaData(id: $id) {
+    id
+    title
+    description
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetWebPageMetaDataQueryVariables, APITypes.GetWebPageMetaDataQuery>;
+export const listOnBoardingScreens = /* GraphQL */ `query ListOnBoardingScreens($input: ListOnBoardingScreensInput) {
+  listOnBoardingScreens(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      order
+      image
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListOnBoardingScreensQueryVariables, APITypes.ListOnBoardingScreensQuery>;
+export const getGeneralSettings = /* GraphQL */ `query GetGeneralSettings {
+  getGeneralSettings {
+    enableEcommerce
+    enableRegistrationByMobile
+    enableSocialLogin
+    forceUpdateAndroidVersion
+    forceUpdateIOSVersion
+    PriceFilterMinValue
+    PriceFilterMaxValue
+    showProfessionalReviews
+    hyperPayPaymentUrl
+    localizationUpdatingDate
+    localizationArabicFilePath
+    localizationEnglishFilePath
+    ManzilikConfigurationFilePath
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetGeneralSettingsQuery, APITypes.GetGeneralSettingsQuery>;
+export const listRefundReasons = /* GraphQL */ `query ListRefundReasons {
+  listRefundReasons {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      is_note_required
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRefundReasonsQuery, APITypes.ListRefundReasonsQuery>;
+export const getOption = /* GraphQL */ `query GetOption($input: GetOptionInput) {
+  getOption(input: $input) {
+    results {
+      name_ar
+      name_en
+      metadata
+      icon
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetOptionQueryVariables, APITypes.GetOptionQuery>;
+export const listBadges = /* GraphQL */ `query ListBadges($input: Pagination) {
+  listBadges(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      created_at
+      updated_at
+      status
+      key
+      title
+      value
+      image
+      description
+      client_progress
+      is_claimed
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListBadgesQueryVariables, APITypes.ListBadgesQuery>;
+export const listFeatureFlags = /* GraphQL */ `query ListFeatureFlags($input: PlatformInput) {
+  listFeatureFlags(input: $input) {
+    title
+    platform
+    enabled
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListFeatureFlagsQueryVariables, APITypes.ListFeatureFlagsQuery>;
+export const getGigServiceDetails = /* GraphQL */ `query GetGigServiceDetails($id: String!) {
+  getGigServiceDetails(id: $id) {
+    id
+    title
+    description
+    services {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    cities {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    price
+    photos
+    is_enabled
+    professional {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetGigServiceDetailsQueryVariables, APITypes.GetGigServiceDetailsQuery>;
+export const ListProfessionalGigs = /* GraphQL */ `query ListProfessionalGigs($input: Pagination) {
+  ListProfessionalGigs(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      cities {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      price
+      photos
+      is_enabled
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListProfessionalGigsQueryVariables, APITypes.ListProfessionalGigsQuery>;
+export const listGigsTitleSuggestions = /* GraphQL */ `query ListGigsTitleSuggestions($input: GigSuggestionInput) {
+  listGigsTitleSuggestions(input: $input) {
+    id
+    title
+    description
+    service {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    price
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListGigsTitleSuggestionsQueryVariables, APITypes.ListGigsTitleSuggestionsQuery>;
+export const getDirectoryGigDetails = /* GraphQL */ `query GetDirectoryGigDetails($id: String!) {
+  getDirectoryGigDetails(id: $id) {
+    id
+    title
+    description
+    service {
+      id
+      created_at
+      updated_at
+      title
+      image
+      short_description
+      long_description
+      __typename
+    }
+    price
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetDirectoryGigDetailsQueryVariables, APITypes.GetDirectoryGigDetailsQuery>;
+export const ListGigServices = /* GraphQL */ `query ListGigServices($input: ListGigServiceInput!) {
+  ListGigServices(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      cities {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      price
+      photos
+      is_enabled
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListGigServicesQueryVariables, APITypes.ListGigServicesQuery>;
+export const ListSimilarGigServices = /* GraphQL */ `query ListSimilarGigServices($input: ListSimilarInput!) {
+  ListSimilarGigServices(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      description
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      cities {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      price
+      photos
+      is_enabled
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSimilarGigServicesQueryVariables, APITypes.ListSimilarGigServicesQuery>;
+export const searchProjects = /* GraphQL */ `query SearchProjects(
+  $text: String
+  $pagination: SearchPagination
+  $sortBy: SearchSortBy
+  $filters: [SearchFilterInput]
+  $categories: [String]
+) {
+  searchProjects(
+    text: $text
+    pagination: $pagination
+    sortBy: $sortBy
+    filters: $filters
+    categories: $categories
+  ) {
+    count
+    results {
+      id
+      room_type {
+        id
+        title
+        arabic_title
+        english_title
+        category {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        status
+        created_at
+        updated_at
+        photo
+        __typename
+      }
+      is_default
+      title
+      status
+      created_at
+      updated_at
+      visibility
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      discussions_count
+      ideas_count
+      likes_count
+      shares_count
+      questions_count
+      description
+      ideas {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      ideasList {
+        count
+        next
+        previous
+        results {
+          id
+          tag
+          created_at
+          updated_at
+          title
+          photo
+          status
+          source
+          description
+          project_id
+          client_id
+          questions_count
+          shares_count
+          likes_count
+          is_liked
+          is_photo_uploaded
+          google_vision_result
+          __typename
+        }
+        __typename
+      }
+      is_liked
+      collaborators {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        __typename
+      }
+      default_idea {
+        id
+        tag
+        created_at
+        updated_at
+        title
+        photo
+        status
+        source
+        description
+        project_id
+        project {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        client_id
+        questions_count
+        shares_count
+        likes_count
+        is_liked
+        is_photo_uploaded
+        questions {
+          count
+          next
+          previous
+          __typename
+        }
+        google_vision_result
+        paint_colors {
+          count
+          next
+          previous
+          __typename
+        }
+        ideaLabels {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      questions {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          status
+          title
+          description
+          idea_id
+          client_id
+          likes_count
+          comments_count
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      entities {
+        count
+        next
+        previous
+        results {
+          created_at
+          updated_at
+          status
+          photo
+          description
+          tag
+          client_id
+          project_id
+          entity_id
+          title
+          is_main_entity
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    filters {
+      title
+      results {
+        title
+        count
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchProjectsQueryVariables, APITypes.SearchProjectsQuery>;
+export const searchCompletion = /* GraphQL */ `query SearchCompletion($text: String!, $searchBy: CompletionSearchBy) {
+  searchCompletion(text: $text, searchBy: $searchBy) {
+    completions
+    suggestions {
+      text
+      suggest
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchCompletionQueryVariables, APITypes.SearchCompletionQuery>;
+export const searchProfessionals = /* GraphQL */ `query SearchProfessionals(
+  $text: String
+  $pagination: SearchPagination
+  $sortBy: ProfessionalSearchSortBy
+  $services: [String]
+  $cities: [String]
+  $regions: [String]
+  $is_verified: Boolean
+) {
+  searchProfessionals(
+    text: $text
+    pagination: $pagination
+    sortBy: $sortBy
+    services: $services
+    cities: $cities
+    regions: $regions
+    is_verified: $is_verified
+  ) {
+    count
+    results {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchProfessionalsQueryVariables, APITypes.SearchProfessionalsQuery>;
+export const searchDiscussions = /* GraphQL */ `query SearchDiscussions(
+  $text: String
+  $pagination: SearchPagination
+  $sortBy: DiscussionSearchSortBy
+  $topics: [String]
+) {
+  searchDiscussions(
+    text: $text
+    pagination: $pagination
+    sortBy: $sortBy
+    topics: $topics
+  ) {
+    count
+    results {
+      id
+      tag
+      created_at
+      updated_at
+      status
+      title
+      description
+      client_id
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      youtube_url
+      photo
+      web_url
+      likes_count
+      comments_count
+      topics {
+        id
+        paren_id
+        created_at
+        updated_at
+        status
+        title
+        description
+        is_interested
+        __typename
+      }
+      polls {
+        id
+        created_at
+        updated_at
+        status
+        title
+        photo_url
+        __typename
+      }
+      is_liked
+      latest_two_commenters {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchDiscussionsQueryVariables, APITypes.SearchDiscussionsQuery>;
+export const searchMagazines = /* GraphQL */ `query SearchMagazines(
+  $text: String
+  $pagination: SearchPagination
+  $sortBy: MagazineSearchSortBy
+  $categories: [String]
+) {
+  searchMagazines(
+    text: $text
+    pagination: $pagination
+    sortBy: $sortBy
+    categories: $categories
+  ) {
+    count
+    results {
+      id
+      page
+      photo
+      likes_count
+      comments_count
+      title
+      meta_description
+      is_liked
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      created_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.SearchMagazinesQueryVariables, APITypes.SearchMagazinesQuery>;
+export const getPresignedUrlForImageAIDesign =
+  /* GraphQL */ `query GetPresignedUrlForImageAIDesign($input: AIPresignedUrlInput!) {
+  getPresignedUrlForImageAIDesign(input: $input) {
+    result
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.GetPresignedUrlForImageAIDesignQueryVariables,
+    APITypes.GetPresignedUrlForImageAIDesignQuery
+  >;
+export const listPublishedAIDesigns =
+  /* GraphQL */ `query ListPublishedAIDesigns($input: AIPagination!, $styleSlug: String) {
+  listPublishedAIDesigns(input: $input, styleSlug: $styleSlug) {
+    count
+    results {
+      id
+      created_at
+      updated_at
+      sourceImageUrl
+      selectedImageIndex
+      processedImagesPath
+      visibility
+      processingType
+      roomType {
+        id
+        name
+        slug
+        image
+        __typename
+      }
+      style {
+        id
+        name
+        slug
+        image
+        template_prompt
+        __typename
+      }
+      status
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListPublishedAIDesignsQueryVariables, APITypes.ListPublishedAIDesignsQuery>;
+export const listMyAIDesigns = /* GraphQL */ `query ListMyAIDesigns($input: AIPagination!) {
+  listMyAIDesigns(input: $input) {
+    count
+    results {
+      id
+      created_at
+      updated_at
+      sourceImageUrl
+      selectedImageIndex
+      processedImagesPath
+      visibility
+      processingType
+      roomType {
+        id
+        name
+        slug
+        image
+        __typename
+      }
+      style {
+        id
+        name
+        slug
+        image
+        template_prompt
+        __typename
+      }
+      status
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMyAIDesignsQueryVariables, APITypes.ListMyAIDesignsQuery>;
+export const getAIDesignDetails = /* GraphQL */ `query GetAIDesignDetails($id: ID!) {
+  getAIDesignDetails(id: $id) {
+    id
+    created_at
+    updated_at
+    sourceImageUrl
+    selectedImageIndex
+    processedImagesPath
+    visibility
+    processingType
+    roomType {
+      id
+      name
+      slug
+      image
+      __typename
+    }
+    style {
+      id
+      name
+      slug
+      image
+      template_prompt
+      __typename
+    }
+    status
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAIDesignDetailsQueryVariables, APITypes.GetAIDesignDetailsQuery>;
+export const listAIRoomTypes = /* GraphQL */ `query ListAIRoomTypes($input: AIPagination!) {
+  listAIRoomTypes(input: $input) {
+    count
+    results {
+      id
+      name
+      slug
+      image
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListAIRoomTypesQueryVariables, APITypes.ListAIRoomTypesQuery>;
+export const listAIStyles = /* GraphQL */ `query ListAIStyles($input: AIPagination!) {
+  listAIStyles(input: $input) {
+    count
+    results {
+      id
+      name
+      slug
+      image
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListAIStylesQueryVariables, APITypes.ListAIStylesQuery>;
+export const getAIOptions = /* GraphQL */ `query GetAIOptions {
+  getAIOptions {
+    name
+    slug
+    values {
+      name
+      slug
+      image
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAIOptionsQuery, APITypes.GetAIOptionsQuery>;
+export const getAIDesignRating = /* GraphQL */ `query GetAIDesignRating($designId: ID!) {
+  getAIDesignRating(designId: $designId) {
+    averageRating
+    numberOfRatings
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetAIDesignRatingQueryVariables, APITypes.GetAIDesignRatingQuery>;
+export const getRequestCreditCost = /* GraphQL */ `query GetRequestCreditCost {
+  getRequestCreditCost {
+    value
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetRequestCreditCostQuery, APITypes.GetRequestCreditCostQuery>;
+export const listServiceInquiryRejectionReason =
+  /* GraphQL */ `query ListServiceInquiryRejectionReason($input: Pagination) {
+  listServiceInquiryRejectionReason(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      title
+      is_note_required
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<
+    APITypes.ListServiceInquiryRejectionReasonQueryVariables,
+    APITypes.ListServiceInquiryRejectionReasonQuery
+  >;
+export const listSentServiceInquiries = /* GraphQL */ `query ListSentServiceInquiries($input: Pagination) {
+  listSentServiceInquiries(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      number
+      status
+      created_at
+      sender {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      categories {
+        count
+        next
+        previous
+        results {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        __typename
+      }
+      services {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        __typename
+      }
+      description
+      budget_limits
+      phone_number
+      whatsapp_number
+      photos {
+        count
+        next
+        previous
+        results {
+          photo
+          __typename
+        }
+        __typename
+      }
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      gig_service_id
+      gig_service_title
+      gig_service_price
+      gig_service_description
+      sendbird_channel_name
+      sendbird_channel_url
+      reviews_total
+      reviews_count
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      type
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListSentServiceInquiriesQueryVariables, APITypes.ListSentServiceInquiriesQuery>;
+export const listReceivedServiceInquiries = /* GraphQL */ `query ListReceivedServiceInquiries($input: Pagination) {
+  listReceivedServiceInquiries(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      number
+      status
+      created_at
+      sender {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      categories {
+        count
+        next
+        previous
+        results {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        __typename
+      }
+      services {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        __typename
+      }
+      description
+      budget_limits
+      phone_number
+      whatsapp_number
+      photos {
+        count
+        next
+        previous
+        results {
+          photo
+          __typename
+        }
+        __typename
+      }
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      gig_service_id
+      gig_service_title
+      gig_service_price
+      gig_service_description
+      sendbird_channel_name
+      sendbird_channel_url
+      reviews_total
+      reviews_count
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      type
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListReceivedServiceInquiriesQueryVariables, APITypes.ListReceivedServiceInquiriesQuery>;
+export const getServiceInquiry = /* GraphQL */ `query GetServiceInquiry($id: String!) {
+  getServiceInquiry(id: $id) {
+    id
+    number
+    status
+    created_at
+    sender {
+      id
+      created_at
+      updated_at
+      status
+      first_name
+      last_name
+      email
+      mobile
+      country_code
+      gender
+      type
+      about_me
+      my_fav_style
+      my_next_style
+      city_id
+      country_id
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      country {
+        id
+        created_at
+        updated_at
+        status
+        name
+        country_flag
+        is_default
+        __typename
+      }
+      zip
+      state
+      following_count
+      followers_count
+      followees_count
+      is_followed
+      total_review
+      discussions_count
+      comments_count
+      is_verified
+      is_add_gigs_tutorial_showed
+      last_login
+      profile_image
+      facebook
+      twitter
+      linkedin
+      blog
+      project_role
+      client_awards {
+        id
+        created_at
+        updated_at
+        status
+        title
+        code
+        image
+        __typename
+      }
+      client_badges {
+        id
+        created_at
+        updated_at
+        status
+        key
+        title
+        value
+        image
+        description
+        client_progress
+        is_claimed
+        __typename
+      }
+      projects {
+        count
+        next
+        previous
+        results {
+          id
+          is_default
+          title
+          status
+          created_at
+          updated_at
+          visibility
+          client_id
+          discussions_count
+          ideas_count
+          likes_count
+          shares_count
+          questions_count
+          description
+          is_liked
+          __typename
+        }
+        __typename
+      }
+      addresses {
+        count
+        next
+        previous
+        results {
+          id
+          name
+          description
+          first_name
+          last_name
+          phone_number
+          email
+          is_default
+          __typename
+        }
+        __typename
+      }
+      bankcards {
+        count
+        next
+        previous
+        results {
+          id
+          card_type
+          number
+          name
+          expiry_date
+          partner_reference
+          __typename
+        }
+        __typename
+      }
+      related_professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      sendbird_access_token
+      apns_token
+      balance
+      is_purchased
+      referral_url
+      __typename
+    }
+    professional {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    categories {
+      count
+      next
+      previous
+      results {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      __typename
+    }
+    services {
+      count
+      next
+      previous
+      results {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      __typename
+    }
+    description
+    budget_limits
+    phone_number
+    whatsapp_number
+    photos {
+      count
+      next
+      previous
+      results {
+        photo
+        __typename
+      }
+      __typename
+    }
+    city {
+      id
+      created_at
+      updated_at
+      status
+      name
+      region_id
+      country_id
+      __typename
+    }
+    gig_service_id
+    gig_service_title
+    gig_service_price
+    gig_service_description
+    sendbird_channel_name
+    sendbird_channel_url
+    reviews_total
+    reviews_count
+    quotations {
+      count
+      next
+      previous
+      results {
+        id
+        service_inquiry {
+          id
+          number
+          status
+          created_at
+          description
+          budget_limits
+          phone_number
+          whatsapp_number
+          gig_service_id
+          gig_service_title
+          gig_service_price
+          gig_service_description
+          sendbird_channel_name
+          sendbird_channel_url
+          reviews_total
+          reviews_count
+          type
+          __typename
+        }
+        professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        created_at
+        status
+        budget_limits
+        execution_time
+        sendbird_channel_name
+        sendbird_channel_url
+        __typename
+      }
+      __typename
+    }
+    type
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetServiceInquiryQueryVariables, APITypes.GetServiceInquiryQuery>;
+export const getQuotation = /* GraphQL */ `query GetQuotation($id: String!) {
+  getQuotation(id: $id) {
+    id
+    service_inquiry {
+      id
+      number
+      status
+      created_at
+      sender {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      categories {
+        count
+        next
+        previous
+        results {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        __typename
+      }
+      services {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        __typename
+      }
+      description
+      budget_limits
+      phone_number
+      whatsapp_number
+      photos {
+        count
+        next
+        previous
+        results {
+          photo
+          __typename
+        }
+        __typename
+      }
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      gig_service_id
+      gig_service_title
+      gig_service_price
+      gig_service_description
+      sendbird_channel_name
+      sendbird_channel_url
+      reviews_total
+      reviews_count
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      type
+      __typename
+    }
+    professional {
+      id
+      created_at
+      updated_at
+      client {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      address
+      categories {
+        id
+        title
+        english_title
+        description
+        parent {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        photo
+        status
+        created_at
+        updated_at
+        filters
+        __typename
+      }
+      services {
+        id
+        created_at
+        updated_at
+        title
+        image
+        short_description
+        long_description
+        __typename
+      }
+      locations {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      is_profile_completed
+      reviews_total
+      reviews_count
+      gallery_photos
+      photos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          photo
+          __typename
+        }
+        __typename
+      }
+      is_reviewable
+      projects_count
+      videos {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          video
+          __typename
+        }
+        __typename
+      }
+      contacts {
+        count
+        next
+        previous
+        results {
+          contact_type
+          value
+          __typename
+        }
+        __typename
+      }
+      professional_type
+      company_name
+      company_logo
+      company_registration_ref
+      personal_freelance_license
+      is_verified
+      is_gig_professional
+      gigs_count
+      score
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    created_at
+    status
+    budget_limits
+    execution_time
+    sendbird_channel_name
+    sendbird_channel_url
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.GetQuotationQueryVariables, APITypes.GetQuotationQuery>;
+export const ListMyQuotations = /* GraphQL */ `query ListMyQuotations($input: ListQuotationInput!) {
+  ListMyQuotations(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      service_inquiry {
+        id
+        number
+        status
+        created_at
+        sender {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        categories {
+          count
+          next
+          previous
+          __typename
+        }
+        services {
+          count
+          next
+          previous
+          __typename
+        }
+        description
+        budget_limits
+        phone_number
+        whatsapp_number
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        gig_service_id
+        gig_service_title
+        gig_service_price
+        gig_service_description
+        sendbird_channel_name
+        sendbird_channel_url
+        reviews_total
+        reviews_count
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        type
+        __typename
+      }
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      created_at
+      status
+      budget_limits
+      execution_time
+      sendbird_channel_name
+      sendbird_channel_url
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListMyQuotationsQueryVariables, APITypes.ListMyQuotationsQuery>;
+export const ListRFQ = /* GraphQL */ `query ListRFQ($input: ListRFQInput!) {
+  ListRFQ(input: $input) {
+    count
+    next
+    previous
+    results {
+      id
+      number
+      status
+      created_at
+      sender {
+        id
+        created_at
+        updated_at
+        status
+        first_name
+        last_name
+        email
+        mobile
+        country_code
+        gender
+        type
+        about_me
+        my_fav_style
+        my_next_style
+        city_id
+        country_id
+        city {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        country {
+          id
+          created_at
+          updated_at
+          status
+          name
+          country_flag
+          is_default
+          __typename
+        }
+        zip
+        state
+        following_count
+        followers_count
+        followees_count
+        is_followed
+        total_review
+        discussions_count
+        comments_count
+        is_verified
+        is_add_gigs_tutorial_showed
+        last_login
+        profile_image
+        facebook
+        twitter
+        linkedin
+        blog
+        project_role
+        client_awards {
+          id
+          created_at
+          updated_at
+          status
+          title
+          code
+          image
+          __typename
+        }
+        client_badges {
+          id
+          created_at
+          updated_at
+          status
+          key
+          title
+          value
+          image
+          description
+          client_progress
+          is_claimed
+          __typename
+        }
+        projects {
+          count
+          next
+          previous
+          __typename
+        }
+        addresses {
+          count
+          next
+          previous
+          __typename
+        }
+        bankcards {
+          count
+          next
+          previous
+          __typename
+        }
+        related_professional {
+          id
+          created_at
+          updated_at
+          address
+          is_profile_completed
+          reviews_total
+          reviews_count
+          gallery_photos
+          is_reviewable
+          projects_count
+          professional_type
+          company_name
+          company_logo
+          company_registration_ref
+          personal_freelance_license
+          is_verified
+          is_gig_professional
+          gigs_count
+          score
+          __typename
+        }
+        sendbird_access_token
+        apns_token
+        balance
+        is_purchased
+        referral_url
+        __typename
+      }
+      professional {
+        id
+        created_at
+        updated_at
+        client {
+          id
+          created_at
+          updated_at
+          status
+          first_name
+          last_name
+          email
+          mobile
+          country_code
+          gender
+          type
+          about_me
+          my_fav_style
+          my_next_style
+          city_id
+          country_id
+          zip
+          state
+          following_count
+          followers_count
+          followees_count
+          is_followed
+          total_review
+          discussions_count
+          comments_count
+          is_verified
+          is_add_gigs_tutorial_showed
+          last_login
+          profile_image
+          facebook
+          twitter
+          linkedin
+          blog
+          project_role
+          sendbird_access_token
+          apns_token
+          balance
+          is_purchased
+          referral_url
+          __typename
+        }
+        address
+        categories {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        services {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        locations {
+          id
+          created_at
+          updated_at
+          status
+          name
+          region_id
+          country_id
+          __typename
+        }
+        is_profile_completed
+        reviews_total
+        reviews_count
+        gallery_photos
+        photos {
+          count
+          next
+          previous
+          __typename
+        }
+        is_reviewable
+        projects_count
+        videos {
+          count
+          next
+          previous
+          __typename
+        }
+        contacts {
+          count
+          next
+          previous
+          __typename
+        }
+        professional_type
+        company_name
+        company_logo
+        company_registration_ref
+        personal_freelance_license
+        is_verified
+        is_gig_professional
+        gigs_count
+        score
+        quotations {
+          count
+          next
+          previous
+          __typename
+        }
+        __typename
+      }
+      categories {
+        count
+        next
+        previous
+        results {
+          id
+          title
+          english_title
+          description
+          photo
+          status
+          created_at
+          updated_at
+          filters
+          __typename
+        }
+        __typename
+      }
+      services {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          updated_at
+          title
+          image
+          short_description
+          long_description
+          __typename
+        }
+        __typename
+      }
+      description
+      budget_limits
+      phone_number
+      whatsapp_number
+      photos {
+        count
+        next
+        previous
+        results {
+          photo
+          __typename
+        }
+        __typename
+      }
+      city {
+        id
+        created_at
+        updated_at
+        status
+        name
+        region_id
+        country_id
+        __typename
+      }
+      gig_service_id
+      gig_service_title
+      gig_service_price
+      gig_service_description
+      sendbird_channel_name
+      sendbird_channel_url
+      reviews_total
+      reviews_count
+      quotations {
+        count
+        next
+        previous
+        results {
+          id
+          created_at
+          status
+          budget_limits
+          execution_time
+          sendbird_channel_name
+          sendbird_channel_url
+          __typename
+        }
+        __typename
+      }
+      type
+      __typename
+    }
+    __typename
+  }
+}
+` as GeneratedQuery<APITypes.ListRFQQueryVariables, APITypes.ListRFQQuery>;
