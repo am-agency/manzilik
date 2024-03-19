@@ -14,6 +14,6 @@ export interface AIDesignLabel {
 export interface ImageLabelProps {
   imageSrc: string;
   labels: AIDesignLabel[];
-  onLabelClicked?: (label: AIDesignLabel) => void;
+  onLabelClicked?: (e: React.MouseEvent, label: AIDesignLabel) => void;
   onViewSimilarClicked?: () => void;
 }

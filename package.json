@@ -81,7 +81,7 @@
     "world_countries_lists": "2.6.0"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "craco --openssl-legacy-provider start",
     "build": "craco build --verbose",
     "docs:build": "npx styleguidist build",
     "docs:start": "npx styleguidist server",

@@ -518,6 +518,7 @@ export const App: React.FunctionComponent = () => {
                                         Component={ClientTypePage}
                                         layout={LayoutTypes.CONTENT_ONLY}
                                       />
+
                                       <WrapperRoute
                                         exact
                                         path={PROFESSIONAL_RFQ_ROUTE}

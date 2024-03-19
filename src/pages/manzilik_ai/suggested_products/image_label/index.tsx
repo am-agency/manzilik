@@ -72,9 +72,9 @@ const ImageLabel: React.FC<ImageLabelProps> = ({ imageSrc, labels, onLabelClicke
                 left: `${averageX * 100}%`,
                 top: `${averageY * 100}%`,
               }}
-              onClick={() => {
+              onClick={(e) => {
                 handleSetSelectedCoordinates(averageX, averageY);
-                onLabelClicked!(label);
+                onLabelClicked!(e, label);
               }}
             >
               <img src={aiIcons.label} alt="Label" />

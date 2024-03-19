@@ -115,7 +115,8 @@ const BeforeAfter = (props: BeforeAfterProps) => {
         <ImageLabel
           imageSrc={design?.processedImagesPath ? design?.processedImagesPath[design?.selectedImageIndex] : ''}
           labels={design?.objects! as any}
-          onLabelClicked={() => {
+          onLabelClicked={(e) => {
+            e.stopPropagation();
             localStorage.setItem('selectedDesignObject', JSON.stringify(design!));
             analytics.PublishEvent(
               new analytics.AnalyticClickLabelEvent(showDesignDetails ? 'My Designs' : 'Recent Designs')
